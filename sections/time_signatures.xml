@@ -4,7 +4,7 @@
 <section xmlns="http://docbook.org/ns/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
     <info>
-        <title><emphasis role="bold">Time Signatures</emphasis></title>
+        <title>Time Signatures</title>
     </info>
     <para>Time signatures have to be written after clefs (and key signatures) or barlines. To start
         a time signature enter the <emphasis role="italic">time</emphasis> key <code>°</code>. After

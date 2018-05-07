@@ -1,45 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://docbook.org/xml/5.1/rng/assembly.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://docbook.org/xml/5.1/sch/assembly.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<assembly version="5.1" xmlns="http://docbook.org/ns/docbook">
-    <resources xml:base="sections/">
-        <resource href="general_concept.xml" xml:id="section-1"/>
-        <resource href="the_musical_note.xml" xml:id="section-2"/>
-        <resource href="staff_and_barlines.xml" xml:id="section-3"/>
-        <resource href="sections/clefs.xml" xml:id="section-4"/>
-        <resource href="sections/time_signatures.xml" xml:id="section-5"/>
-        <resource href="sections/articulations.xml" xml:id="section-6"/>
-        <resource href="sections/dynamics.xml" xml:id="section-7"/>
-        <resource href="sections/ornaments.xml" xml:id="section-8"/>
-        <resource href="sections/repetition_markings.xml" xml:id="section-9"/>
-        <resource href="sections/other_notation.xml" xml:id="section-10"/>
-        <resource href="sections/staff_systems.xml" xml:id="section-11"/>
-    </resources>
-    
-    <resources xml:base="sections/note/">
-        <resource href="note_length.xml" xml:id="section-2.1"/>
-        <resource href="note_orientation.xml" xml:id="section-2.2"/>
-        <resource href="sections/note/note_rests.xml" xml:id="section-2.3"/>
-        <resource href="sections/note/note_beams.xml" xml:id="section-2.4"/>
-    </resources>
-    
-    <structure>
-        <output renderas="book"/>
-        <module resourceref="section-1"/>
-        <module resourceref="section-2">
-            <module resourceref="section-2.1"/>
-            <module resourceref="section-2.2"/>
-            <module resourceref="section-2.3"/>
-            <module resourceref="section-2.4"/>
-        </module>
-        <module resourceref="section-3"/>
-        <module resourceref="section-4"/>
-        <module resourceref="section-5"/>
-        <module resourceref="section-6"/>
-        <module resourceref="section-7"/>
-        <module resourceref="section-8"/>
-        <module resourceref="section-9"/>
-        <module resourceref="section-10"/>
-        <module resourceref="section-11"/>
-    </structure>
-</assembly>
+<article version="5.1-extended" xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xila="http://www.w3.org/2001/XInclude/local-attributes"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:trans="http://docbook.org/ns/transclusion"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <title>Documentation for Cavatina</title>
+
+    <author>
+      <personname><firstname>Alexis</firstname><surname>Luengas</surname></personname>
+
+      <affiliation>
+        <orgname>Hochschule der Medien Stuttgart</orgname>
+      </affiliation>
+    </author>
+
+    <pubdate>01.06.2018</pubdate>
+  </info>
+
+  <xi:include href="sections/general_concept.xml" />
+  <xi:include href="sections/the_musical_note.xml" />
+  <xi:include href="sections/staff_and_barlines.xml" />
+  <xi:include href="sections/clefs.xml" />
+  <xi:include href="sections/time_signatures.xml" />
+  <xi:include href="sections/articulations.xml" />
+  <xi:include href="sections/dynamics.xml" />
+  <xi:include href="sections/ornaments.xml" />
+  <xi:include href="sections/repetition_markings.xml" />
+  <xi:include href="sections/other_notation.xml" />
+  <xi:include href="sections/staff_systems.xml" />
+  
+</article>

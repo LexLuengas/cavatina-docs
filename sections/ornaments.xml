@@ -6,6 +6,15 @@
     <info>
         <title>Ornaments</title>
     </info>
+    
+    <informaltable>
+        <tbody>
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </informaltable>
+    
     <informaltable>
         <tgroup cols="2">
             <colspec colnum="1" colname="col1"/>
@@ -38,7 +47,7 @@
             </tbody>
         </tgroup>
     </informaltable>
-    <para>Note that, intuitively enough, ornaments are inverted with the <emphasis role="italic"
+    <para>Note that, intuitively enough, ornaments are inverted with the <emphasis role="definition_term"
             >inverter</emphasis> key <code>^</code>.</para>
     <para>To extend the trill or the arpeggio repeat that same character. The arpeggio is written at
         the end of a chord. </para>
