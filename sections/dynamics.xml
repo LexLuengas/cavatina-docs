@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<section xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    <info>
+        <title>Dynamics</title>
+    </info>
+    <para>Dynamics are aligned with respect to the note to which they are applied. Therefore, if you
+        are writing a chord with some dynamics marking, you should write that marking just after the
+        first (lowest) note of the chord.</para>
+    <informaltable>
+        <tgroup cols="2">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <tbody>
+                <row>
+                    <entry>pianississimo</entry>
+                    <entry>***</entry>
+                </row>
+                <row>
+                    <entry>pianissimo</entry>
+                    <entry>**</entry>
+                </row>
+                <row>
+                    <entry>piano</entry>
+                    <entry>*</entry>
+                </row>
+                <row>
+                    <entry>mezzo piano</entry>
+                    <entry>*+</entry>
+                </row>
+                <row>
+                    <entry>mezzo forte</entry>
+                    <entry>+*</entry>
+                </row>
+                <row>
+                    <entry>forte</entry>
+                    <entry>+</entry>
+                </row>
+                <row>
+                    <entry>fortissimo</entry>
+                    <entry>++</entry>
+                </row>
+                <row>
+                    <entry>fortississimo</entry>
+                    <entry>+++</entry>
+                </row>
+                <row>
+                    <entry>sforzando</entry>
+                    <entry>**+ <emphasis role="italic">or</emphasis> ++*</entry>
+                </row>
+                <row>
+                    <entry>forte-piano</entry>
+                    <entry>***+ <emphasis role="italic">or</emphasis> +++* **^ <emphasis
+                            role="italic">or</emphasis> ++^</entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </informaltable>
+    <informaltable>
+        <tgroup cols="2">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <tbody>
+                <row>
+                    <entry>crescendo</entry>
+                    <entry>l</entry>
+                </row>
+                <row>
+                    <entry>decrescendo</entry>
+                    <entry>l^</entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </informaltable>
+    
+    <example>
+        <title>Example</title>
+        <para>
+            <informaltable>
+                <tgroup cols="2">
+                    <tbody>
+                        <row>
+                            <entry>Input</entry>
+                            <entry>Rendered</entry>
+                        </row>
+                        <row>
+                            <entry><code> d*fh h^++er M**+ Dl </code></entry>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+        </para>
+    </example>
+</section>

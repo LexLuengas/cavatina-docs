@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/assembly.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/assembly.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<assembly version="5.1" xmlns="http://docbook.org/ns/docbook">
+    <resources xml:base="sections/">
+        <resource href="general_concept.xml" xml:id="section-1"/>
+        <resource href="the_musical_note.xml" xml:id="section-2"/>
+        <resource href="staff_and_barlines.xml" xml:id="section-3"/>
+        <resource href="sections/clefs.xml" xml:id="section-4"/>
+        <resource href="sections/time_signatures.xml" xml:id="section-5"/>
+        <resource href="sections/articulations.xml" xml:id="section-6"/>
+        <resource href="sections/dynamics.xml" xml:id="section-7"/>
+        <resource href="sections/ornaments.xml" xml:id="section-8"/>
+        <resource href="sections/repetition_markings.xml" xml:id="section-9"/>
+        <resource href="sections/other_notation.xml" xml:id="section-10"/>
+        <resource href="sections/staff_systems.xml" xml:id="section-11"/>
+    </resources>
+    
+    <resources xml:base="sections/note/">
+        <resource href="note_length.xml" xml:id="section-2.1"/>
+        <resource href="note_orientation.xml" xml:id="section-2.2"/>
+        <resource href="sections/note/note_rests.xml" xml:id="section-2.3"/>
+        <resource href="sections/note/note_beams.xml" xml:id="section-2.4"/>
+    </resources>
+    
+    <structure>
+        <output renderas="book"/>
+        <module resourceref="section-1"/>
+        <module resourceref="section-2">
+            <module resourceref="section-2.1"/>
+            <module resourceref="section-2.2"/>
+            <module resourceref="section-2.3"/>
+            <module resourceref="section-2.4"/>
+        </module>
+        <module resourceref="section-3"/>
+        <module resourceref="section-4"/>
+        <module resourceref="section-5"/>
+        <module resourceref="section-6"/>
+        <module resourceref="section-7"/>
+        <module resourceref="section-8"/>
+        <module resourceref="section-9"/>
+        <module resourceref="section-10"/>
+        <module resourceref="section-11"/>
+    </structure>
+</assembly>

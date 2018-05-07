@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<topic xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    <info>
+        <title>Rests</title>
+    </info>
+    <para>Rests are accessed via the <code>ü<emphasis role="italic">|</emphasis>Ü</code> key. Their
+        duration is changed the same way as for notes. Optionally, you can write the same rest twice
+        and the length will increase accordingly.</para>
+    <example>
+        <title>Example</title>
+        <para>
+            <informaltable>
+                <tgroup cols="2">
+                    <tbody>
+                        <row>
+                            <entry>Input</entry>
+                            <entry>Rendered</entry>
+                        </row>
+                        <row>
+                            <entry><code>, ü Ü üü ÜÜ ü° ü°° Ü° Ü°°,</code></entry>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+        </para>
+    </example>
+</topic>

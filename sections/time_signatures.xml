@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<section xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    <info>
+        <title><emphasis role="bold">Time Signatures</emphasis></title>
+    </info>
+    <para>Time signatures have to be written after clefs (and key signatures) or barlines. To start
+        a time signature enter the <emphasis role="italic">time</emphasis> key <code>°</code>. After
+        that you just write the upper and lower numeral successively. </para>
+    <para>To write the <emphasis role="italic">common time</emphasis> or <emphasis role="italic">cut
+            time</emphasis> symbols, enter <emphasis role="italic">c</emphasis> or <emphasis
+            role="italic">C</emphasis> after the <emphasis role="italic">time</emphasis> key.</para>
+    <para>A space is automatically attached after a time signature, so that you don’t have to open a
+        new staff block yourself.</para>
+    
+    <example>
+        <title>Example</title>
+        <para>
+            <informaltable>
+                <tgroup cols="2">
+                    <tbody>
+                        <row>
+                            <entry>Input</entry>
+                            <entry>Rendered</entry>
+                        </row>
+                        <row>
+                            <entry><code>,°34 ,°1216 ,?'''°34 ,°c ,</code></entry>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+        </para>
+    </example>
+</section>

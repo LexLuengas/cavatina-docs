@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<topic xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    <info>
+        <title>Note length</title>
+    </info>
+    <para>
+        So far we have 31 notes (covering a bit more than four octaves). Each of these characters has its lowercase and uppercase variant, 
+        which correspond to the note in 8<superscript>th</superscript> and 4<superscript>th</superscript> length accordingly. Switching to the bold weight of Cavatina, you get 16<superscript>th</superscript>-notes in the 
+        lowercase and 8<superscript>th</superscript>-notes in the uppercase characters.
+    </para>
+    <informaltable>
+        <tgroup cols="4">
+            <colspec align="left" colwidth="1.01*"/>
+            <colspec align="center" colwidth="1*"/>
+            <colspec align="left" colwidth="3.06*"/>
+            <colspec colwidth="3.76*"/>
+            <tbody>
+                <row>
+                    <entry>Regular style</entry>
+                    <entry>
+                        <para>a</para>
+                        <para>A</para>
+                    </entry>
+                    <entry>
+                        <para>8<superscript>th</superscript></para>
+                        <para>4<superscript>th</superscript></para>
+                    </entry>
+                    <entry/>
+                </row>
+                <row>
+                    <entry>Bold style</entry>
+                    <entry>
+                        <para><emphasis role="bold">a</emphasis></para>
+                        <para><emphasis role="bold">A</emphasis></para>
+                    </entry>
+                    <entry>
+                        <para>16<superscript>th</superscript></para>
+                        <para>8<superscript>th</superscript></para>
+                    </entry>
+                    <entry/>
+                </row>
+            </tbody>
+        </tgroup>
+    </informaltable>
+    <example>
+        <title>Example</title>
+        <para>
+            <informaltable>
+                <tgroup cols="2">
+                    <tbody>
+                        <row>
+                            <entry>Input</entry>
+                            <entry>Rendered</entry>
+                        </row>
+                        <row>
+                            <entry><code>, a A <emphasis role="bold">a A</emphasis>,</code></entry>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+        </para>
+    </example>
+    <para>Appart from that, Cavatina has a special key that serves as a <emphasis
+        role="bold">modifier key</emphasis>: the <code>^</code>/<code>°</code> key. We are going to
+        call <code>^</code> the <emphasis role="italic">inverter</emphasis> and
+        <code>°</code> the <emphasis role="italic">time</emphasis> character, the latter
+        of which, among other things, extends the duration of notes. Every time you hit the
+        <emphasis role="italic">time</emphasis> key after a note, the note’s length
+        doubles. You can do this up to a maximum of twice per note, i.e. for a whole note
+        you would need to type a 4th-note followed by two times <code>°</code>.</para>
+    <example>
+        <title>Example</title>
+        <para>
+            <informaltable>
+                <tgroup cols="2">
+                    <tbody>
+                        <row>
+                            <entry>Input</entry>
+                            <entry>Rendered</entry>
+                        </row>
+                        <row>
+                            <entry><code>, a A <emphasis role="bold">a A</emphasis>,</code></entry>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+        </para>
+    </example>
+    <para>For <emphasis role="bold">dotted notes</emphasis> you use <code>&lt;</code> after the
+        note.</para>
+    <para>To draw a <emphasis role="bold">tie</emphasis> after a note append an
+        <code>L</code>.</para>
+</topic>

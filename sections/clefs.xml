@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<section xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    <info>
+        <title>Clefs</title>
+    </info>
+    <para>Cavatina supports three different clefs:</para>
+    <informaltable>
+        <tgroup cols="2">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <tbody>
+                <row>
+                    <entry>F-clef</entry>
+                    <entry>?</entry>
+                </row>
+                <row>
+                    <entry>C-clef</entry>
+                    <entry>?ß <emphasis role="italic">or</emphasis> ß?</entry>
+                </row>
+                <row>
+                    <entry>G-clef</entry>
+                    <entry>ß</entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </informaltable>
+    <para>The input of the notes is invariant of the signature; it doesn’t depend on the current
+        clef.</para>
+</section>

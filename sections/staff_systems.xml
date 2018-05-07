@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<section xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    <info>
+        <title>Staff systems</title>
+    </info>
+    <para>To create systems of multiple staves you can extend barlines to join with the upper staff.
+        To draw a <emphasis role="italic">grand staff</emphasis>, first enter a newline followed by
+        a single barline <code>,</code> to start a new staff. To draw the brace connecting with the
+        upper staff, type in <code>**</code>. Then continue with the clef and key signature as you
+        would normally do. To connect the subsequent barlines, write a single <code>*</code> after
+        them. </para>
+    <informaltable>
+        <tgroup cols="2">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <tbody>
+                <row>
+                    <entry>brace</entry>
+                    <entry>,**</entry>
+                </row>
+                <row>
+                    <entry>long barlines</entry>
+                    <entry>,*  .*  <emphasis role="italic">etc.</emphasis></entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </informaltable>
+    
+    <example>
+        <title>Example</title>
+        <para>
+            <informaltable>
+                <tgroup cols="2">
+                    <tbody>
+                        <row>
+                            <entry>Input</entry>
+                            <entry>Rendered</entry>
+                        </row>
+                        <row>
+                            <entry><literallayout><code>,ß''' DFJ DGJ J s d>..,
+,** ?''' A D Ü MJ ,*</code></literallayout></entry>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+        </para>
+    </example>
+</section>

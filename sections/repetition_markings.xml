@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<section xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    <info>
+        <title>Repetition markings</title>
+    </info>
+    <para>Apart from the repeat barlines <code>; <emphasis role="italic">|</emphasis> :</code>, you
+        can use the following repetition markings:</para>
+    <informaltable>
+        <tgroup cols="2">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <tbody>
+                <row>
+                    <entry>1st repetition</entry>
+                    <entry>o</entry>
+                </row>
+                <row>
+                    <entry>2nd repetition</entry>
+                    <entry>oo</entry>
+                </row>
+                <row>
+                    <entry>end marking</entry>
+                    <entry>o^</entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </informaltable>
+    <para>The end marking is necessary for the MusicXML/MIDI converter to detect the range of the
+        repetition sections.</para>
+    <informaltable>
+        <tgroup cols="2">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <tbody>
+                <row>
+                    <entry>coda</entry>
+                    <entry>i</entry>
+                </row>
+                <row>
+                    <entry>segno</entry>
+                    <entry>I</entry>
+                </row>
+                <row>
+                    <entry>D.C.</entry>
+                    <entry>k</entry>
+                </row>
+                <row>
+                    <entry>D.S.</entry>
+                    <entry>K</entry>
+                </row>
+            </tbody>
+        </tgroup>
+    </informaltable>
+    <para>Writing <emphasis role="italic">coda</emphasis> or <emphasis role="italic"
+            >segno</emphasis> right after <emphasis role="italic">D.C.</emphasis> or <emphasis
+            role="italic">D.S.</emphasis> will append "al Coda" and "al Fine" accordingly. </para>
+    
+    <example>
+        <title>Example</title>
+        <para>
+            <informaltable>
+                <tgroup cols="2">
+                    <tbody>
+                        <row>
+                            <entry>Input</entry>
+                            <entry>Rendered</entry>
+                        </row>
+                        <row>
+                            <entry><code>, D F G Do, D F D Go^:oo D S A Ü.</code></entry>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </informaltable>
+        </para>
+    </example>
+</section>

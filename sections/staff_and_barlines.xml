@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<section version="5.1" xmlns="http://docbook.org/ns/docbook"
+       xmlns:xlink="http://www.w3.org/1999/xlink"
+       xmlns:ns="http://docbook.org/ns/docbook">
+  <info>
+    <title>Staff and Barlines</title>
+  </info>
+
+  <para>When you hit the <code>space</code> bar you draw a new staff “block”.
+  Before any note or chord, you have to draw a new staff block where this note
+  or chord will sit.</para>
+
+  <para>The barlines are located as follows:</para>
+
+  <informaltable>
+    <tgroup cols="2">
+      <colspec colname="col1" colnum="1"/>
+
+      <colspec colname="col2" colnum="2"/>
+
+      <tbody>
+        <row>
+          <entry>simple barline</entry>
+
+          <entry>,</entry>
+        </row>
+
+        <row>
+          <entry>double barline</entry>
+
+          <entry>,,</entry>
+        </row>
+
+        <row>
+          <entry>final barline</entry>
+
+          <entry>.</entry>
+        </row>
+
+        <row>
+          <entry>repeat signs<emphasis role="italic">start</emphasis><emphasis
+          role="italic">end</emphasis></entry>
+
+          <entry>; :</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </informaltable>
+
+  <para>Cavatina is not made to do minor adjustments to the layout, but if you
+  consider it necessary, you can gain control over horizontal spacing by using
+  the half space <code>-</code> and the quarter space <code>--</code>.</para>
+
+  <example>
+    <title>Example</title>
+
+    <para>
+      <informaltable>
+        <tgroup cols="2">
+          <tbody>
+            <row>
+              <entry>Input</entry>
+
+              <entry>Rendered</entry>
+            </row>
+
+            <row>
+              <entry>
+                <code>, ,, . ; :</code>
+              </entry>
+
+              <entry/>
+            </row>
+          </tbody>
+        </tgroup>
+      </informaltable>
+    </para>
+  </example>
+</section>

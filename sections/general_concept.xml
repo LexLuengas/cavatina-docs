@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<section xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    <info>
+        <title>General concept</title>
+    </info>
+    <section>
+        <title>Basics</title>
+        <section>
+            <title>Language overview</title>
+            <para>You type in your music <emphasis role="italic">sequentially</emphasis>, i.e. the same
+                way as in written language. Chords are words, bar-lines are punctuation marks,
+                accidentals are diacritics and staff lines are the space character. Here is the base of
+                Cavatina’s syntax: </para>
+            <orderedlist>
+                <listitem>
+                    <para>Hitting space extends the staff for starting a new note/chord.</para>
+                </listitem>
+                <listitem>
+                    <para>Notes within a chord are typed in <emphasis role="italic">from low to high</emphasis>.</para>
+                </listitem>
+                <listitem>
+                    <para>Note modifiers are written directly <emphasis role="italic">after</emphasis> the corresponding note.</para>
+                </listitem>
+            </orderedlist>
+        </section>
+        <section>
+            <title>Character mappings</title>
+            <para>Notes and all other musical symbols are accessed directly with your computer keyboard. The input depends on what keyboard layout you use. 
+                The complete keyboard mapping for each layout can be found on the <link xlink:href="http://cavatinafont.com/en/keyboard">Keyboard</link> page, but if you are new to Cavatina, it’s recommended to read 
+                through the whole documentation first.</para>
+        </section>
+    </section>
+</section>
