@@ -1,65 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/schema_cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
-    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Articulations</title>
     </info>
+    
     <informaltable>
-        <tgroup cols="2">
-            <colspec colnum="1" colname="col1"/>
-            <colspec colnum="2" colname="col2"/>
-            <tbody>
-                <row>
-                    <entry>staccato</entry>
-                    <entry>ä</entry>
-                </row>
-                <row>
-                    <entry>tenuto</entry>
-                    <entry>Ä</entry>
-                </row>
-                <row>
-                    <entry>staccatissimo</entry>
-                    <entry>ää</entry>
-                </row>
-                <row>
-                    <entry>fermata</entry>
-                    <entry>ÄÄ</entry>
-                </row>
-                <row>
-                    <entry>accent</entry>
-                    <entry>></entry>
-                </row>
-            </tbody>
-        </tgroup>
+        <thead>
+            <tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>staccato</td>
+                <td><cav-computer-key></cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>tenuto</td>
+                <td><cav-computer-key></cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>staccatissimo</td>
+                <td><cav-computer-key></cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>fermata</td>
+                <td><cav-computer-key></cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>accent</td>
+                <td><cav-computer-key></cav-computer-key></td>
+            </tr>
+        </tbody>
     </informaltable>
+    
     <para>All articulations are written after the lowest note of a chord, except the fermata, which
         is written after the highest note. </para>
     
     <example>
         <title>Example</title>
-        <para>
-            <informaltable>
-                <tgroup cols="2">
-                    <tbody>
-                        <row>
-                            <entry>Input</entry>
-                            <entry>Rendered</entry>
-                        </row>
-                        <row>
-                            <entry><code> Aä AÄ Aää AÄÄ A></code></entry>
-                            <entry>
-                                <mediaobject>
-                                    <imageobject>
-                                        <imagedata fileref="../music_notation/articulations.ly" role="printfilename" />
-                                    </imageobject>
-                                </mediaobject>
-                            </entry>
-                        </row>
-                    </tbody>
-                </tgroup>
-            </informaltable>
-        </para>
+        <informaltable>
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><cav-computer-key> Aä AÄ Aää AÄÄ A></cav-computer-key></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </informaltable>
     </example>
 </section>

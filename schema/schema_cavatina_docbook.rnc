@@ -3,18 +3,22 @@ default namespace = "http://docbook.org/ns/docbook"
 
 include "docbook.rnc"
 
-db.domain.inlines |= db.computer-key
+db.domain.inlines |= db.cav-computer-key
 
 # Define a new computer-key element:
 
-db.computer-key.role.attribute = attribute role { text }
-db.computer-key.attlist =
-   db.computer-key.role.attribute?
+db.cav-computer-key.role.attribute = attribute role { text }
+db.cav-computer-key.attlist =
+   db.cav-computer-key.role.attribute?
  & db.common.attributes
  & db.common.linking.attributes
+ 
+db.cav-computer-key.attlist &=
+  attribute source-symbol { text }?
+ 
 
-db.computer-key =
-   element computer-key {
-      db.computer-key.attlist,
+db.cav-computer-key =
+   element cav-computer-key {
+      db.cav-computer-key.attlist,
       db._text
    }

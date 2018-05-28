@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://docbook.org/xml/5.1/sch/docbook.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../schema/schema_cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
-    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1">
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Note orientation</title>
     </info>
-    <para>The stem of a note can be inverted. This is done with the <emphasis role="italic"
-            >inverter</emphasis><code>^</code>. A note can only be inverted once (which doesn’t stop
+    <para>The stem of a note can be inverted. This is done with the <glossterm>inverter</glossterm><cav-computer-key>^</cav-computer-key>. A note can only be inverted once (which doesn’t stop
         you from un-inverting).</para>
     <para>To invert the stem of a chord you invert the first note of the chord. If the next note in
         the chord would collide in its default orientation, then it is automatically inverted.
@@ -15,21 +13,19 @@
         voices within one chord.</para>
     <example>
         <title>Example</title>
-        <para>
-            <informaltable>
-                <tgroup cols="2">
-                    <tbody>
-                        <row>
-                            <entry>Input</entry>
-                            <entry>Rendered</entry>
-                        </row>
-                        <row>
-                            <entry><code>, f f^ j j^, afj a^fj a^f^j a^f^j^,</code></entry>
-                            <entry/>
-                        </row>
-                    </tbody>
-                </tgroup>
-            </informaltable>
-        </para>
+        <informaltable>
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><cav-computer-key>, f f^ j j^, afj a^fj a^f^j a^f^j^,</cav-computer-key></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </informaltable>
     </example>
 </section>
