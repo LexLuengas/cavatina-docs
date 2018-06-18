@@ -7,11 +7,11 @@
     </info>
     
     <para>Time signatures have to be written after clefs (and key signatures) or barlines. To start
-        a time signature enter the <emphasis role="italic">time</emphasis> key <cav-computer-key>°</cav-computer-key>. After
+        a time signature enter the <musical-term>time</musical-term> key <cav-computer-key>°</cav-computer-key>. After
         that you just write the upper and lower numeral successively. </para>
     
-    <para>To write the <emphasis role="italic">common time</emphasis> or <emphasis role="italic">cut
-        time</emphasis> symbols, enter <cav-computer-key>c</cav-computer-key> or <cav-computer-key>C</cav-computer-key> 
+    <para>To write the <musical-term>common time</musical-term> or <musical-term>cut
+        time</musical-term> symbols, enter <cav-computer-key>c</cav-computer-key> or <cav-computer-key>C</cav-computer-key> 
         after the <emphasis role="italic">time</emphasis> key.</para>
     
     <para>A space is automatically attached after a time signature, so that you don’t have to open a

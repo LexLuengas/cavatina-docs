@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="xs"
-    version="2.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     
-    <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/html/profile-docbook.xsl"/>
-    <xsl:import href="cavatina_docbook.xsl"/>
+    <xsl:import href="https://cdn.docbook.org/release/xsl/current/html/docbook.xsl"/>
+    
+    <xsl:param name="emphasis.propagates.style" select="1"/>
+    
+    <xsl:template match="*[@role='cav-computer-key']" mode="class.value">
+        <code class="{@role}">
+             <xsl:apply-templates/>        
+        </code>
+    </xsl:template>
     
 </xsl:stylesheet>

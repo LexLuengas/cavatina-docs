@@ -1,0 +1,340 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Documentation for Cavatina</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article"><div class="titlepage"><div><div><h1 class="title"><a name="d56e2"></a>Documentation for Cavatina</h1></div><div><div class="author"><h3 class="author"><span class="firstname">Alexis</span> <span class="surname">Luengas</span></h3><div class="affiliation"><span class="orgname">Hochschule der Medien Stuttgart<br></span></div></div></div><div><p class="pubdate">01.06.2018</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="#d56e18">General concept</a></span></dt><dd><dl><dt><span class="section"><a href="#d56e22">Language overview</a></span></dt><dt><span class="section"><a href="#d56e46">Character mappings</a></span></dt></dl></dd><dt><span class="section"><a href="#d56e55">The musical note</a></span></dt><dd><dl><dt><span class="section"><a href="#d56e86">Note length</a></span></dt><dt><span class="section"><a href="#d56e276">Note orientation</a></span></dt><dt><span class="section"><a href="#d56e312">Rests</a></span></dt><dt><span class="section"><a href="#d56e347">Note beams</a></span></dt></dl></dd><dt><span class="section"><a href="#d56e385">Staff and Barlines</a></span></dt><dt><span class="section"><a href="#d56e483">Clefs</a></span></dt><dt><span class="section"><a href="#d56e533">Time Signatures</a></span></dt><dt><span class="section"><a href="#d56e588">Articulations</a></span></dt><dt><span class="section"><a href="#d56e673">Dynamics</a></span></dt><dt><span class="section"><a href="#d56e844">Ornaments</a></span></dt><dt><span class="section"><a href="#d56e946">Repetition markings</a></span></dt><dt><span class="section"><a href="#d56e1086">Other Notation</a></span></dt><dt><span class="section"><a href="#d56e1194">Staff systems</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d56e18"></a>General concept</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d56e22"></a>Language overview</h3></div></div></div><p>You type in your music <span class="italic">sequentially</span>, i.e. the same
+            way as in written language. Chords are words, bar-lines are punctuation marks,
+            accidentals are diacritics and staff lines are the space character. Here is the base of
+            Cavatina&#x2019;s syntax: </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>Hitting space extends the staff for starting a new note/chord.</p></li><li class="listitem"><p>Notes within a chord are typed in <span class="italic">from low to high</span>.</p></li><li class="listitem"><p>Note modifiers are written directly <span class="italic">after</span> the corresponding note.</p></li></ol></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d56e46"></a>Character mappings</h3></div></div></div><p>Notes and all other musical symbols are accessed directly with your computer keyboard. The input depends on what keyboard layout you use. 
+            The complete keyboard mapping for each layout can be found on the <a class="link" href="http://cavatinafont.com/en/keyboard" target="_top">keyboard page</a>, but if you are new to Cavatina, it&#x2019;s recommended to read 
+            through the whole documentation first.</p></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d56e55"></a>The musical note</h2></div></div></div><p>The location of each note is motivated by the fact that the lowest row of characters
+        just above the space bar has exactly <span class="bold"><strong>seven letters</strong></span>: the
+        seven pitches of a diatonic scale.</p><p>It is easy to learn where this seven notes are because of their physical location on
+        the keyboard. It&#x2019;s like playing on the piano, but without the black keys.</p><div class="mediaobject"><img src="images/keyboard_basic.png"></div><p>Most musicians aren't happy with just seven notes. Following the idea above, we get a
+        new octave for each of the four rows of the keyboard above the space bar, with the top
+        row having three additional notes, like this:</p><div class="mediaobject"><img src="images/keyboard_overview.png"></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Notice each column contains the same note in different octaves.</p></div><p>If you have used other notation software, you are probably used to look
+        for the <span style="color: red">&lt;cav-computer-key&gt;C&lt;/cav-computer-key&gt;</span> key if you want to write a <span class="italic">C</span>, and so on. This is not very efficient, because
+        sadly these letters aren&#x2019;t ordered in such order in a row. When writing notes
+        with Cavatina, once you get your fingers placed in the right position, you have
+        all notes you need at your fingertips and you don&#x2019;t have to look
+        back down at the keyboard.
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d56e86"></a>Note length</h3></div></div></div><p> So far we have 31 notes (covering a bit more than four octaves). Each of these characters
+        has its lowercase and uppercase variant, which correspond to the note in
+            8<sup>th</sup> and 4<sup>th</sup> length accordingly.
+        Switching to the bold weight of Cavatina, you get 16<sup>th</sup>-notes in
+        the lowercase and 8<sup>th</sup>-notes in the uppercase characters. </p><div class="informaltable"><table><thead><tr>
+                <td></td>
+                <th>Input</th>
+                <th>Note length</th>
+            </tr></thead><tbody><tr>
+                <th rowspan="2">Regular style</th>
+                <td>
+                    <span style="color: red">&lt;cav-computer-key&gt;a&lt;/cav-computer-key&gt;</span>
+                </td>
+                <td> 8<sup>th</sup>
+                </td>
+            </tr><tr>
+                <td>
+                    <span style="color: red">&lt;cav-computer-key&gt;A&lt;/cav-computer-key&gt;</span>
+                </td>
+                <td> 4<sup>th</sup>
+                </td>
+            </tr><tr>
+                <th rowspan="2">Bold style</th>
+                <td>
+                    <span style="color: red">&lt;cav-computer-key&gt;<span class="bold"><strong>a</strong></span>&lt;/cav-computer-key&gt;</span>
+                </td>
+                <td> 16<sup>th</sup>
+                </td>
+            </tr><tr>
+                <td>
+                    <span style="color: red">&lt;cav-computer-key&gt;<span class="bold"><strong>A</strong></span>&lt;/cav-computer-key&gt;</span>
+                </td>
+                <td> 8<sup>th</sup>
+                </td>
+            </tr></tbody></table></div><div class="example"><a name="d56e181"></a><p class="title"><b>Example&nbsp;1.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><span style="color: red">&lt;cav-computer-key&gt;, a A <span class="bold"><strong>a
+                            A</strong></span>,&lt;/cav-computer-key&gt;</span></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"><p>Appart from that, Cavatina has a special key that serves as a <span class="bold"><strong>modifier key</strong></span>: the <span style="color: red">&lt;cav-computer-key&gt;^&lt;/cav-computer-key&gt;</span>/<span style="color: red">&lt;cav-computer-key&gt;°&lt;/cav-computer-key&gt;</span> key. We are going to call
+        <span style="color: red">&lt;cav-computer-key&gt;^&lt;/cav-computer-key&gt;</span> the <em class="glossterm">inverter</em> and <span style="color: red">&lt;cav-computer-key&gt;°&lt;/cav-computer-key&gt;</span> the
+            <em class="glossterm">time</em> character, the latter of which, among other things, extends
+        the duration of notes. Every time you hit the time key after a note, the note&#x2019;s length
+        doubles. You can do this up to a maximum of twice per note, i.e. for a whole note you would
+        need to type a 4<sup>th</sup>-note followed by two times <span style="color: red">&lt;cav-computer-key&gt;°&lt;/cav-computer-key&gt;</span>.</p><div class="example"><a name="d56e236"></a><p class="title"><b>Example&nbsp;2.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><span style="color: red">&lt;cav-computer-key&gt;, f F f~ f~~ F~ F~~,&lt;/cav-computer-key&gt;</span></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"><p>For <em class="glossterm">dotted notes</em> you use <span style="color: red">&lt;cav-computer-key&gt;&lt;&lt;/cav-computer-key&gt;</span> after the note.</p><p>To draw a <em class="glossterm">tie</em> after a note append an <span style="color: red">&lt;cav-computer-key&gt;L&lt;/cav-computer-key&gt;</span>.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d56e276"></a>Note orientation</h3></div></div></div><p>The stem of a note can be inverted. This is done with the <em class="glossterm">inverter</em><span style="color: red">&lt;cav-computer-key&gt;^&lt;/cav-computer-key&gt;</span>. A note can only be inverted once (which doesn&#x2019;t stop
+        you from un-inverting).</p><p>To invert the stem of a chord you invert the first note of the chord. If the next note in
+        the chord would collide in its default orientation, then it is automatically inverted.
+        Otherwise keep inverting until you obtain the desired result. This is useful for separating
+        voices within one chord.</p><div class="example"><a name="d56e289"></a><p class="title"><b>Example&nbsp;3.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><span style="color: red">&lt;cav-computer-key&gt;, f f^ j j^, afj a^fj a^f^j a^f^j^,&lt;/cav-computer-key&gt;</span></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d56e312"></a>Rests</h3></div></div></div><p>Rests are accessed via the <span style="color: red">&lt;cav-computer-key&gt;ü&lt;/cav-computer-key&gt;</span>/<span style="color: red">&lt;cav-computer-key&gt;Ü&lt;/cav-computer-key&gt;</span> key. Their
+        duration is changed the same way as for notes. Optionally, you can write the same rest twice
+        and the length will increase accordingly.</p><div class="example"><a name="d56e324"></a><p class="title"><b>Example&nbsp;4.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><span style="color: red">&lt;cav-computer-key&gt;, ü Ü üü ÜÜ ü° ü°° Ü° Ü°°,&lt;/cav-computer-key&gt;</span></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d56e347"></a>Note beams</h3></div></div></div><p>To beam two 8<sup>th</sup> or 16<sup>th</sup> notes, write two dots <span style="color: red">&lt;cav-computer-key&gt;..&lt;/cav-computer-key&gt;</span> after the second note. Both
+        notes need to have the same orientation before they can be beamed. Currently only pairs of
+        notes can be beamed.</p><div class="example"><a name="d56e362"></a><p class="title"><b>Example&nbsp;5.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><span style="color: red">&lt;cav-computer-key&gt;,  dh sj..  d^h^ s^..j  d^h s^..j^..,&lt;/cav-computer-key&gt;</span></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d56e385"></a>Staff and Barlines</h2></div></div></div><p>When you hit the spacebar you draw a new staff &#x201c;block&#x201d;.
+  Before any note or chord, you have to draw a new <span style="color: red">&lt;musical-term&gt;staff&lt;/musical-term&gt;</span> block where this note
+  or chord will sit.</p><p>The barlines are located as follows:</p><div class="informaltable"><table><thead><tr>
+        <th>Musical symbol</th>
+        <th>Computer key</th>
+      </tr></thead><tbody><tr>
+        <td>simple barline</td>
+        <td><span style="color: red">&lt;cav-computer-key&gt;,&lt;/cav-computer-key&gt;</span></td>
+      </tr><tr>
+        <td>double barline</td>
+        <td><span style="color: red">&lt;cav-computer-key&gt;,,&lt;/cav-computer-key&gt;</span></td>
+      </tr><tr>
+        <td>final barline</td>
+        <td><span style="color: red">&lt;cav-computer-key&gt;.&lt;/cav-computer-key&gt;</span></td>
+      </tr><tr>
+        <td>repeat barline (start)</td>
+        <td><span style="color: red">&lt;cav-computer-key&gt;;&lt;/cav-computer-key&gt;</span></td>
+      </tr><tr>
+        <td>repeat barline (end)</td>
+        <td><span style="color: red">&lt;cav-computer-key&gt;:&lt;/cav-computer-key&gt;</span></td>
+      </tr></tbody></table></div><p>Cavatina is not made to do minor adjustments to the layout, but if you
+  consider it necessary, you can gain control over horizontal spacing by using
+  the half space <span style="color: red">&lt;cav-computer-key&gt;-&lt;/cav-computer-key&gt;</span> and the quarter space <span style="color: red">&lt;cav-computer-key&gt;--&lt;/cav-computer-key&gt;</span>.</p><div class="example"><a name="d56e460"></a><p class="title"><b>Example&nbsp;6.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+          <th>Input</th>
+          <th>Rendered output</th>
+        </tr></thead><tbody><tr>
+          <td><span style="color: red">&lt;cav-computer-key&gt;, ,, . ; :&lt;/cav-computer-key&gt;</span></td>
+          <td></td>
+        </tr></tbody></table></div></div></div><br class="example-break"></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d56e483"></a>Clefs</h2></div></div></div><p>Cavatina supports three different clefs:</p><div class="informaltable"><table><thead><tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr></thead><tbody><tr>
+                <td>F-clef</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;?&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>C-Clef</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;?ß&lt;/cav-computer-key&gt;</span> or <span style="color: red">&lt;cav-computer-key&gt;ß?&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>G-Clef</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;ß&lt;/cav-computer-key&gt;</span></td>
+            </tr></tbody></table></div><p>The input of the notes is invariant of the signature; it doesn&#x2019;t depend on the current
+        clef.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d56e533"></a>Time Signatures</h2></div></div></div><p>Time signatures have to be written after clefs (and key signatures) or barlines. To start
+        a time signature enter the <span style="color: red">&lt;musical-term&gt;time&lt;/musical-term&gt;</span> key <span style="color: red">&lt;cav-computer-key&gt;°&lt;/cav-computer-key&gt;</span>. After
+        that you just write the upper and lower numeral successively. </p><p>To write the <span style="color: red">&lt;musical-term&gt;common time&lt;/musical-term&gt;</span> or <span style="color: red">&lt;musical-term&gt;cut
+        time&lt;/musical-term&gt;</span> symbols, enter <span style="color: red">&lt;cav-computer-key&gt;c&lt;/cav-computer-key&gt;</span> or <span style="color: red">&lt;cav-computer-key&gt;C&lt;/cav-computer-key&gt;</span> 
+        after the <span class="italic">time</span> key.</p><p>A space is automatically attached after a time signature, so that you don&#x2019;t have to open a
+        new staff block yourself.</p><div class="example"><a name="d56e564"></a><p class="title"><b>Example&nbsp;7.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><span style="color: red">&lt;cav-computer-key&gt;,°34 ,°1216 ,?'''°34 ,°c ,&lt;/cav-computer-key&gt;</span></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d56e588"></a>Articulations</h2></div></div></div><div class="informaltable"><table><thead><tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr></thead><tbody><tr>
+                <td>staccato</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;ä&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>tenuto</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;Ä&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>staccatissimo</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;ää&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>fermata</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;ÄÄ&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>accent</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;&gt;&lt;/cav-computer-key&gt;</span></td>
+            </tr></tbody></table></div><p>All articulations are written after the lowest note of a chord, except the fermata, which
+        is written after the highest note. </p><div class="example"><a name="d56e650"></a><p class="title"><b>Example&nbsp;8.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><span style="color: red">&lt;cav-computer-key&gt; Aä AÄ Aää AÄÄ A&gt;&lt;/cav-computer-key&gt;</span></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d56e673"></a>Dynamics</h2></div></div></div><p>Dynamics are aligned with respect to the note to which they are applied. Therefore, if you
+        are writing a chord with some dynamics marking, you should write that marking just after the
+        first (lowest) note of the chord.</p><div class="informaltable"><table><thead><tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr></thead><tbody><tr>
+                <td>pianississimo</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;***&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>pianissimo</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;**&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>piano</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;*&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>mezzo piano</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;*+&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>mezzo forte</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;+*&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>forte</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;+&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>fortissimo</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;++&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>fortississimo</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;+++&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>sforzando</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;++*&lt;/cav-computer-key&gt;</span> or
+                    <span style="color: red">&lt;cav-computer-key&gt;**+&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>forte-piano</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;***+&lt;/cav-computer-key&gt;</span> or 
+                    <span style="color: red">&lt;cav-computer-key&gt;+++*&lt;/cav-computer-key&gt;</span> or 
+                    <span style="color: red">&lt;cav-computer-key&gt;**^&lt;/cav-computer-key&gt;</span> or 
+                    <span style="color: red">&lt;cav-computer-key&gt;++^&lt;/cav-computer-key&gt;</span></td>
+            </tr></tbody></table></div><div class="informaltable"><table><thead><tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr></thead><tbody><tr>
+                <td>crescendo</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;l&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>decrescendo</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;l^&lt;/cav-computer-key&gt;</span></td>
+            </tr></tbody></table></div><div class="example"><a name="d56e821"></a><p class="title"><b>Example&nbsp;9.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><span style="color: red">&lt;cav-computer-key&gt; d*fh h^++er M**+ Dl &lt;/cav-computer-key&gt;</span></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d56e844"></a>Ornaments</h2></div></div></div><div class="informaltable"><table><thead><tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr></thead><tbody><tr>
+                <td>mordent</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;ö&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>inv. mordent</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;ö^&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>trill</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;öö&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>turn</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;Ö&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>inv. turn</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;Ö^&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>arpeggio</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;P&lt;/cav-computer-key&gt;</span></td>
+            </tr></tbody></table></div><p>Note that, intuitively enough, ornaments are inverted with the <span class="musical_term">inverter</span> key <span style="color: red">&lt;cav-computer-key&gt;^&lt;/cav-computer-key&gt;</span>.</p><p>To extend the trill or the arpeggio repeat that same character. The arpeggio is written at
+        the end of a chord. </p><div class="example"><a name="d56e923"></a><p class="title"><b>Example&nbsp;10.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><span style="color: red">&lt;cav-computer-key&gt; Dö DÖ Dö^ DÖ^ Döö Döööö &lt;/cav-computer-key&gt;</span></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d56e946"></a>Repetition markings</h2></div></div></div><p>Apart from the repeat barlines <span style="color: red">&lt;cav-computer-key&gt;;&lt;/cav-computer-key&gt;</span>/<span style="color: red">&lt;cav-computer-key&gt;:&lt;/cav-computer-key&gt;</span>, you
+        can use the following repetition markings:</p><div class="informaltable"><table><thead><tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr></thead><tbody><tr>
+                <td>1<sup>st</sup> repetition</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;o&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>2<sup>nd</sup> repetition</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;oo&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>end marking</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;o^&lt;/cav-computer-key&gt;</span></td>
+            </tr></tbody></table></div><p>The end marking is necessary for the MusicXML/MIDI converter to detect the range of the
+        repetition sections.</p><div class="informaltable"><table><thead><tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr></thead><tbody><tr>
+                <td>coda</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;i&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>segno</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;I&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>D.C.</td>
+                <td>k</td>
+            </tr><tr>
+                <td>D.S.</td>
+                <td>K</td>
+            </tr></tbody></table></div><p>Writing <span class="italic">coda</span> or <span class="italic">segno</span> right after <span class="italic">D.C.</span> or <span class="italic">D.S.</span> will append the words "al Coda" and "al Fine" accordingly.</p><div class="example"><a name="d56e1063"></a><p class="title"><b>Example&nbsp;11.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><span style="color: red">&lt;cav-computer-key&gt;, D F G Do, D F D Go^:oo D S A Ü.&lt;/cav-computer-key&gt;</span></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d56e1086"></a>Other Notation</h2></div></div></div><p>Octave markings are used in a similar manner as repetition markings and always after the
+        highest note in a chord.</p><div class="informaltable"><table><thead><tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr></thead><tbody><tr>
+                <td>8<sup>va</sup></td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;O&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>8<sup>va</sup> (2)</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;OO&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>end 8<sup>va</sup></td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;O^&lt;/cav-computer-key&gt;</span></td>
+            </tr></tbody></table></div><p>The triplet is written before the chord sequence. Use tight spacing to fit the notes under
+        the mark: enter three quarter-spaces <span style="color: red">&lt;cav-computer-key&gt;---&lt;/cav-computer-key&gt;</span> between the notes.</p><div class="informaltable"><table><thead><tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr></thead><tbody><tr>
+                <td>triplet</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;_&lt;/cav-computer-key&gt;</span></td>
+            </tr></tbody></table></div><p>Pedal markings are lower markings and as such they have to be applied to the first note of
+        a chord.</p><div class="informaltable"><table><thead><tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr></thead><tbody><tr>
+                <td>pedal</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;p&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>release pedal</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;pp&lt;/cav-computer-key&gt;</span></td>
+            </tr></tbody></table></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d56e1194"></a>Staff systems</h2></div></div></div><p>To create systems of multiple staves you can extend barlines to join with the upper staff.
+        To draw a <span class="italic">grand staff</span>, first enter a newline followed by
+        a single barline <span style="color: red">&lt;cav-computer-key&gt;,&lt;/cav-computer-key&gt;</span> to start a new staff. To draw the brace connecting with the
+        upper staff, type in <span style="color: red">&lt;cav-computer-key&gt;**&lt;/cav-computer-key&gt;</span>. Then continue with the clef and key signature as you
+        would normally do. To connect the subsequent barlines, write a single <span style="color: red">&lt;cav-computer-key&gt;*&lt;/cav-computer-key&gt;</span> after
+        them. </p><div class="informaltable"><table><thead><tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr></thead><tbody><tr>
+                <td>brace</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;,**&lt;/cav-computer-key&gt;</span></td>
+            </tr><tr>
+                <td>long barlines</td>
+                <td><span style="color: red">&lt;cav-computer-key&gt;,*&lt;/cav-computer-key&gt;</span> or <span style="color: red">&lt;cav-computer-key&gt;.*&lt;/cav-computer-key&gt;</span> ...</td>
+            </tr></tbody></table></div><div class="example"><a name="d56e1245"></a><p class="title"><b>Example&nbsp;12.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><span style="color: red">&lt;cav-computer-key&gt;,ß''' DFJ DGJ J s d&gt;..,
+,** ?''' A D Ü MJ ,*&lt;/cav-computer-key&gt;</span></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"></div></div></body></html>

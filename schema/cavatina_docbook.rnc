@@ -1,6 +1,6 @@
+default namespace = "http://docbook.org/ns/docbook"
 namespace db = "http://docbook.org/ns/docbook"
 namespace r  = "http://nwalsh.com/xmlns/schema-remap/"
-default namespace = "http://docbook.org/ns/docbook"
 
 db.domain.inlines |= db.cav-computer-key
 
@@ -8,7 +8,7 @@ db.domain.inlines |= db.cav-computer-key
 
 db.musical-term =
   [ r:remap [ db:emphasis [ ] ] ]
-  element musical-term { text }
+  element musical-term { db._text }
 
 # Define a new computer-key element:
 
