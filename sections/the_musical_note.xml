@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/schema_cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended"
     xmlns:xila="http://www.w3.org/2001/XInclude/local-attributes"
@@ -7,29 +7,36 @@
     <info>
         <title>The musical note</title>
     </info>
+    
     <para>The location of each note is motivated by the fact that the lowest row of characters
         just above the space bar has exactly <emphasis role="bold">seven letters</emphasis>: the
         seven pitches of a diatonic scale.</para>
+    
     <para>It is easy to learn where this seven notes are because of their physical location on
         the keyboard. It’s like playing on the piano, but without the black keys.</para>
+    
     <mediaobject>
         <imageobject>
             <imagedata fileref="images/keyboard_basic.png"/>
         </imageobject>
     </mediaobject>
+    
     <para>Most musicians aren't happy with just seven notes. Following the idea above, we get a
         new octave for each of the four rows of the keyboard above the space bar, with the top
         row having three additional notes, like this:</para>
+    
     <mediaobject>
         <imageobject>
             <imagedata fileref="images/keyboard_overview.png"/>
         </imageobject>
     </mediaobject>
+    
     <note>
         <para>Notice each column contains the same note in different octaves.</para>
     </note>
+    
     <para>If you have used other notation software, you are probably used to look
-        for the <code>C</code> key if you want to write a <emphasis
+        for the <cav-computer-key>C</cav-computer-key> key if you want to write a <emphasis
             role="italic">C</emphasis>, and so on. This is not very efficient, because
         sadly these letters aren’t ordered in such order in a row. When writing notes
         with Cavatina, once you get your fingers placed in the right position, you have

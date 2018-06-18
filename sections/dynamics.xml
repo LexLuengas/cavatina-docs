@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/schema_cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
@@ -8,89 +8,96 @@
     <para>Dynamics are aligned with respect to the note to which they are applied. Therefore, if you
         are writing a chord with some dynamics marking, you should write that marking just after the
         first (lowest) note of the chord.</para>
+    
     <informaltable>
-        <tgroup cols="2">
-            <colspec colnum="1" colname="col1"/>
-            <colspec colnum="2" colname="col2"/>
-            <tbody>
-                <row>
-                    <entry>pianississimo</entry>
-                    <entry>***</entry>
-                </row>
-                <row>
-                    <entry>pianissimo</entry>
-                    <entry>**</entry>
-                </row>
-                <row>
-                    <entry>piano</entry>
-                    <entry>*</entry>
-                </row>
-                <row>
-                    <entry>mezzo piano</entry>
-                    <entry>*+</entry>
-                </row>
-                <row>
-                    <entry>mezzo forte</entry>
-                    <entry>+*</entry>
-                </row>
-                <row>
-                    <entry>forte</entry>
-                    <entry>+</entry>
-                </row>
-                <row>
-                    <entry>fortissimo</entry>
-                    <entry>++</entry>
-                </row>
-                <row>
-                    <entry>fortississimo</entry>
-                    <entry>+++</entry>
-                </row>
-                <row>
-                    <entry>sforzando</entry>
-                    <entry>**+ <emphasis role="italic">or</emphasis> ++*</entry>
-                </row>
-                <row>
-                    <entry>forte-piano</entry>
-                    <entry>***+ <emphasis role="italic">or</emphasis> +++* **^ <emphasis
-                            role="italic">or</emphasis> ++^</entry>
-                </row>
-            </tbody>
-        </tgroup>
+        <thead>
+            <tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>pianississimo</td>
+                <td><cav-computer-key>***</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>pianissimo</td>
+                <td><cav-computer-key>**</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>piano</td>
+                <td><cav-computer-key>*</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>mezzo piano</td>
+                <td><cav-computer-key>*+</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>mezzo forte</td>
+                <td><cav-computer-key>+*</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>forte</td>
+                <td><cav-computer-key>+</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>fortissimo</td>
+                <td><cav-computer-key>++</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>fortississimo</td>
+                <td><cav-computer-key>+++</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>sforzando</td>
+                <td><cav-computer-key>++*</cav-computer-key> or
+                    <cav-computer-key>**+</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>forte-piano</td>
+                <td><cav-computer-key>***+</cav-computer-key> or 
+                    <cav-computer-key>+++*</cav-computer-key> or 
+                    <cav-computer-key>**^</cav-computer-key> or 
+                    <cav-computer-key>++^</cav-computer-key></td>
+            </tr>
+        </tbody>
     </informaltable>
+    
     <informaltable>
-        <tgroup cols="2">
-            <colspec colnum="1" colname="col1"/>
-            <colspec colnum="2" colname="col2"/>
-            <tbody>
-                <row>
-                    <entry>crescendo</entry>
-                    <entry>l</entry>
-                </row>
-                <row>
-                    <entry>decrescendo</entry>
-                    <entry>l^</entry>
-                </row>
-            </tbody>
-        </tgroup>
+        <thead>
+            <tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>crescendo</td>
+                <td><cav-computer-key>l</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>decrescendo</td>
+                <td><cav-computer-key>l^</cav-computer-key></td>
+            </tr>
+        </tbody>
     </informaltable>
     
     <example>
         <title>Example</title>
-        <para>
-            <informaltable>
-                <tgroup cols="2">
-                    <tbody>
-                        <row>
-                            <entry>Input</entry>
-                            <entry>Rendered</entry>
-                        </row>
-                        <row>
-                            <entry><code> d*fh h^++er M**+ Dl </code></entry>
-                            <entry/>
-                        </row>
-                    </tbody>
-                </tgroup>
-            </informaltable>
-        </para>
+        <informaltable>
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><cav-computer-key> d*fh h^++er M**+ Dl </cav-computer-key></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </informaltable>
     </example>
 </section>

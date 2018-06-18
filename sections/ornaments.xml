@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/schema_cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
@@ -7,67 +7,60 @@
     </info>
     
     <informaltable>
+        <thead>
+            <tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr>
+        </thead>
         <tbody>
             <tr>
-                <td></td>
+                <td>mordent</td>
+                <td><cav-computer-key>ö</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>inv. mordent</td>
+                <td><cav-computer-key>ö^</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>trill</td>
+                <td><cav-computer-key>öö</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>turn</td>
+                <td><cav-computer-key>Ö</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>inv. turn</td>
+                <td><cav-computer-key>Ö^</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>arpeggio</td>
+                <td><cav-computer-key>P</cav-computer-key></td>
             </tr>
         </tbody>
     </informaltable>
     
-    <informaltable>
-        <tgroup cols="2">
-            <colspec colnum="1" colname="col1"/>
-            <colspec colnum="2" colname="col2"/>
-            <tbody>
-                <row>
-                    <entry>mordent</entry>
-                    <entry>ö</entry>
-                </row>
-                <row>
-                    <entry>inv. mordent</entry>
-                    <entry>ö^</entry>
-                </row>
-                <row>
-                    <entry>trill</entry>
-                    <entry>öö</entry>
-                </row>
-                <row>
-                    <entry>turn</entry>
-                    <entry>Ö</entry>
-                </row>
-                <row>
-                    <entry>inv. turn</entry>
-                    <entry>Ö^</entry>
-                </row>
-                <row>
-                    <entry>arpeggio</entry>
-                    <entry>P</entry>
-                </row>
-            </tbody>
-        </tgroup>
-    </informaltable>
-    <para>Note that, intuitively enough, ornaments are inverted with the <emphasis role="definition_term"
-            >inverter</emphasis> key <code>^</code>.</para>
+    <para>Note that, intuitively enough, ornaments are inverted with the <emphasis role="musical_term"
+        >inverter</emphasis> key <cav-computer-key>^</cav-computer-key>.</para>
     <para>To extend the trill or the arpeggio repeat that same character. The arpeggio is written at
         the end of a chord. </para>
     
     <example>
         <title>Example</title>
-        <para>
-            <informaltable>
-                <tgroup cols="2">
-                    <tbody>
-                        <row>
-                            <entry>Input</entry>
-                            <entry>Rendered</entry>
-                        </row>
-                        <row>
-                            <entry><code> Dö DÖ Dö^ DÖ^ Döö Döööö </code></entry>
-                            <entry/>
-                        </row>
-                    </tbody>
-                </tgroup>
-            </informaltable>
-        </para>
+        <informaltable>
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><cav-computer-key> Dö DÖ Dö^ DÖ^ Döö Döööö </cav-computer-key></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </informaltable>
     </example>
 </section>

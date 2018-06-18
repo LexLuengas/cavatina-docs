@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/schema_cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Time Signatures</title>
     </info>
+    
     <para>Time signatures have to be written after clefs (and key signatures) or barlines. To start
-        a time signature enter the <emphasis role="italic">time</emphasis> key <code>°</code>. After
+        a time signature enter the <emphasis role="italic">time</emphasis> key <cav-computer-key>°</cav-computer-key>. After
         that you just write the upper and lower numeral successively. </para>
+    
     <para>To write the <emphasis role="italic">common time</emphasis> or <emphasis role="italic">cut
-            time</emphasis> symbols, enter <emphasis role="italic">c</emphasis> or <emphasis
-            role="italic">C</emphasis> after the <emphasis role="italic">time</emphasis> key.</para>
+        time</emphasis> symbols, enter <cav-computer-key>c</cav-computer-key> or <cav-computer-key>C</cav-computer-key> 
+        after the <emphasis role="italic">time</emphasis> key.</para>
+    
     <para>A space is automatically attached after a time signature, so that you don’t have to open a
         new staff block yourself.</para>
     
     <example>
         <title>Example</title>
-        <para>
-            <informaltable>
-                <tgroup cols="2">
-                    <tbody>
-                        <row>
-                            <entry>Input</entry>
-                            <entry>Rendered</entry>
-                        </row>
-                        <row>
-                            <entry><code>,°34 ,°1216 ,?'''°34 ,°c ,</code></entry>
-                            <entry/>
-                        </row>
-                    </tbody>
-                </tgroup>
-            </informaltable>
-        </para>
+        <informaltable>
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><cav-computer-key>,°34 ,°1216 ,?'''°34 ,°c ,</cav-computer-key></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </informaltable>
     </example>
 </section>

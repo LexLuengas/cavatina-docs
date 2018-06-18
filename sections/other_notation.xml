@@ -1,62 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/schema_cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Other Notation</title>
     </info>
+    
     <para>Octave markings are used in a similar manner as repetition markings and always after the
         highest note in a chord.</para>
+    
     <informaltable>
-        <tgroup cols="2">
-            <colspec colnum="1" colname="col1"/>
-            <colspec colnum="2" colname="col2"/>
-            <tbody>
-                <row>
-                    <entry>8va</entry>
-                    <entry>O</entry>
-                </row>
-                <row>
-                    <entry>8va (2)</entry>
-                    <entry>OO</entry>
-                </row>
-                <row>
-                    <entry>end 8va</entry>
-                    <entry>O^</entry>
-                </row>
-            </tbody>
-        </tgroup>
+        <thead>
+            <tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>8<superscript>va</superscript></td>
+                <td><cav-computer-key>O</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>8<superscript>va</superscript> (2)</td>
+                <td><cav-computer-key>OO</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>end 8<superscript>va</superscript></td>
+                <td><cav-computer-key>O^</cav-computer-key></td>
+            </tr>
+        </tbody>
     </informaltable>
+    
     <para>The triplet is written before the chord sequence. Use tight spacing to fit the notes under
-        the mark: enter three quarter-spaces <code>---</code> between the notes.</para>
+        the mark: enter three quarter-spaces <cav-computer-key>---</cav-computer-key> between the notes.</para>
+    
     <informaltable>
-        <tgroup cols="2">
-            <colspec colnum="1" colname="col1"/>
-            <colspec colnum="2" colname="col2"/>
-            <tbody>
-                <row>
-                    <entry>triplet</entry>
-                    <entry>_</entry>
-                </row>
-            </tbody>
-        </tgroup>
+        <thead>
+            <tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>triplet</td>
+                <td><cav-computer-key>_</cav-computer-key></td>
+            </tr>
+        </tbody>
     </informaltable>
+    
     <para>Pedal markings are lower markings and as such they have to be applied to the first note of
         a chord.</para>
+    
     <informaltable>
-        <tgroup cols="2">
-            <colspec colnum="1" colname="col1"/>
-            <colspec colnum="2" colname="col2"/>
-            <tbody>
-                <row>
-                    <entry>pedal</entry>
-                    <entry>p</entry>
-                </row>
-                <row>
-                    <entry>release pedal</entry>
-                    <entry>pp</entry>
-                </row>
-            </tbody>
-        </tgroup>
+        <thead>
+            <tr>
+                <th>Musical symbol</th>
+                <th>Computer key</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>pedal</td>
+                <td><cav-computer-key>p</cav-computer-key></td>
+            </tr>
+            <tr>
+                <td>release pedal</td>
+                <td><cav-computer-key>pp</cav-computer-key></td>
+            </tr>
+        </tbody>
     </informaltable>
 </section>
