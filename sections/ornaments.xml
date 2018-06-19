@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
+    xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Ornaments</title>
@@ -16,33 +17,33 @@
         <tbody>
             <tr>
                 <td>mordent</td>
-                <td><cav-computer-key>ö</cav-computer-key></td>
+                <td><cav:computer-key>ö</cav:computer-key></td>
             </tr>
             <tr>
                 <td>inv. mordent</td>
-                <td><cav-computer-key>ö^</cav-computer-key></td>
+                <td><cav:computer-key>ö^</cav:computer-key></td>
             </tr>
             <tr>
                 <td>trill</td>
-                <td><cav-computer-key>öö</cav-computer-key></td>
+                <td><cav:computer-key>öö</cav:computer-key></td>
             </tr>
             <tr>
                 <td>turn</td>
-                <td><cav-computer-key>Ö</cav-computer-key></td>
+                <td><cav:computer-key>Ö</cav:computer-key></td>
             </tr>
             <tr>
                 <td>inv. turn</td>
-                <td><cav-computer-key>Ö^</cav-computer-key></td>
+                <td><cav:computer-key>Ö^</cav:computer-key></td>
             </tr>
             <tr>
                 <td>arpeggio</td>
-                <td><cav-computer-key>P</cav-computer-key></td>
+                <td><cav:computer-key>P</cav:computer-key></td>
             </tr>
         </tbody>
     </informaltable>
     
     <para>Note that, intuitively enough, ornaments are inverted with the <emphasis role="musical_term"
-        >inverter</emphasis> key <cav-computer-key>^</cav-computer-key>.</para>
+        >inverter</emphasis> key <cav:computer-key>^</cav:computer-key>.</para>
     <para>To extend the trill or the arpeggio repeat that same character. The arpeggio is written at
         the end of a chord. </para>
     
@@ -57,7 +58,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><cav-computer-key> Dö DÖ Dö^ DÖ^ Döö Döööö </cav-computer-key></td>
+                    <td><cav:computer-key> Dö DÖ Dö^ DÖ^ Döö Döööö </cav:computer-key></td>
                     <td></td>
                 </tr>
             </tbody>

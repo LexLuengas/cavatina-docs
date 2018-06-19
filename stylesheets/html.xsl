@@ -5,7 +5,7 @@
     
     <xsl:param name="emphasis.propagates.style" select="1"/>
     
-    <xsl:template match="*[@role='cav-computer-key']" mode="class.value">
+    <xsl:template match="*[@role='cav:computer-key']" mode="class.value">
         <code class="{@role}">
              <xsl:apply-templates/>        
         </code>

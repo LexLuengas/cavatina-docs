@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
+    xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Articulations</title>
@@ -16,23 +17,23 @@
         <tbody>
             <tr>
                 <td>staccato</td>
-                <td><cav-computer-key>ä</cav-computer-key></td>
+                <td><cav:computer-key>ä</cav:computer-key></td>
             </tr>
             <tr>
                 <td>tenuto</td>
-                <td><cav-computer-key>Ä</cav-computer-key></td>
+                <td><cav:computer-key>Ä</cav:computer-key></td>
             </tr>
             <tr>
                 <td>staccatissimo</td>
-                <td><cav-computer-key>ää</cav-computer-key></td>
+                <td><cav:computer-key>ää</cav:computer-key></td>
             </tr>
             <tr>
                 <td>fermata</td>
-                <td><cav-computer-key>ÄÄ</cav-computer-key></td>
+                <td><cav:computer-key>ÄÄ</cav:computer-key></td>
             </tr>
             <tr>
                 <td>accent</td>
-                <td><cav-computer-key>></cav-computer-key></td>
+                <td><cav:computer-key>></cav:computer-key></td>
             </tr>
         </tbody>
     </informaltable>
@@ -51,7 +52,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><cav-computer-key> Aä AÄ Aää AÄÄ A></cav-computer-key></td>
+                    <td><cav:computer-key> Aä AÄ Aää AÄÄ A></cav:computer-key></td>
                     <td></td>
                 </tr>
             </tbody>

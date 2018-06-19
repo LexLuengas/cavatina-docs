@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
+    xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Staff systems</title>
@@ -8,9 +9,9 @@
     
     <para>To create systems of multiple staves you can extend barlines to join with the upper staff.
         To draw a <emphasis role="italic">grand staff</emphasis>, first enter a newline followed by
-        a single barline <cav-computer-key>,</cav-computer-key> to start a new staff. To draw the brace connecting with the
-        upper staff, type in <cav-computer-key>**</cav-computer-key>. Then continue with the clef and key signature as you
-        would normally do. To connect the subsequent barlines, write a single <cav-computer-key>*</cav-computer-key> after
+        a single barline <cav:computer-key>,</cav:computer-key> to start a new staff. To draw the brace connecting with the
+        upper staff, type in <cav:computer-key>**</cav:computer-key>. Then continue with the clef and key signature as you
+        would normally do. To connect the subsequent barlines, write a single <cav:computer-key>*</cav:computer-key> after
         them. </para>
     
     <informaltable>
@@ -23,11 +24,11 @@
         <tbody>
             <tr>
                 <td>brace</td>
-                <td><cav-computer-key>,**</cav-computer-key></td>
+                <td><cav:computer-key>,**</cav:computer-key></td>
             </tr>
             <tr>
                 <td>long barlines</td>
-                <td><cav-computer-key>,*</cav-computer-key> or <cav-computer-key>.*</cav-computer-key> ...</td>
+                <td><cav:computer-key>,*</cav:computer-key> or <cav:computer-key>.*</cav:computer-key> ...</td>
             </tr>
         </tbody>
     </informaltable>
@@ -43,8 +44,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><cav-computer-key>,ß''' DFJ DGJ J s d>..,
-,** ?''' A D Ü MJ ,*</cav-computer-key></td>
+                    <td><cav:computer-key>,ß''' DFJ DGJ J s d>..,
+,** ?''' A D Ü MJ ,*</cav:computer-key></td>
                     <td></td>
                 </tr>
             </tbody>

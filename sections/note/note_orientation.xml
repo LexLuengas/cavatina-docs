@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
+    xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Note orientation</title>
     </info>
-    <para>The stem of a note can be inverted. This is done with the <glossterm>inverter</glossterm><cav-computer-key>^</cav-computer-key>. A note can only be inverted once (which doesn’t stop
+    <para>The stem of a note can be inverted. This is done with the <glossterm>inverter</glossterm><cav:computer-key>^</cav:computer-key>. A note can only be inverted once (which doesn’t stop
         you from un-inverting).</para>
     <para>To invert the stem of a chord you invert the first note of the chord. If the next note in
         the chord would collide in its default orientation, then it is automatically inverted.
@@ -22,7 +23,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><cav-computer-key>, f f^ j j^, afj a^fj a^f^j a^f^j^,</cav-computer-key></td>
+                    <td><cav:computer-key>, f f^ j j^, afj a^fj a^f^j a^f^j^,</cav:computer-key></td>
                     <td></td>
                 </tr>
             </tbody>

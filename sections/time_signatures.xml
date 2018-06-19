@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
+    xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Time Signatures</title>
     </info>
     
     <para>Time signatures have to be written after clefs (and key signatures) or barlines. To start
-        a time signature enter the <musical-term>time</musical-term> key <cav-computer-key>°</cav-computer-key>. After
+        a time signature enter the <cav:musical-term>time</cav:musical-term> key <cav:computer-key>°</cav:computer-key>. After
         that you just write the upper and lower numeral successively. </para>
     
-    <para>To write the <musical-term>common time</musical-term> or <musical-term>cut
-        time</musical-term> symbols, enter <cav-computer-key>c</cav-computer-key> or <cav-computer-key>C</cav-computer-key> 
+    <para>To write the <cav:musical-term>common time</cav:musical-term> or <cav:musical-term>cut
+        time</cav:musical-term> symbols, enter <cav:computer-key>c</cav:computer-key> or <cav:computer-key>C</cav:computer-key> 
         after the <emphasis role="italic">time</emphasis> key.</para>
     
     <para>A space is automatically attached after a time signature, so that you don’t have to open a
@@ -28,7 +29,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><cav-computer-key>,°34 ,°1216 ,?'''°34 ,°c ,</cav-computer-key></td>
+                    <td><cav:computer-key>,°34 ,°1216 ,?'''°34 ,°c ,</cav:computer-key></td>
                     <td></td>
                 </tr>
             </tbody>

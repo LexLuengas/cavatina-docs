@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
+    xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Repetition markings</title>
     </info>
     
-    <para>Apart from the repeat barlines <cav-computer-key>;</cav-computer-key>/<cav-computer-key>:</cav-computer-key>, you
+    <para>Apart from the repeat barlines <cav:computer-key>;</cav:computer-key>/<cav:computer-key>:</cav:computer-key>, you
         can use the following repetition markings:</para>
     
     <informaltable>
@@ -19,15 +20,15 @@
         <tbody>
             <tr>
                 <td>1<superscript>st</superscript> repetition</td>
-                <td><cav-computer-key>o</cav-computer-key></td>
+                <td><cav:computer-key>o</cav:computer-key></td>
             </tr>
             <tr>
                 <td>2<superscript>nd</superscript> repetition</td>
-                <td><cav-computer-key>oo</cav-computer-key></td>
+                <td><cav:computer-key>oo</cav:computer-key></td>
             </tr>
             <tr>
                 <td>end marking</td>
-                <td><cav-computer-key>o^</cav-computer-key></td>
+                <td><cav:computer-key>o^</cav:computer-key></td>
             </tr>
         </tbody>
     </informaltable>
@@ -45,11 +46,11 @@
         <tbody>
             <tr>
                 <td>coda</td>
-                <td><cav-computer-key>i</cav-computer-key></td>
+                <td><cav:computer-key>i</cav:computer-key></td>
             </tr>
             <tr>
                 <td>segno</td>
-                <td><cav-computer-key>I</cav-computer-key></td>
+                <td><cav:computer-key>I</cav:computer-key></td>
             </tr>
             <tr>
                 <td>D.C.</td>
@@ -77,7 +78,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><cav-computer-key>, D F G Do, D F D Go^:oo D S A Ü.</cav-computer-key></td>
+                    <td><cav:computer-key>, D F G Do, D F D Go^:oo D S A Ü.</cav:computer-key></td>
                     <td></td>
                 </tr>
             </tbody>

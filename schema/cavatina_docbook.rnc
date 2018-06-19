@@ -1,27 +1,28 @@
-default namespace = "http://docbook.org/ns/docbook"
 namespace db = "http://docbook.org/ns/docbook"
 namespace r  = "http://nwalsh.com/xmlns/schema-remap/"
-
-db.domain.inlines |= db.cav-computer-key
+namespace cav  = "http://cavatina-font.com/docbook"
+default namespace = "http://docbook.org/ns/docbook"
 
 # Define musical term
 
 db.musical-term =
   [ r:remap [ db:emphasis [ ] ] ]
-  element musical-term { db._text }
+  element cav:musical-term { text }
 
-# Define a new computer-key element:
 
-db.cav-computer-key =
+# Define computer-key element:
+
+db.computer-key =
   [ r:remap [ db:code [ ] ] ]
-  element cav-computer-key { 
+  element cav:computer-key { 
     db._text,
     attribute source-symbol { text }?
   }
 
-asm.inlines = db.musical-term | db.cav-computer-key
+# Append to docbook schema
+
+cav.inlines = db.musical-term | db.computer-key
 include "docbook.rnc"
 {
-    db.general.inlines |= asm.inlines
+    db.general.inlines |= cav.inlines
 }
-

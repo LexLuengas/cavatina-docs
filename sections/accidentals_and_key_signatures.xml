@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
+    xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Accidentals and Key Signatures</title>
@@ -16,23 +17,23 @@
         <tbody>
             <tr>
                 <td>flat</td>
-                <td><cav-computer-key>'</cav-computer-key></td>
+                <td><cav:computer-key>'</cav:computer-key></td>
             </tr>
             <tr>
                 <td>sharp</td>
-                <td><cav-computer-key>#</cav-computer-key></td>
+                <td><cav:computer-key>#</cav:computer-key></td>
             </tr>
             <tr>
                 <td>natural</td>
-                <td><cav-computer-key>'#</cav-computer-key> or <cav-computer-key>'#</cav-computer-key></td>
+                <td><cav:computer-key>'#</cav:computer-key> or <cav:computer-key>'#</cav:computer-key></td>
             </tr>
             <tr>
                 <td>double flat</td>
-                <td><cav-computer-key>''</cav-computer-key></td>
+                <td><cav:computer-key>''</cav:computer-key></td>
             </tr>
             <tr>
                 <td>double sharp</td>
-                <td><cav-computer-key>##</cav-computer-key></td>
+                <td><cav:computer-key>##</cav:computer-key></td>
             </tr>
         </tbody>
     </informaltable>
@@ -50,7 +51,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><cav-computer-key>?''''' D G,?ß## ADG </cav-computer-key></td>
+                    <td><cav:computer-key>?''''' D G,?ß## ADG </cav:computer-key></td>
                     <td></td>
                 </tr>
             </tbody>

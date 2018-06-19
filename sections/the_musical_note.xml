@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
+    xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended"
     xmlns:xila="http://www.w3.org/2001/XInclude/local-attributes"
     xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -36,7 +37,7 @@
     </note>
     
     <para>If you have used other notation software, you are probably used to look
-        for the <cav-computer-key>C</cav-computer-key> key if you want to write a <emphasis
+        for the <cav:computer-key>C</cav:computer-key> key if you want to write a <emphasis
             role="italic">C</emphasis>, and so on. This is not very efficient, because
         sadly these letters aren’t ordered in such order in a row. When writing notes
         with Cavatina, once you get your fingers placed in the right position, you have

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
+    xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Rests</title>
     </info>
-    <para>Rests are accessed via the <cav-computer-key>ü</cav-computer-key>/<cav-computer-key>Ü</cav-computer-key> key. Their
+    <para>Rests are accessed via the <cav:computer-key>ü</cav:computer-key>/<cav:computer-key>Ü</cav:computer-key> key. Their
         duration is changed the same way as for notes. Optionally, you can write the same rest twice
         and the length will increase accordingly.</para>
     <example>
@@ -19,7 +20,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><cav-computer-key>, ü Ü üü ÜÜ ü° ü°° Ü° Ü°°,</cav-computer-key></td>
+                    <td><cav:computer-key>, ü Ü üü ÜÜ ü° ü°° Ü° Ü°°,</cav:computer-key></td>
                     <td></td>
                 </tr>
             </tbody>

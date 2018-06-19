@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
+    xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <info>
         <title>Other Notation</title>
@@ -19,21 +20,21 @@
         <tbody>
             <tr>
                 <td>8<superscript>va</superscript></td>
-                <td><cav-computer-key>O</cav-computer-key></td>
+                <td><cav:computer-key>O</cav:computer-key></td>
             </tr>
             <tr>
                 <td>8<superscript>va</superscript> (2)</td>
-                <td><cav-computer-key>OO</cav-computer-key></td>
+                <td><cav:computer-key>OO</cav:computer-key></td>
             </tr>
             <tr>
                 <td>end 8<superscript>va</superscript></td>
-                <td><cav-computer-key>O^</cav-computer-key></td>
+                <td><cav:computer-key>O^</cav:computer-key></td>
             </tr>
         </tbody>
     </informaltable>
     
     <para>The triplet is written before the chord sequence. Use tight spacing to fit the notes under
-        the mark: enter three quarter-spaces <cav-computer-key>---</cav-computer-key> between the notes.</para>
+        the mark: enter three quarter-spaces <cav:computer-key>---</cav:computer-key> between the notes.</para>
     
     <informaltable>
         <thead>
@@ -45,7 +46,7 @@
         <tbody>
             <tr>
                 <td>triplet</td>
-                <td><cav-computer-key>_</cav-computer-key></td>
+                <td><cav:computer-key>_</cav:computer-key></td>
             </tr>
         </tbody>
     </informaltable>
@@ -63,11 +64,11 @@
         <tbody>
             <tr>
                 <td>pedal</td>
-                <td><cav-computer-key>p</cav-computer-key></td>
+                <td><cav:computer-key>p</cav:computer-key></td>
             </tr>
             <tr>
                 <td>release pedal</td>
-                <td><cav-computer-key>pp</cav-computer-key></td>
+                <td><cav:computer-key>pp</cav:computer-key></td>
             </tr>
         </tbody>
     </informaltable>

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
-<section version="5.1-extended" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+<section version="5.1-extended" 
+  xmlns="http://docbook.org/ns/docbook" 
+  xmlns:cav="http://cavatina-font.com/docbook"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <info>
     <title>Staff and Barlines</title>
   </info>
 
   <para>When you hit the spacebar you draw a new staff “block”.
-  Before any note or chord, you have to draw a new <musical-term>staff</musical-term> block where this note
+  Before any note or chord, you have to draw a new <cav:musical-term>staff</cav:musical-term> block where this note
   or chord will sit.</para>
 
   <para>The barlines are located as follows:</para>
@@ -21,30 +24,30 @@
     <tbody>
       <tr>
         <td>simple barline</td>
-        <td><cav-computer-key>,</cav-computer-key></td>
+        <td><cav:computer-key>,</cav:computer-key></td>
       </tr>
       <tr>
         <td>double barline</td>
-        <td><cav-computer-key>,,</cav-computer-key></td>
+        <td><cav:computer-key>,,</cav:computer-key></td>
       </tr>
       <tr>
         <td>final barline</td>
-        <td><cav-computer-key>.</cav-computer-key></td>
+        <td><cav:computer-key>.</cav:computer-key></td>
       </tr>
       <tr>
         <td>repeat barline (start)</td>
-        <td><cav-computer-key>;</cav-computer-key></td>
+        <td><cav:computer-key>;</cav:computer-key></td>
       </tr>
       <tr>
         <td>repeat barline (end)</td>
-        <td><cav-computer-key>:</cav-computer-key></td>
+        <td><cav:computer-key>:</cav:computer-key></td>
       </tr>
     </tbody>
   </informaltable>
 
   <para>Cavatina is not made to do minor adjustments to the layout, but if you
   consider it necessary, you can gain control over horizontal spacing by using
-  the half space <cav-computer-key>-</cav-computer-key> and the quarter space <cav-computer-key>--</cav-computer-key>.</para>
+  the half space <cav:computer-key>-</cav:computer-key> and the quarter space <cav:computer-key>--</cav:computer-key>.</para>
   
   <example>
     <title>Example</title>
@@ -57,7 +60,7 @@
       </thead>
       <tbody>
         <tr>
-          <td><cav-computer-key>, ,, . ; :</cav-computer-key></td>
+          <td><cav:computer-key>, ,, . ; :</cav:computer-key></td>
           <td></td>
         </tr>
       </tbody>

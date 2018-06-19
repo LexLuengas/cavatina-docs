@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grammar ns="http://docbook.org/ns/docbook" xmlns:r="http://nwalsh.com/xmlns/schema-remap/" xmlns:db="http://docbook.org/ns/docbook" xmlns="http://relaxng.org/ns/structure/1.0">
   <define name="db.domain.inlines" combine="choice">
-    <ref name="db.cav-computer-key"/>
+    <ref name="db.cav:computer-key"/>
   </define>
   <!-- Define musical term -->
-  <define name="db.musical-term">
-    <element name="musical-term">
+  <define name="db.cav:musical-term">
+    <element name="cav:musical-term">
       <r:remap>
         <db:emphasis/>
       </r:remap>
@@ -13,8 +13,8 @@
     </element>
   </define>
   <!-- Define a new computer-key element: -->
-  <define name="db.cav-computer-key">
-    <element name="cav-computer-key">
+  <define name="db.cav:computer-key">
+    <element name="cav:computer-key">
       <r:remap>
         <db:code/>
       </r:remap>
@@ -26,8 +26,8 @@
   </define>
   <define name="asm.inlines">
     <choice>
-      <ref name="db.musical-term"/>
-      <ref name="db.cav-computer-key"/>
+      <ref name="db.cav:musical-term"/>
+      <ref name="db.cav:computer-key"/>
     </choice>
   </define>
   <include href="docbook.rng">
