@@ -1,0 +1,92 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title xmlns:ng="http://docbook.org/docbook-ng">The musical note</title><meta xmlns:ng="http://docbook.org/docbook-ng" name="generator" content="DocBook XSL Stylesheets V1.79.2"><link rel="home" href="index.html" title="Documentation for Cavatina"><link rel="up" href="index.html" title="Documentation for Cavatina"><link rel="prev" href="index.html" title="Documentation for Cavatina"><link rel="next" href="ar01s03.html" title="Staff and Barlines"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">The musical note</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="index.html">Prev</a>&nbsp;</td><th width="60%" align="center">&nbsp;</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ar01s03.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d5e31"></a>The musical note</h2></div></div></div><p>The location of each note is motivated by the fact that the lowest row of characters
+        just above the space bar has exactly <span class="bold"><strong>seven letters</strong></span>: the
+        seven pitches of a diatonic scale.</p><p>It is easy to learn where this seven notes are because of their physical location on
+        the keyboard. It&#8217;s like playing on the piano, but without the black keys.</p><p>Most musicians aren't happy with just seven notes. Following the idea above, we get a
+        new octave for each of the four rows of the keyboard above the space bar, with the top
+        row having three additional notes, like this:</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="file:/usr/share/oxygenxml/frameworks/docbook/css/img/note.png"></td><th align="left">Note</th></tr><tr><td align="left" valign="top"><p>Notice each column contains the same note in different octaves.</p></td></tr></table></div><p>If you have used other notation software, you are probably used to look
+        for the <code class="code">C</code> key if you want to write a <span class="italic">C</span>, and so on. This is not very efficient, because
+        sadly these letters aren&#8217;t ordered in such order in a row. When writing notes
+        with Cavatina, once you get your fingers placed in the right position, you have
+        all notes you need at your fingertips and you don&#8217;t have to look
+        back down at the keyboard.
+    </p><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e43"></a>Note length</h3></div></div></div><p> So far we have 31 notes (covering a bit more than four octaves). Each of these characters
+        has its lowercase and uppercase variant, which correspond to the note in
+            8<sup>th</sup> and 4<sup>th</sup> length accordingly.
+        Switching to the bold weight of Cavatina, you get 16<sup>th</sup>-notes in
+        the lowercase and 8<sup>th</sup>-notes in the uppercase characters. </p><div class="informaltable"><table><thead><tr>
+                <td></td>
+                <th>Input</th>
+                <th>Note length</th>
+            </tr></thead><tbody><tr>
+                <th rowspan="2">Regular style</th>
+                <td>
+                    <code class="code">a</code>
+                </td>
+                <td> 8<sup>th</sup>
+                </td>
+            </tr><tr>
+                <td>
+                    <code class="code">A</code>
+                </td>
+                <td> 4<sup>th</sup>
+                </td>
+            </tr><tr>
+                <th rowspan="2">Bold style</th>
+                <td>
+                    <code class="code"><span class="bold"><strong>a</strong></span></code>
+                </td>
+                <td> 16<sup>th</sup>
+                </td>
+            </tr><tr>
+                <td>
+                    <code class="code"><span class="bold"><strong>A</strong></span></code>
+                </td>
+                <td> 8<sup>th</sup>
+                </td>
+            </tr></tbody></table></div><div class="example"><a name="d5e82"></a><p class="title"><b>Example&nbsp;1.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><code class="code">, a A <span class="bold"><strong>a
+                            A</strong></span>,</code></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"><p>Appart from that, Cavatina has a special key that serves as a <span class="bold"><strong>modifier key</strong></span>: the <code class="code">^</code>/<code class="code">&deg;</code> key. We are going to call
+        <code class="code">^</code> the <em class="glossterm">inverter</em> and <code class="code">&deg;</code> the
+            <em class="glossterm">time</em> character, the latter of which, among other things, extends
+        the duration of notes. Every time you hit the time key after a note, the note&#8217;s length
+        doubles. You can do this up to a maximum of twice per note, i.e. for a whole note you would
+        need to type a 4<sup>th</sup>-note followed by two times <code class="code">&deg;</code>.</p><div class="example"><a name="d5e105"></a><p class="title"><b>Example&nbsp;2.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><code class="code">, f F f~ f~~ F~ F~~,</code></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"><p>For <em class="glossterm">dotted notes</em> you use <code class="code">&lt;</code> after the note.</p><p>To draw a <em class="glossterm">tie</em> after a note append an <code class="code">L</code>.</p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e123"></a>Note orientation</h3></div></div></div><p>The stem of a note can be inverted. This is done with the <em class="glossterm">inverter</em><code class="code">^</code>. A note can only be inverted once (which doesn&#8217;t stop
+        you from un-inverting).</p><p>To invert the stem of a chord you invert the first note of the chord. If the next note in
+        the chord would collide in its default orientation, then it is automatically inverted.
+        Otherwise keep inverting until you obtain the desired result. This is useful for separating
+        voices within one chord.</p><div class="example"><a name="d5e130"></a><p class="title"><b>Example&nbsp;3.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><code class="code">, f f^ j j^, afj a^fj a^f^j a^f^j^,</code></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e142"></a>Rests</h3></div></div></div><p>Rests are accessed via the <code class="code">&uuml;</code>/<code class="code">&Uuml;</code> key. Their
+        duration is changed the same way as for notes. Optionally, you can write the same rest twice
+        and the length will increase accordingly.</p><div class="example"><a name="d5e148"></a><p class="title"><b>Example&nbsp;4.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><code class="code">, &uuml; &Uuml; &uuml;&uuml; &Uuml;&Uuml; &uuml;&deg; &uuml;&deg;&deg; &Uuml;&deg; &Uuml;&deg;&deg;,</code></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="d5e160"></a>Note beams</h3></div></div></div><p>To beam two 8<sup>th</sup> or 16<sup>th</sup> notes, write two dots <code class="code">..</code> after the second note. Both
+        notes need to have the same orientation before they can be beamed. Currently only pairs of
+        notes can be beamed.</p><div class="example"><a name="d5e167"></a><p class="title"><b>Example&nbsp;5.&nbsp;Example</b></p><div class="example-contents"><div class="informaltable"><table><thead><tr>
+                    <th>Input</th>
+                    <th>Rendered output</th>
+                </tr></thead><tbody><tr>
+                    <td><code class="code">,  dh sj..  d^h^ s^..j  d^h s^..j^..,</code></td>
+                    <td></td>
+                </tr></tbody></table></div></div></div><br class="example-break"></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="index.html">Prev</a>&nbsp;</td><td width="20%" align="center">&nbsp;</td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ar01s03.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Documentation for Cavatina&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top">&nbsp;Staff and Barlines</td></tr></table></div></body></html>

@@ -1,0 +1,60 @@
+// Auto generated list of analyzer stop words that must be ignored by search.
+stopWords = new Array();
+stopWords[0]= "but";
+stopWords[1]= "be";
+stopWords[2]= "with";
+stopWords[3]= "such";
+stopWords[4]= "then";
+stopWords[5]= "for";
+stopWords[6]= "no";
+stopWords[7]= "will";
+stopWords[8]= "not";
+stopWords[9]= "are";
+stopWords[10]= "and";
+stopWords[11]= "their";
+stopWords[12]= "if";
+stopWords[13]= "this";
+stopWords[14]= "on";
+stopWords[15]= "into";
+stopWords[16]= "a";
+stopWords[17]= "or";
+stopWords[18]= "there";
+stopWords[19]= "in";
+stopWords[20]= "that";
+stopWords[21]= "they";
+stopWords[22]= "was";
+stopWords[23]= "is";
+stopWords[24]= "it";
+stopWords[25]= "an";
+stopWords[26]= "the";
+stopWords[27]= "as";
+stopWords[28]= "at";
+stopWords[29]= "these";
+stopWords[30]= "by";
+stopWords[31]= "to";
+stopWords[32]= "of";
+
+var indexerLanguage="en";
+
+// Auto generated index for searching.
+w["."]="0*0*1d";
+w["/cav:computer-key"]="0*3*18$2u$3b$4n";
+w["/cav:musical-term"]="0*2*q$21$2f";
+w["1"]="0*0*48";
+w["1216"]="0*0*4k";
+w["34"]="0*0*4j";
+w["<"]="0*13*i$p$10$17$1o$20$26$2e$2m$2t$33$3a$4d$4m";
+w[">"]="0*13*n$u$15$1c$1t$25$2b$2j$2r$32$38$3f$4i$4r";
+w["after"]="0*3*8$1e$3g$3n";
+w["attached"]="0*0*3m";
+w["automatically"]="0*0*3l";
+w["barlines"]="0*0*d";
+w["barlines."]="0*0*c";
+w["block"]="0*0*43";
+w["c"]="0*2*2s$39$4l";
+w["cav"]="0*13*k$r$12$19$1q$22$28$2g$2o$2v$35$3c$4f$4o";
+w["cav:computer-key"]="0*3*11$2n$34$4e";
+w["cav:musical-term"]="0*2*j$1p$27";
+w["clefs"]="0*0*9";
+w["common"]="0*0*1u";
+

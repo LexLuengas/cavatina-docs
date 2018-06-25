@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
 <section xmlns="http://docbook.org/ns/docbook"
     xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended"
@@ -16,21 +15,21 @@
     <para>It is easy to learn where this seven notes are because of their physical location on
         the keyboard. It’s like playing on the piano, but without the black keys.</para>
     
-    <mediaobject>
+    <!--<mediaobject>
         <imageobject>
             <imagedata fileref="images/keyboard_basic.png"/>
         </imageobject>
-    </mediaobject>
+    </mediaobject>-->
     
     <para>Most musicians aren't happy with just seven notes. Following the idea above, we get a
         new octave for each of the four rows of the keyboard above the space bar, with the top
         row having three additional notes, like this:</para>
     
-    <mediaobject>
+    <!--<mediaobject>
         <imageobject>
             <imagedata fileref="images/keyboard_overview.png"/>
         </imageobject>
-    </mediaobject>
+    </mediaobject>-->
     
     <note>
         <para>Notice each column contains the same note in different octaves.</para>
