@@ -14,8 +14,8 @@
         just above the space bar has exactly <emphasis role="bold">seven letters</emphasis>: the
         seven pitches of a diatonic scale.</para>
     
-    <para>It is easy to learn where this seven notes are because of their physical location on
-        the keyboard. It’s like playing on the piano, but without the black keys.</para>
+    <para>It is easy to learn where this seven notes are because their physical location on
+        the keyboard.</para>
     
     <cav:figure id="keyboard-full"></cav:figure>
     
@@ -28,7 +28,7 @@
     <cav:figure id="keyboard-overview"></cav:figure>
     
     <note>
-        <para>Notice each column contains the same note in different octaves.</para>
+        <para>Notice each column of keyboard keys maps to the same note in different octaves.</para>
     </note>
     
     <para>If you have used other notation software, you are probably used to look

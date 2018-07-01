@@ -3,20 +3,16 @@ namespace r  = "http://nwalsh.com/xmlns/schema-remap/"
 namespace cav  = "http://cavatina-font.com/docbook"
 default namespace = "http://docbook.org/ns/docbook"
 
-# Define musical term
-
 db.musical-term =
   [ r:remap [ db:emphasis [ ] ] ]
   element cav:musical-term { text }
-
-
-# Define computer-key element:
 
 db.computer-key =
   [ r:remap [ db:code [ ] ] ]
   element cav:computer-key { 
     db._text,
-    attribute source-symbol { text }?
+    attribute source-symbol { text }?,
+    attribute id { text }?
   }
 
 db.cav-figure =
@@ -31,7 +27,9 @@ db.cav-music-notation =
   element cav:music-notation {
     text,
     attribute id { text }?,
-    attribute fallback-source { text }?
+    attribute fallback-source { text }?,
+    attribute for { text }?,
+    attribute multipart { text }?
   }
 
 # Append to docbook schema

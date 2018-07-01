@@ -15,7 +15,7 @@
         <thead>
             <tr>
                 <th>Musical symbol</th>
-                <th>Computer key</th>
+                <th>Raw input</th>
             </tr>
         </thead>
         <tbody>
@@ -41,7 +41,7 @@
         <thead>
             <tr>
                 <th>Musical symbol</th>
-                <th>Computer key</th>
+                <th>Raw input</th>
             </tr>
         </thead>
         <tbody>
@@ -74,13 +74,13 @@
             <thead>
                 <tr>
                     <th>Input</th>
-                    <th>Rendered output</th>
+                    <th>Output</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><cav:computer-key>, D F G Do, D F D Go^:oo D S A Ü.</cav:computer-key></td>
-                    <td></td>
+                    <td><cav:computer-key id="example-repetition">, D F G Do, D F D Go^:oo  D S A Ü.</cav:computer-key></td>
+                    <td><cav:music-notation for="example-repetition">, D F G Do, D F D Go`:oo  D S A }.</cav:music-notation></td>
                 </tr>
             </tbody>
         </informaltable>

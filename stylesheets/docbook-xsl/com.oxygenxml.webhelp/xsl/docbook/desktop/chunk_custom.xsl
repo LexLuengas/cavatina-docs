@@ -53,6 +53,14 @@ Copyright (c) 1998-2017 Syncro Soft SRL, Romania.  All rights reserved.
       </xsl:attribute>
       <xsl:comment/>
     </xsl:element>
+
+    <xsl:element name="script" namespace="{$namespace}">
+      <xsl:attribute name="type">text/javascript</xsl:attribute>
+      <xsl:attribute name="src">
+        <xsl:value-of select="$html.script"/>
+      </xsl:attribute>
+      <xsl:comment/>
+    </xsl:element>
     
   </xsl:template>
 </xsl:stylesheet>

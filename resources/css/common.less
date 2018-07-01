@@ -1,4 +1,18 @@
 
+body {
+  span.cavatina {
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  &.is-loaded {
+    span.cavatina {
+      opacity: 1 !important;
+      overflow: visible !important;
+    }
+  }
+}
+
 span.cavatina {
   height: 2rem;
   display: block;
@@ -8,9 +22,10 @@ span.cavatina {
   margin-right: auto;
   margin-bottom: 20px;
   padding: 20px 0;
+  transition: opacity .4s linear;
 
   color: black;
-  font-family: "Cavatina US", fantasy;
+  font-family: "Cavatina US";
   font-size: 75pt;
   line-height: 0;
   white-space: pre;
@@ -21,6 +36,14 @@ span.cavatina {
   -o-font-feature-settings: "liga" 1, "calt" 1;
   -webkit-font-feature-settings: "liga" 1, "calt" 1;
   font-feature-settings: "liga" 1, "calt" 1;
+
+  &.multipart {
+    height: auto;
+    min-height: 124px;
+    padding: 0;
+    margin-top: -12px;
+    line-height: 0.666;
+  }
 }
 
 #notation-scale {
@@ -31,6 +54,15 @@ span.cavatina {
   font-family: "Cavatina US", sans-serif;
 }
 
+#example-note-length {
+  background: url(../images/note-length.png) no-repeat;
+  background-size: contain !important;
+  height: 68px;
+  width: 235px;
+  margin: 0 -60px;
+
+}
+
 p > code.computer-key {
   background-color: #455a64;
   color: white;
@@ -39,9 +71,13 @@ p > code.computer-key {
   border-radius: 2px;
   margin: -6px 3px;
   transform: translateY(2px);
+  line-height: 17px;
 }
 
-.informaltable {
+.informaltable, .table {
+  .title {
+    color: #888;
+  }
   table {
     border-collapse: collapse;
     tr {
@@ -50,7 +86,7 @@ p > code.computer-key {
       }
     }
     thead {
-      tr {
+      tr, td, th {
         background-color: #c1d5e0;
       }
     }
@@ -64,6 +100,19 @@ p > code.computer-key {
           background-color: #eee;
         }
       }
+    }
+    span.cavatina {
+      margin: 12px;
+      transform: translateY(15px);
+    }
+  }
+}
+
+.example-contents {
+  .informaltable {
+    table {
+      border: 1px solid #c1d5e0;
+      box-shadow: 1px 2px 2px #aaa4;
     }
   }
 }

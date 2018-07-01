@@ -12,7 +12,7 @@
         <thead>
             <tr>
                 <th>Musical symbol</th>
-                <th>Computer key</th>
+                <th>Raw input</th>
             </tr>
         </thead>
         <tbody>
@@ -54,13 +54,13 @@
             <thead>
                 <tr>
                     <th>Input</th>
-                    <th>Rendered output</th>
+                    <th>Output</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><cav:computer-key> Dö DÖ Dö^ DÖ^ Döö Döööö </cav:computer-key></td>
-                    <td></td>
+                    <td><cav:computer-key id="example-ornaments"> Dö DÖ Dö^ DÖ^ Döö Döööö </cav:computer-key></td>
+                    <td><cav:music-notation for="example-ornaments">  D[ D{ D[` D{` D[[ D[[[[ </cav:music-notation></td>
                 </tr>
             </tbody>
         </informaltable>

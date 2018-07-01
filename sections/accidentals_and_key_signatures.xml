@@ -12,7 +12,7 @@
         <thead>
             <tr>
                 <th>Musical symbol</th>
-                <th>Computer key</th>
+                <th>Raw input</th>
             </tr>
         </thead>
         <tbody>
@@ -47,13 +47,13 @@
             <thead>
                 <tr>
                     <th>Input</th>
-                    <th>Rendered output</th>
+                    <th>Output</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><cav:computer-key>?''''' D G,?ß## ADG </cav:computer-key></td>
-                    <td></td>
+                    <td><cav:computer-key id="example-accidentals">?''''' D G,?ß## ADG </cav:computer-key></td>
+                    <td><cav:music-notation for="example-accidentals">_----- D G,_+== ADG </cav:music-notation></td>
                 </tr>
             </tbody>
         </informaltable>

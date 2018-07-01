@@ -11,11 +11,12 @@
         are writing a chord with some dynamics marking, you should write that marking just after the
         first (lowest) note of the chord.</para>
     
-    <informaltable>
+    <table>
+        <caption>Note dynamics</caption>
         <thead>
             <tr>
                 <th>Musical symbol</th>
-                <th>Computer key</th>
+                <th>Raw input</th>
             </tr>
         </thead>
         <tbody>
@@ -64,13 +65,14 @@
                     <cav:computer-key>++^</cav:computer-key></td>
             </tr>
         </tbody>
-    </informaltable>
+    </table>
     
-    <informaltable>
+    <table>
+        <caption>Phrasal dynamics</caption>
         <thead>
             <tr>
                 <th>Musical symbol</th>
-                <th>Computer key</th>
+                <th>Raw input</th>
             </tr>
         </thead>
         <tbody>
@@ -83,7 +85,7 @@
                 <td><cav:computer-key>l^</cav:computer-key></td>
             </tr>
         </tbody>
-    </informaltable>
+    </table>
     
     <example>
         <title>Example</title>
@@ -91,13 +93,13 @@
             <thead>
                 <tr>
                     <th>Input</th>
-                    <th>Rendered output</th>
+                    <th>Output</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><cav:computer-key> d*fh h^++er M**+ Dl </cav:computer-key></td>
-                    <td></td>
+                    <td><cav:computer-key id="example-dynamics">  d*fh  h^++er  M**+  Dl </cav:computer-key></td>
+                    <td><cav:music-notation for="example-dynamics">  d\fh  h`||er  M\\|  Dl </cav:music-notation></td>
                 </tr>
             </tbody>
         </informaltable>

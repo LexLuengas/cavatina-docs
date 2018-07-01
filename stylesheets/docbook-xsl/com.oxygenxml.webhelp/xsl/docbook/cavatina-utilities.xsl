@@ -19,19 +19,33 @@
         </span>
     </xsl:template>
 
-    <xsl:template match="xhtml:p/cav:music-notation">
-        <span class="cavatina">
-            <xsl:copy-of select="@*" />
+    <xsl:template match="cav:music-notation[@multipart]">
+        <span class="cavatina multipart" style="opacity: 0; overflow: hidden;">
+            <xsl:copy-of select="@id|@for"/>
             <xsl:apply-templates/>
         </span>
     </xsl:template>
 
-    <xsl:template match="cav:music-notation">
+    <xsl:template name="cavatina-notation">
+        <span class="cavatina" style="opacity: 0; overflow: hidden;">
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+
+    <xsl:template match="d:section/cav:music-notation">
         <div style="text-align: center">
-            <span class="cavatina">
-                <xsl:copy-of select="@*" />
-                <xsl:apply-templates/>
-            </span>
+            <xsl:call-template name="cavatina-notation"/>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="cav:music-notation">
+        <xsl:call-template name="cavatina-notation"/>
+    </xsl:template>
+
+    <xsl:template match="cav:figure[@id = 'example-note-length-base']">
+        <div id="example-note-length">
+            <xsl:comment/>
         </div>
     </xsl:template>
 

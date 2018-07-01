@@ -25,13 +25,13 @@
             <thead>
                 <tr>
                     <th>Input</th>
-                    <th>Rendered output</th>
+                    <th>Output</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><cav:computer-key>,°34 ,°1216 ,?'''°34 ,°c ,</cav:computer-key></td>
-                    <td></td>
+                    <td><cav:computer-key id="example-time-signatures">,°34 ,°1216 ,?'''°34 ,°c ,</cav:computer-key></td>
+                    <td><cav:music-notation for="example-time-signatures">,~34 ,~1216 ,_---~34 ,~c ,</cav:music-notation></td>
                 </tr>
             </tbody>
         </informaltable>

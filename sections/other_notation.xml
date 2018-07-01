@@ -15,7 +15,7 @@
         <thead>
             <tr>
                 <th>Musical symbol</th>
-                <th>Computer key</th>
+                <th>Raw input</th>
             </tr>
         </thead>
         <tbody>
@@ -41,7 +41,7 @@
         <thead>
             <tr>
                 <th>Musical symbol</th>
-                <th>Computer key</th>
+                <th>Raw input</th>
             </tr>
         </thead>
         <tbody>
@@ -59,7 +59,7 @@
         <thead>
             <tr>
                 <th>Musical symbol</th>
-                <th>Computer key</th>
+                <th>Raw input</th>
             </tr>
         </thead>
         <tbody>

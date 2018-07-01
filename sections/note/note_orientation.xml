@@ -19,13 +19,13 @@
             <thead>
                 <tr>
                     <th>Input</th>
-                    <th>Rendered output</th>
+                    <th>Output</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><cav:computer-key>, f f^ j j^, afj a^fj a^f^j a^f^j^,</cav:computer-key></td>
-                    <td></td>
+                    <td><cav:computer-key id="example-note-orientation">, f f^ j j^, afj a^fj a^f^j a^f^j^,</cav:computer-key></td>
+                    <td><cav:music-notation for="example-note-orientation">, f f` j j`, afj a`fj a`f`j a`f`j`,</cav:music-notation></td>
                 </tr>
             </tbody>
         </informaltable>

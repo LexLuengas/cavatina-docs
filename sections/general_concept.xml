@@ -1,34 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns="http://docbook.org/ns/docbook"
-    xmlns:cav="http://cavatina-font.com/docbook"
-    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
+         xmlns:cav="http://cavatina-font.com/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <?dbhtml filename="general_concept.html" ?>
 
     <info>
         <title>General concept</title>
     </info>
+
+    <para>Cavatina is a language for creating musical notation and a font system that renders it. The main premises are
+        ease of input and portability. It is primarly suited for music teaching and quick drafting of ideas. Portability
+        is achieved in a very unique manner. Your music is text and as such it will support all common text
+        manipulation commands As you write, the input is interpreted straight away
+        by the text engine, so that firstly it won't feel like coding and, more importantly, there is no need to
+        “compile” it. This makes Cavatina really portable. It is ideal for traveling and teaching music. Also, it can be
+        easily embedded as a webfont in any website.
+    </para>
+
+    <para>The font implements a rendering concept which could be called <emphasis role="italic">image-as-text</emphasis>, using implicit compilation of a text
+        engine via contextual character substitutions. This has the advantage of supporting all common text manipulation functions of any
+        rich text editor, such as copy, paste, cut, and undo. As a plain font, Cavatina can be embedded into a web page
+        or web app with minimal effort.
+    </para>
+
+    <cav:music-notation>+---~24 ] g|| g.. g.., D~"", ] f|| f.. f.., S~L, S~"",</cav:music-notation>
+
     <section>
+        <?dbhtml filename="language_overview.html" ?>
+
         <title>Language overview</title>
         <para>You type in your music <emphasis role="italic">sequentially</emphasis>, i.e. the same
             way as in written language. Chords are words, bar-lines are punctuation marks,
             accidentals are diacritics and staff lines are the space character. Here is the base of
-            Cavatina’s syntax: </para>
+            Cavatina’s syntax:
+        </para>
         <orderedlist>
             <listitem>
                 <para>Hitting space extends the staff for starting a new note/chord.</para>
             </listitem>
             <listitem>
-                <para>Notes within a chord are typed in <emphasis role="italic">from low to high</emphasis>.</para>
+                <para>Notes within a chord are typed in <emphasis role="italic">from low to high</emphasis>.
+                </para>
             </listitem>
             <listitem>
-                <para>Note modifiers are written directly <emphasis role="italic">after</emphasis> the corresponding note.</para>
+                <para>Note modifiers are written directly <emphasis role="italic">after</emphasis> the corresponding
+                    note.
+                </para>
             </listitem>
         </orderedlist>
     </section>
+
     <section>
-        <title>Character mappings</title>
-        <para>Notes and all other musical symbols are accessed directly with your computer keyboard. The input depends on what keyboard layout you use. 
-            The complete keyboard mapping for each layout can be found on the <link xlink:href="http://cavatinafont.com/en/keyboard">keyboard page</link>, but if you are new to Cavatina, it’s recommended to read 
-            through the whole documentation first.</para>
+        <?dbhtml filename="character_mapping.html" ?>
+
+        <title>Character mapping</title>
+        <para>Notes and all other musical symbols are accessed directly with your computer keyboard. The input depends
+            on what keyboard layout you use.
+            The complete keyboard mapping for each layout can be found on the <link
+                    xlink:href="http://cavatinafont.com/en/keyboard">keyboard page</link>. If you are new to
+            Cavatina, it is a better idea to read through the short documentation first.
+        </para>
     </section>
 </section>

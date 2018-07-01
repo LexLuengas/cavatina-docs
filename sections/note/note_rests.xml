@@ -16,13 +16,13 @@
             <thead>
                 <tr>
                     <th>Input</th>
-                    <th>Rendered output</th>
+                    <th>Output</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><cav:computer-key>, ü Ü üü ÜÜ ü° ü°° Ü° Ü°°,</cav:computer-key></td>
-                    <td></td>
+                    <td><cav:computer-key id="example-note-rests">, ü Ü üü ÜÜ ü° ü°° Ü° Ü°°,</cav:computer-key></td>
+                    <td><cav:music-notation for="example-note-rests">, ] } ]] }} ]~ ]~~ }~ }~~,</cav:music-notation></td>
                 </tr>
             </tbody>
         </informaltable>

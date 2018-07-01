@@ -18,13 +18,13 @@
             <thead>
                 <tr>
                     <th>Input</th>
-                    <th>Rendered output</th>
+                    <th>Output</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><cav:computer-key>,  dh sj..  d^h^ s^..j  d^h s^..j^..,</cav:computer-key></td>
-                    <td></td>
+                    <td><cav:computer-key id="example-note-beams">,  dh sj..  d^h^ s^..j  d^h s^..j^..,</cav:computer-key></td>
+                    <td><cav:music-notation for="example-note-beams">,  dh sj..  d`h` s`..j  d`h s`..j`..,</cav:music-notation></td>
                 </tr>
             </tbody>
         </informaltable>

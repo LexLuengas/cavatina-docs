@@ -183,12 +183,6 @@ body { background-image: url('</xsl:text>
     </xsl:call-template>
   </xsl:if>
 
-  <xsl:if test="$html.script != ''">
-    <xsl:call-template name="output.html.scripts">
-      <xsl:with-param name="scripts" select="normalize-space($html.script)"/>
-    </xsl:call-template>
-  </xsl:if>
-
   <xsl:if test="$link.mailto.url != ''">
     <xsl:call-template name="head.content.link.made">
       <xsl:with-param name="node" select="$node"/>
@@ -257,6 +251,12 @@ body { background-image: url('</xsl:text>
       </xsl:call-template>
     </xsl:when>
   </xsl:choose>
+
+  <xsl:if test="$html.script != ''">
+    <xsl:call-template name="output.html.scripts">
+      <xsl:with-param name="scripts" select="normalize-space($html.script)"/>
+    </xsl:call-template>
+  </xsl:if>
 </xsl:template>
 
 <!-- ============================================================ -->

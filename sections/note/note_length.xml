@@ -63,14 +63,14 @@
             <thead>
                 <tr>
                     <th>Input</th>
-                    <th>Rendered output</th>
+                    <th>Output</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td><cav:computer-key>, a A <emphasis role="bold">a
                             A</emphasis>,</cav:computer-key></td>
-                    <td></td>
+                    <td><cav:figure id="example-note-length-base"></cav:figure></td>
                 </tr>
             </tbody>
         </informaltable>
@@ -90,13 +90,13 @@
             <thead>
                 <tr>
                     <th>Input</th>
-                    <th>Rendered output</th>
+                    <th>Output</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><cav:computer-key>, f F f~ f~~ F~ F~~,</cav:computer-key></td>
-                    <td/>
+                    <td><cav:computer-key id="example-note-length">, f F f~ f~~ F~ F~~,</cav:computer-key></td>
+                    <td><cav:music-notation for="example-note-length">, f F f~ f~~ F~ F~~,</cav:music-notation></td>
                 </tr>
             </tbody>
         </informaltable>

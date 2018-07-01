@@ -14,21 +14,6 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>documentation.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>WebHelp (Custom 2)</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>ANT</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>stylesheets/html.xsl</String>
                                 </field>
                                 <field name="scenarioIds">

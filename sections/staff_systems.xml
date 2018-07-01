@@ -19,7 +19,7 @@
         <thead>
             <tr>
                 <th>Musical symbol</th>
-                <th>Computer key</th>
+                <th>Raw input</th>
             </tr>
         </thead>
         <tbody>
@@ -40,14 +40,15 @@
             <thead>
                 <tr>
                     <th>Input</th>
-                    <th>Rendered output</th>
+                    <th>Output</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><cav:computer-key>,ß''' DFJ DGJ J s d>..,
-,** ?''' A D Ü MJ ,*</cav:computer-key></td>
-                    <td></td>
+                    <td><cav:computer-key id="example-staff-systems">,ß''' DFJ DGJ J s d>..,
+,**?''' A D Ü MJ ,*</cav:computer-key></td>
+                    <td><cav:music-notation for="example-staff-systems" multipart="true">,+--- DFJ DGJ J s d>..,
+,\\_--- A D } MJ ,\</cav:music-notation></td>
                 </tr>
             </tbody>
         </informaltable>

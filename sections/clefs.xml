@@ -14,7 +14,7 @@
         <thead>
             <tr>
                 <th>Musical symbol</th>
-                <th>Computer key</th>
+                <th>Raw input</th>
             </tr>
         </thead>
         <tbody>
@@ -35,4 +35,22 @@
     
     <para>The input of the notes is invariant of the signature; it doesn’t depend on the current
         clef.</para>
+
+    <example>
+        <title>Example</title>
+        <informaltable>
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><cav:computer-key id="example-clefs">,ß f f ,? f f,ß? f f ,</cav:computer-key></td>
+                    <td><cav:music-notation for="example-clefs">,_ f f ,+ f f ,_+ f f,</cav:music-notation></td>
+                </tr>
+            </tbody>
+        </informaltable>
+    </example>
 </section>

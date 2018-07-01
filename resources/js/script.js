@@ -81,19 +81,5 @@ $(document).on({
 }, "#k2 ul.keyboard.pop li a.box.on");
 
 $(function() {
-  if ($("#koverlay1").length) {
-    $("#koverlay1").css('visibility', 'hidden');
-    $(window).on('scroll', function () {
-      var scrollLimit = $(window).scrollTop() + (4 * $(window).height()) / 9;
-      keyboardTop = $('#keyboard1').offset().top;
-      if ($("#koverlay1").css('visibility') == "hidden" && scrollLimit >= keyboardTop)
-      {
-        $("#koverlay1").css('visibility', 'visible').hide().fadeIn();
-      }
-    });
-  }
-});
-
-$(function() {
   $("body").addClass("is-loaded");
 });

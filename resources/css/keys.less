@@ -23,10 +23,10 @@
 @k2-width: 50px;
 @k2-height: 33px;
 
-@hover-k2-left:		-3px;
-@hover-k2-top:		-6px;
-@hover-k2-width:	@k2-width;
-@hover-k2-height:	@k2-height + 6px;
+@hover-k2-left: -3px;
+@hover-k2-top: -6px;
+@hover-k2-width: @k2-width;
+@hover-k2-height: @k2-height + 6px;
 
 @keyframes boxPulseS {
   0%, 100% {
@@ -144,10 +144,10 @@ ul.keyboard li a.box.on.visited {
   z-index: 1;
   font-size: 1.3em;
   cursor: default;
-@include animation-name(boxPulse);
-@include animation-duration(.7s);
-@include animation-iteration-count(infinite);
-@include animation-delay(.12s);
+  animation-name: boxPulse;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+  animation-delay: .12s;
 }
 
 ul.keyboard.pop li a.red:hover {
@@ -158,6 +158,7 @@ ul.keyboard.pop li a.red:hover {
   box-shadow: 1px 1px #b60000, 2px 2px #b60000, 3px 3px #b60000;
   border: 1px solid red
 }
+
 ul.keyboard.pop li {
   a.cnote:hover, a.cnote.triggerPulse {
     //	orange
@@ -169,11 +170,12 @@ ul.keyboard.pop li {
   }
   a.cnote.triggerPulse {
     @box-color: #d45500;
-    -webkit-box-shadow: 1px 1px @box-color, 2px 2px @box-color, 3px 3px @box-color;//, 4px 4px 8px -3px black;
-    -moz-box-shadow: 1px 1px @box-color, 2px 2px @box-color, 3px 3px @box-color;//, 4px 4px 8px -3px black;
+    -webkit-box-shadow: 1px 1px @box-color, 2px 2px @box-color, 3px 3px @box-color; //, 4px 4px 8px -3px black;
+    -moz-box-shadow: 1px 1px @box-color, 2px 2px @box-color, 3px 3px @box-color; //, 4px 4px 8px -3px black;
     box-shadow: 1px 1px @box-color, 2px 2px @box-color, 3px 3px @box-color;
   }
 }
+
 ul.keyboard.pop li {
   a.dnote:hover, a.dnote.triggerPulse {
     //	orangeyellow
@@ -191,6 +193,7 @@ ul.keyboard.pop li {
     box-shadow: 1px 1px @box-color, 2px 2px @box-color, 3px 3px @box-color, 4px 4px @box-color;
   }
 }
+
 ul.keyboard.pop li {
   a.enote:hover, a.enote.triggerPulse {
     //	yellow
@@ -208,6 +211,7 @@ ul.keyboard.pop li {
     box-shadow: 1px 1px @box-color, 2px 2px @box-color, 3px 3px @box-color, 4px 4px @box-color;
   }
 }
+
 ul.keyboard.pop li {
   a.fnote:hover, a.fnote.triggerPulse {
     //	green
@@ -225,6 +229,7 @@ ul.keyboard.pop li {
     box-shadow: 1px 1px @box-color, 2px 2px @box-color, 3px 3px @box-color, 4px 4px @box-color;
   }
 }
+
 ul.keyboard.pop li {
   a.gnote:hover, a.gnote.triggerPulse {
     //	blue
@@ -242,6 +247,7 @@ ul.keyboard.pop li {
     box-shadow: 1px 1px @box-color, 2px 2px @box-color, 3px 3px @box-color, 4px 4px @box-color;
   }
 }
+
 ul.keyboard.pop li {
   a.anote:hover, a.anote.triggerPulse {
     //	dark-blue
@@ -259,6 +265,7 @@ ul.keyboard.pop li {
     box-shadow: 1px 1px @box-color, 2px 2px @box-color, 3px 3px @box-color, 4px 4px @box-color;
   }
 }
+
 ul.keyboard.pop li {
   a.bnote:hover, a.bnote.triggerPulse {
     //	purple
@@ -347,20 +354,23 @@ ul.keyboard#koverlay2 li a.box {
   cursor: default;
 }
 
-#k2 ul.keyboard.pop li a.box.on:hover{
+#k2 ul.keyboard.pop li a.box.on:hover {
   left: @hover-k2-left;
   top: @hover-k2-top - 2;
   width: @hover-k2-width;
   height: @hover-k2-height;
-  font-size: 1.2em;
+  font-size: 22px;
   padding-left: 1px;
-@include animation-name(boxPulseS);
-@include animation-duration(.7s);
-@include animation-iteration-count(infinite);
-@include animation-delay(.12s);
+  animation-name: boxPulseS;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+  animation-delay: .12s;
+  animation-fill-mode: backwards;
+  padding-top: 14px;
+  line-height: 24px;
 }
 
-#k2 ul.keyboard.pop li a.box.on.triggerPulse{
+#k2 ul.keyboard.pop li a.box.on.triggerPulse {
   left: @hover-k2-left + 1;
   top: @hover-k2-top + 2;
   width: @k2-width - 3;
@@ -412,7 +422,7 @@ ul.keyboard#koverlay2 li a.box {
   display: inherit !important;
 }
 
-#k1 ul#koverlay1 li.ghost{
+#k1 ul#koverlay1 li.ghost {
   visibility: hidden;
 }
 
