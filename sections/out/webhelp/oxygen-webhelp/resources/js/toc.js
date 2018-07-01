@@ -1,7 +1,7 @@
 /*
 
 Oxygen Webhelp Plugin
-Copyright (c) 1998-2018 Syncro Soft SRL, Romania.  All rights reserved.
+Copyright (c) 1998-2017 Syncro Soft SRL, Romania.  All rights reserved.
 
 */
 
@@ -40,18 +40,18 @@ var notLocalChrome = verifyBrowser();
 function getParameter(parameter) {
     var whLocation = "";
 
+    var toReturn = undefined;
+
     try {
         whLocation = window.location;
         var p = parseUri(whLocation);
 
-        for (var param in p.queryKey) {
-            if (p.queryKey.hasOwnProperty(param) && parameter.toLowerCase() == param.toLowerCase()){
-                return p.queryKey[param];
-            }
-        }
+        toReturn = p.queryKey[parameter];
     } catch (e) {
-        error(e);
+        debug(e);
     }
+
+    return toReturn;
 }
 
 /**
@@ -60,8 +60,7 @@ function getParameter(parameter) {
  */
 function parseParameters() {
     debug("parseParameters()...");
-    // All parameters in this list have to be lower case
-    var excludeParameters = ["contextid", "appname"];
+    var excludeParameters = ["contextId", "appname"];
     var whLocation = "";
     var query = "?";
 
@@ -71,13 +70,13 @@ function parseParameters() {
         whLocation = window.location;
         p = parseUri(whLocation);
     } catch (e) {
-        error(e);
+        debug(e);
     }
 
     var parameters = p.queryKey;
 
     for (var para in parameters) {
-        if ($.inArray(para.toLowerCase(), excludeParameters) == -1) {
+        if ($.inArray(para, excludeParameters) == -1) {
             query += para + "=" + parameters[para] + "&";
         }
     }
@@ -103,7 +102,7 @@ function executeQuery() {
 	try {
 		var element = google.search.cse.element.getElement('searchresults-only0');
 	} catch (e) {
-		error(e);
+		debug(e);
 	}
 	if (element != undefined) {
 		if (input.value == '') {
@@ -118,6 +117,25 @@ function executeQuery() {
 	return false;
 }
 	
+/**
+ * Debug functions 
+ */
+function debug(msg, obj) {
+    log.debug(msg, obj);
+}
+
+function info(msg, obj) {
+    log.info(msg, obj);
+}
+
+function error(msg, obj) {
+    log.error(msg, obj);
+}
+
+function warn(msg, obj) {
+    log.warn(msg, obj);
+}
+
 function openTopic(anchor) {
     $("#contentBlock ul").css("background-color", $("#splitterContainer #leftPane").css('background-color'));
     $("#contentBlock li").css("background-color", "transparent");
@@ -142,12 +160,6 @@ function openTopic(anchor) {
         redirect($(anchor).attr('href'));
     } else {
         window.open($(anchor).attr('href'), $(anchor).attr('target'));
-    }
-
-    try {
-        recomputeBreadcrumb(-1);
-    } catch (e) {
-        debug(e);
     }
 }
 
@@ -230,7 +242,7 @@ $(document).ready(function () {
                                     var newLocation = whUrl + path;
                                     window.parent.contentwin.location.href = newLocation;
                                 } catch (e) {
-                                    error(e);
+                                    debug(e);
                                 }
                             } else {
                                 var newLocation = window.location.protocol + '//' + window.location.host;
@@ -249,7 +261,7 @@ $(document).ready(function () {
         try {
             var p = parseUri(parent.location);
         } catch (e) {
-            error(e);
+            debug(e);
             var p = parseUri(window.location);
         }
         if (withFrames) {
@@ -258,7 +270,7 @@ $(document).ready(function () {
                 	var link = p.protocol + '://' + p.host + ':' + p.port + q;
 	                window.parent.contentwin.location.href = link;
                 } catch (e) {
-                    error(e);
+                    debug(e);
                 }
             } else {
 								openTopic($('#tree a').first());
@@ -369,14 +381,10 @@ $(window).resize(function(){
 });
 
 
-try {
-    $(window.parent).resize(function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(resizeContent, 10);
-    });
-} catch (e) {
-    error(e);
-}
+$(window.parent).resize(function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resizeContent, 10);
+});
 
 // Return true if "word1" starts with "word2"
 function startsWith(word1, word2) {
@@ -423,30 +431,24 @@ function redirect(link) {
 function initTabs() {
     if (! tabsInitialized) {
         // Get the tabs internationalization text
-        var searchLinkText;
+        var contentLinkText = getLocalization("webhelp.content");
         if ( !withFrames ) {
-            searchLinkText = getLocalization("SearchResults");
+        var searchLinkText = getLocalization("SearchResults");
         } else {
-            searchLinkText = getLocalization("webhelp.search");
+            var searchLinkText = getLocalization("webhelp.search");
         }
-
-        var linkText = {
-            "content": getLocalization("webhelp.content"),
-            "search": searchLinkText,
-            "index": getLocalization("webhelp.index")
-        };
+        var indexLinkText = getLocalization("webhelp.index");
         var IndexPlaceholderText = getLocalization("IndexFilterPlaceholder");
         var SearchPlaceholderText = getLocalization("webhelp.search");
 
-        var tabs = ["content", "search", "index"];
+        var tabs = new Array("content", "search", "index");
         for (var i = 0; i < tabs.length; i++) {
             var currentTabId = tabs[i];
             // Generates menu tabs
-            var $currentTabElement = $("#"+currentTabId);
-            if ($currentTabElement.length > 0) {
+            if ($("#"+currentTabId).length > 0) {
                 debug('Init tab with name: ' + currentTabId);
-                $currentTabElement.html(linkText[currentTabId]);
-                $currentTabElement.attr("title",linkText[currentTabId]);
+                $("#"+currentTabId).html(eval(currentTabId + "LinkText"));
+                $("#"+currentTabId).attr("title", eval(currentTabId + "LinkText"));
             } else {
                 info('init no tab found with name: ' + currentTabId);
             }
@@ -478,7 +480,7 @@ function loadIndexterms() {
         }, 10);
     } catch (e) {
         if ( $("#indexList").length < 1 ) {
-            $("#index").html('<span id="loadingError">Index loading error: ' + e.message + '</span>');
+            $("#index").html('<span id="loadingError">Index loading error: ' + e + '</span>');
         }
     }
 }
@@ -504,7 +506,7 @@ function showMenu(displayTab) {
         try {
         	parent.termsToHighlight = Array();
         } catch (e) {
-            error(e);
+            debug(e);
 	    }
     }
 
@@ -692,22 +694,23 @@ debug('os:' + navigator.appVersion);
  * @param words (type:Array) - Words to be highlighted
  */
 function highlightSearchTerm(words) {
-
+    if (words.length < 1) {
+        return false;
+    }
     if (notLocalChrome) {
-        if (words !== null && words !== undefined && words.length > 0) {
+        if (words != null) {
             // highlight each term in the content view
-            var $frm = $('#frm');
-            $frm.contents().find('body').removeHighlight();
-            for (var i = 0; i < words.length; i++) {
+            $('#frm').contents().find('body').removeHighlight();
+            for (i = 0; i < words.length; i++) {
                 debug('highlight(' + words[i] + ');');
-                $frm.contents().find('body').highlight(words[i]);
+                $('#frm').contents().find('body').highlight(words[i]);
             }
         }
     } else {
         // For index with frames
-        if (parent.termsToHighlight !== null && parent.termsToHighlight !== undefined && parent.termsToHighlight > 0) {
+        if (parent.termsToHighlight != null) {
             // highlight each term in the content view
-            for (var i = 0; i < parent.termsToHighlight.length; i++) {
+            for (i = 0; i < parent.termsToHighlight.length; i++) {
                 $('*', window.parent.contentwin.document).highlight(parent.termsToHighlight[i]);
             }
         }
@@ -728,7 +731,7 @@ function clearHighlights() {
         try {
             $(window.parent.contentwin.document).find('body').removeHighlight();
         } catch (e) {
-            error(e);
+            debug(e);
         }
     }
 }
@@ -815,7 +818,7 @@ function scrollToVisibleItem() {
             $bckToc.scrollTop(tocSelectedItemOffset.top);
         }
     } catch (e) {
-        error(e);
+        debug(e);
     }
 }
 
@@ -974,11 +977,22 @@ function getUrlWithoutAnchor(url){
 function normalizeLink(originalHref) {
     var relLink = originalHref;
     var logStr = '';
+    if (! $.support.hrefNormalized) {
+        var relp = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        //ie7
+        logStr = ' IE7 ';
+        var srv = window.location.protocol + '//' + window.location.hostname;
+        var localHref = parseUri(originalHref);
         
-    if (startsWith(relLink, whUrl)) {
-        relLink = relLink.substr(whUrl.length);
+        if (window.location.protocol.toLowerCase() != 'file:' && localHref.protocol.toLowerCase() != '') {
+            debug('ie7 file://');
+            relLink = originalHref.substring(whUrl.length);
+        }
+    } else {
+        if (startsWith(relLink, whUrl)) {
+            relLink = relLink.substr(whUrl.length);
+        }
     }
-
     var toReturn = stripUri(relLink);
     info(logStr + 'normalizeLink(' + originalHref + ')=' + toReturn);
     return toReturn;

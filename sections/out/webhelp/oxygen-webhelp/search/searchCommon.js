@@ -64,7 +64,7 @@ function preprocessSearchResult(searchResult, whDistribution) {
             ttScore_first = allPages[0].scoring;
         }
 
-        var currentSimilarPage={};
+        var currentSimilarPage;
         for (var page = 0; page < allPages.length; page++) {
             /*debug("Page number: " + page);*/
 
@@ -128,18 +128,18 @@ function preprocessSearchResult(searchResult, whDistribution) {
  * @returns {string} The HTML to be displayed as search result.
  */
 function computeHTMLResult(whDistribution, pageNumber, totalPageNumber, itemsPerPage) {
-    // Empty jQuery element
-    var results = $();
+    var linkTab = [];
+    var results = "";
 
-    var $wh_search_results_items = $();
+    var wh_mobile =
+        (typeof whDistribution != 'undefined') && whDistribution == 'wh-mobile';
+    var wh_Classic =
+        (typeof whDistribution != 'undefined') && whDistribution == 'wh-classic';
 
     if (lastSearchResult.searchExpression.length > 0) {
         if (lastSearchResultItems.length > 0) {
-            $wh_search_results_items = $('<div/>', {
-                class: 'wh_search_results_items'
-            });
 
-            // Start and end index depending on the current presented page
+            // Start and end index dependin on the current presented page
             var s = 0;
             var e = lastSearchResultItems.length;
 
@@ -150,40 +150,31 @@ function computeHTMLResult(whDistribution, pageNumber, totalPageNumber, itemsPer
 
             // Result for: word1 word2
             var txt_results_for = "Results for:";
-            var $headerHTML = $('<div/>', {
-                class: 'wh_search_results_header'
-            });
+            var headerHTML = "";
 
-            var $whSearchResultsHeaderDocs = $('<div/>', {
-                class: 'wh_search_results_header_docs'
-            }).text(
-                lastSearchResultItems.length +
-                ' ' +
-                getLocalization(txt_results_for) + ' '
-            );
+            headerHTML = "<div class=\"wh_search_results_header\">";
+            headerHTML += "<div class=\"wh_search_results_header_docs\">";
+            headerHTML +=
+                lastSearchResultItems.length + " "
+                + getLocalization(txt_results_for) + " " +
+                "<span class=\"wh_search_expression\">" + lastSearchResult.originalSearchExpression + "</span>";
 
-            var $span = $('<span/>', {
-                class: 'wh_search_expression'
-            }).text(lastSearchResult.originalSearchExpression);
-
-            $whSearchResultsHeaderDocs.append($span);
-            $headerHTML.append($whSearchResultsHeaderDocs);
-
+            headerHTML += "</div>";
             if (typeof pageNumber != "undefined" && typeof totalPageNumber != "undefined" && totalPageNumber > 1) {
-                var $wh_search_results_header_pages = $('<div/>', {
-                    class: 'wh_search_results_header_pages'
-                }).text(getLocalization('Page') + ' ' + pageNumber + '/' + totalPageNumber);
-                $headerHTML.append($wh_search_results_header_pages);
+                headerHTML += "<div class=\"wh_search_results_header_pages\">";
+                headerHTML += getLocalization('Page')+ " " + pageNumber + "/" + totalPageNumber;
+                headerHTML += "</div>";
             }
+            headerHTML += "</div>";
 
-            $wh_search_results_items.append($headerHTML);
+            linkTab.push(headerHTML);
 
 			// EXM-38967 Start numbering
             var start = (pageNumber - 1) * 10 + 1;
-            var $ol = $('<ol/>', {
-                class: 'searchresult',
-                start: start
-            });
+            linkTab.push("<ol class='searchresult' start=\"" + start + "\">");
+
+            var allSearchWords = lastSearchResult.searchExpression.split(" ");
+
 
             for (var page = s; page < e; page++) {
                 var csri = lastSearchResultItems[page];
@@ -197,7 +188,7 @@ function computeHTMLResult(whDistribution, pageNumber, totalPageNumber, itemsPer
                     whDistribution,
                     hasSimilarPages,
                     null);
-                $ol.append(siHTML);
+                linkTab.push(siHTML);
 
                 if (hasSimilarPages) {
                     // Add HTML for similar pages
@@ -208,52 +199,57 @@ function computeHTMLResult(whDistribution, pageNumber, totalPageNumber, itemsPer
                             false,
                             csri.resultID);
 
-                        $ol.append(simHTML);
+                        linkTab.push(simHTML);
                     }
                 }
             }
 
-            $wh_search_results_items.append($ol);
+            linkTab.push("</ol>");
 
-            if ($wh_search_results_items.find('li').length == 0) {
-                $wh_search_results_items = $('<div/>', {
-                    class: 'wh_search_results_for'
-                });
-                var $span = $('<span/>', {
-                    class: 'wh_search_expression'
-                }).text(lastSearchResult.originalSearchExpression);
-
-                $wh_search_results_items.append($span);
+            if (linkTab.length > 2) {
+                results = "<div class='wh_search_results_items'>";
+                for (var t in linkTab) {
+                    results += linkTab[t].toString();
                 }
+                results += "</div>";
             } else {
-            $wh_search_results_items = $('<div/>', {
-                class: 'wh_search_results_for'
-            }).text(getLocalization('Search no results') + ' ');
-            var $span = $('<span/>', {
-                class: 'wh_search_expression'
-            }).text(lastSearchResult.originalSearchExpression);
-            $wh_search_results_items.append($span);
+                results = "";
+                results += "<div class='wh_search_results_for'>" +
+                    getLocalization("Search no results") + " " + "<span class=\"wh_search_expression\">" + lastSearchResult.originalSearchExpression + "</span>" + "</div>";
             }
         } else {
+            results = "";
+            results += "<div class='wh_search_results_for'>" + getLocalization("Search no results") +
+                " " + "<span class=\"wh_search_expression\">" + lastSearchResult.originalSearchExpression + "</span>" + "</div>";
+        }
+    } else {
         // Search expression is empty. If there are stop words, display a message accordingly
         if (lastSearchResult.excluded.length > 0) {
-            $wh_search_results_items = $();
-            var $p = $('<p/>', {
-                class: 'wh_search_results_for'
-            }).text(getLocalization("no_results_only_stop_words1"));
-            $wh_search_results_items.append($p);
+            results = "";
+            var p1 = getLocalization("no_results_only_stop_words1");
+            var pStr = "<p class=\"wh_search_results_for\">" + p1 + "</p>";
+            results += pStr;
 
-            $p.text(getLocalization('no_results_only_stop_words2'));
-            $wh_search_results_items.append($p);
+            var p2 = getLocalization("no_results_only_stop_words2");
+            var pStr = "<p  class=\"wh_search_results_for\">" + p2 + "</p>";
+            results += pStr;
         }
     }
 
-    return $wh_search_results_items;
+    return results;
 }
 
+
+/**
+ * Compute the HTML for a single search result item.
+ *
+ * @param searchItem {SearchResultInfo} The search item to compute HTML.
+ * @param whDistribution {String} The WebHelp distribution.
+ * @param hasSimilarPages {Boolean} True if this item has similar results.
+ * @param similarPageID {Boolean} It is set for a search item that is similar with another
+ */
 function computeSearchItemHTML(searchItem, whDistribution, hasSimilarPages, similarPageID) {
-    // New empty jQuery element
-    var htmlResult = $();
+    var htmlResult = "";
 
     var wh_mobile =
         (typeof whDistribution != 'undefined') && whDistribution == 'wh-mobile';
@@ -269,50 +265,47 @@ function computeSearchItemHTML(searchItem, whDistribution, hasSimilarPages, simi
     var tempTitle = searchItem.title;
     // EXM-27709 END
     var tempShortDesc = searchItem.shortDescription;
-    var starWidth = searchItem.starWidth;
-    var rankingHTML = $();
 
+    var starWidth = searchItem.starWidth;
+
+    var rankingHTML = "";
     if (!wh_mobile && (typeof webhelpSearchRanking != 'undefined') && webhelpSearchRanking) {
         // Add rating values for scoring at the list of matches
-        rankingHTML =  $("<div/>", {
-            id: 'rightDiv'
-        });
+        rankingHTML += "<div id=\"rightDiv\"";
         if (displayScore) {
-            rankingHTML.attr('title', 'Score: ' + searchItem.scoring);
+            rankingHTML += 'title="Score: ' + searchItem.scoring + '"';
         }
-
-        var rankingStar =
-            $('<div/>', {
-                id: 'star'
-            }).append(
-                $('<div/>', {
-                    id: 'star0',
-                    class: 'star'
-                }).append(
-                    $('<div/>', {
-                        id: 'starCur0',
-                        class: 'curr',
-                        style: 'width: ' + starWidth + 'px'
-                    }).append(
-                        $('<br/>', {
-                            style: 'clear: both;'
-                        })
-                    )
-                )
-            );
-        rankingHTML.append(rankingStar);
+        rankingHTML += ">";
+        rankingHTML += "<div id=\"star\">";
+        rankingHTML += "<div id=\"star0\" class=\"star\">";
+        rankingHTML += "<div id=\"starCur0\" class=\"curr\" style=\"width: " + starWidth + "px;\">&nbsp;</div>";
+        rankingHTML += "</div>";
+        rankingHTML += "<br style=\"clear: both;\" />";
+        rankingHTML += "</div>";
+        rankingHTML += "</div>";
     }
+
 
     var finalArray = searchItem.words;
-    var arrayStringAux = [];
+    debug(finalArray);
     var arrayString = '';
-
-    for (var x in finalArray) {
-        if (finalArray[x].length >= 2 || useCJKTokenizing || (indexerLanguage == "ja" && finalArray[x].length >= 1)) {
-            arrayStringAux.push(finalArray[x]);
+    if (wh_Classic || wh_mobile) {
+        var arrayString = 'Array(';
+        for (var x in finalArray) {
+            if (finalArray[x].length >= 2 || useCJKTokenizing || (indexerLanguage == "ja" && finalArray[x].length >= 1)) {
+                arrayString += "'" + finalArray[x] + "',";
+            }
         }
+        arrayString = arrayString.substring(0, arrayString.length - 1) + ")";
+
+    } else {
+        for (var x in finalArray) {
+            if (finalArray[x].length >= 2 || useCJKTokenizing || (indexerLanguage == "ja" && finalArray[x].length >= 1)) {
+                arrayString += finalArray[x] + ",";
+            }
+        }
+        arrayString = arrayString.substring(0, arrayString.length - 1);
     }
-    arrayString = arrayStringAux.toString();
 
     // Add highlight param
     if (!wh_Classic && !wh_mobile) {
@@ -322,87 +315,58 @@ function computeSearchItemHTML(searchItem, whDistribution, hasSimilarPages, simi
     var idLink = searchItem.linkID;
     var idResult = searchItem.resultID;
 
-    var link = '';
-
-    if (wh_Classic) {
-        link = 'return openAndHighlight(\'' + tempPath + '\', Array(';
-        for (var i in arrayStringAux) {
-            link +='\'' + arrayStringAux[i] + '\', ';
-        }
-        link = link.substr(0, link.length-2) + '))';
-    }
+    var link = 'return openAndHighlight(\'' + tempPath + '\', ' + arrayString + '\)';
 
     // Similar pages
     if (similarPageID == null) {
-        htmlResult = $('<li/>', {
-            id: idResult
-        });
+        htmlResult = '<li id="' + idResult + '">';
 
-        var $a = $('<a/>', {
-            id: idLink,
-            href: tempPath,
-            class: 'foundResult'
-        }).html(tempTitle);
+        htmlResult += '<a id="' + idLink + '" href="' + tempPath + '" class="foundResult"';
+
         if (wh_Classic) {
-            $a.attr('onclick', link);
+            htmlResult += ' onclick="' + link + '"';
         }
-
-        htmlResult.append($a);
+        htmlResult += '>' + tempTitle + '</a>';
     } else {
-        htmlResult = $('<li/>', {
-            id: idResult,
-            class: 'similarResult',
-            'data-similarTo': similarPageID
-        });
+        htmlResult =
+            '<li id="' + idResult + '" class="similarResult" data-similarTo="' + similarPageID + '">';
+        htmlResult +=
+            '<a id="' + idLink + '" href="' + tempPath + '" class="foundResult"';
 
-        var $a = $('<a/>', {
-            id: idLink,
-            href: tempPath,
-            class: 'foundResult'
-        }).html(tempTitle);
         if (wh_Classic) {
-            $a.attr('onclick', link);
+            htmlResult += ' onclick="' + link + '"';
         }
 
-        htmlResult.append($a);
+        htmlResult +=
+            '>' + tempTitle + '</a>';
     }
 
     // Also check if we have a valid description
     if ((tempShortDesc != "null" && tempShortDesc != '...')) {
-        var $shortDescriptionDIV = $('<div/>', {
-            class: 'shortdesclink'
-        }).html(tempShortDesc);
-
         // Highlight the search words in short description
         for (var si = 0; si < allSearchWords.length; si++) {
             var sw = allSearchWords[si];
-            $shortDescriptionDIV.highlight(sw, 'search-shortdescription-highlight');
+            tempShortDesc = tempShortDesc.replace(
+                new RegExp("(" + sw + ")", 'i'),
+                "<span class='search-shortdescription-highlight'>$1</span>");
         }
 
-        htmlResult.append($shortDescriptionDIV);
+        htmlResult += "\n<div class=\"shortdesclink\">" + tempShortDesc + "</div>";
     }
 
-    // Empty jQuery element
-    var searchItemInfo = $('<div/>', {
-        class: 'missingAndSimilar'
-    });
+    var searchItemInfo = "";
 
     // Relative Path
-    $a = $('<a/>', {
-        href: tempPath
-    }).html(searchItem.relativePath);
+    var relPathStr = '<div class="relativePath"><a href="' + tempPath + '"';
     if (wh_Classic) {
-        $a.attr('onclick', link);
+        relPathStr += ' onclick="' + link + '"';
     }
-
-    var relPathStr = $('<div/>', {
-        class: 'relativePath'
-    }).append($a);
-
-    searchItemInfo.append(relPathStr);
+    relPathStr += '>' + searchItem.relativePath + '</a></div>';
+    searchItemInfo += relPathStr;
 
     // Missing words
     if (!wh_mobile && allSearchWords.length != searchItem.words.length) {
+        //console.info("-------------- all words: ", allSearchWords);
         var missingWords = [];
         allSearchWords.forEach(function (word) {
             if (searchItem.words.indexOf(word) == -1) {
@@ -410,43 +374,41 @@ function computeSearchItemHTML(searchItem, whDistribution, hasSimilarPages, simi
             }
         });
 
-        var missingHTML = $('<div/>', {
-            class: 'wh_missing_words'
-        });
-        missingHTML.html(getLocalization('missing') + ' : ');
-
-
+        //console.info("missing words: ", missingWords);
+        var missingHTML =
+            "<div class=\"wh_missing_words\">" +
+            getLocalization('Missing') + " : ";
         for (var widx = 0; widx < missingWords.length; widx++) {
-            var $span = $('<span/>', {
-                class: 'wh_missing_word'
-            }).html(missingWords[widx]);
-            missingHTML.append($span).append(' ');
+            missingHTML += "<span class=\"wh_missing_word\">" + missingWords[widx] + "</span> "
         }
-
-        searchItemInfo.append(missingHTML);
+        missingHTML += "</div>";
+        searchItemInfo += missingHTML;
     }
 
     if (!wh_mobile && hasSimilarPages) {
-        var $similarHTML = $('<a/>', {
-            class: 'showSimilarPages',
-            onclick: 'showSimilarResults(this)'
-        }).html(getLocalization('Similar results') +  '...');
+        var similarHTML =
+            '<a class="showSimilarPages" ' +
+            'onclick="showSimilarResults(this)">Similar results...</a>';
 
-        searchItemInfo.append($similarHTML);
+        searchItemInfo += similarHTML;
     }
 
-    if (rankingHTML.html() != '' && searchItemInfo.html() != '') {
-        var $searchItemAdditionalData = $('<div/>', {
-            class: 'searchItemAdditionalData'
-        }).append(searchItemInfo).append(rankingHTML);
+    if (rankingHTML != undefined && searchItemInfo.length > 0) {
+        htmlResult += '<div class="searchItemAdditionalData">';
 
-        htmlResult.append($searchItemAdditionalData);
-    } else if (searchItemInfo.html() != '') {
-        htmlResult.append(searchItemInfo);
-    } else if (rankingHTML.html() != '') {
-        htmlResult.append(rankingHTML);
+        htmlResult += '<div class="missingAndSimilar">';
+        htmlResult += searchItemInfo;
+        htmlResult += '</div>';
+
+        htmlResult += rankingHTML;
+        htmlResult += '</div>';
+    } else if (searchItemInfo.length > 0) {
+        htmlResult += searchItemInfo;
+    } else if (rankingHTML != undefined) {
+        htmlResult += rankingHTML;
     }
 
+    htmlResult += "</li>";
     return htmlResult;
 }
 

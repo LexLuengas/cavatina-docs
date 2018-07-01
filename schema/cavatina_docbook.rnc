@@ -19,10 +19,27 @@ db.computer-key =
     attribute source-symbol { text }?
   }
 
+db.cav-figure =
+  [ r:remap [ db:figure [ ] ] ]
+  element cav:figure {
+    db._text,
+    attribute id { text }?
+  }
+
+db.cav-music-notation =
+  [ r:remap [ db:figure [ ] ] ]
+  element cav:music-notation {
+    text,
+    attribute id { text }?,
+    attribute fallback-source { text }?
+  }
+
 # Append to docbook schema
 
 cav.inlines = db.musical-term | db.computer-key
+cav.blocks = db.cav-music-notation | db.cav-figure
 include "docbook.rnc"
 {
     db.general.inlines |= cav.inlines
+    db.extension.blocks |= cav.blocks
 }

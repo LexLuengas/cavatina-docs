@@ -10,16 +10,14 @@
          xmlns:html="http://www.w3.org/1999/xhtml"
          xmlns:db="http://docbook.org/ns/docbook">
   <info>
-    <title>Documentation for Cavatina</title>
+    <title>Cavatina Documentation</title>
 
     <author>
       <personname><firstname>Alexis</firstname><surname>Luengas</surname></personname>
-
       <affiliation>
         <orgname>Hochschule der Medien Stuttgart</orgname>
       </affiliation>
     </author>
-
     <pubdate>01.06.2018</pubdate>
   </info>
 

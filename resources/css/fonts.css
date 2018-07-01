@@ -1,0 +1,83 @@
+/* Cavatina */
+
+@import url("https://use.typekit.net/huu5xta.css");
+
+@font-face {
+    font-family: 'Cavatina US';
+    src: url('../fonts/cavatina_web_min/Cavatina US.otf') format('opentype'),
+         url('../fonts/cavatina_web_min/Cavatina US.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cavatina DE';
+    src: url('../fonts/cavatina_web_min/Cavatina DE.otf') format('opentype'),
+         url('../fonts/cavatina_web_min/Cavatina DE.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cavatina IT';
+    src: url('../fonts/cavatina_web_min/Cavatina IT.otf') format('opentype'),
+         url('../fonts/cavatina_web_min/Cavatina IT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cavatina PTa';
+    src: url('../fonts/cavatina_web_min/Cavatina PTa.otf') format('opentype'),
+         url('../fonts/cavatina_web_min/Cavatina PTa.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cavatina PTb';
+    src: url('../fonts/cavatina_web_min/Cavatina PTb.otf') format('opentype'),
+         url('../fonts/cavatina_web_min/Cavatina PTb.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cavatina PTp';
+    src: url('../fonts/cavatina_web_min/Cavatina PTp.otf') format('opentype'),
+         url('../fonts/cavatina_web_min/Cavatina PTp.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cavatina SPh';
+    src: url('../fonts/cavatina_web_min/Cavatina SPh.otf') format('opentype'),
+         url('../fonts/cavatina_web_min/Cavatina SPh.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cavatina SPi';
+    src: url('../fonts/cavatina_web_min/Cavatina SPi.otf') format('opentype'),
+         url('../fonts/cavatina_web_min/Cavatina SPi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cavatina BRa';
+    src: url('../fonts/cavatina_web_min/Cavatina BRa.otf') format('opentype'),
+         url('../fonts/cavatina_web_min/Cavatina BRa.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cavatina BRw';
+    src: url('../fonts/cavatina_web_min/Cavatina BRw.otf') format('opentype'),
+         url('../fonts/cavatina_web_min/Cavatina BRw.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

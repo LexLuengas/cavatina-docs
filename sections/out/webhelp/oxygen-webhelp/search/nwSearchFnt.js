@@ -142,16 +142,14 @@ var resultCategoriesMapFiles = [];
  * @param {[string]} The array with excluded words from initial search expression.
  * @param {string} originalSearchExpression The initial search expression.
  * @param {DocumentInfo[]} documents The array containing the search result grouped by topic/document.
- * @param {string} errorMsg The message returned by search when an error occurred. This message will be displayed to user.
  *
  * @constructor
  */
-function SearchResult(searchExpression, excluded, originalSearchExpression, documents, errorMsg) {
+function SearchResult(searchExpression, excluded, originalSearchExpression, documents) {
     this.searchExpression = searchExpression;
     this.excluded = excluded;
     this.documents = documents;
     this.originalSearchExpression = originalSearchExpression;
-    this.error = errorMsg;
 }
 
 /**
@@ -201,13 +199,8 @@ function performSearch(searchQuery) {
     // Remove ' and " characters
     searchQuery = searchQuery.replace(/"/g, " ").replace(/'/g, " ")
 
-    var errorMsg;
-    try {
-    	realSearchQuery = preprocessSearchQuery(searchQuery, phraseSearch);
-    } catch (e) {
-        errorMsg = e.message;
-        debug(e);
-    }
+
+    realSearchQuery = preprocessSearchQuery(searchQuery, phraseSearch);
     debug("Search query after pre-process: ", realSearchQuery);
     if (realSearchQuery.trim().length != 0) {
         // Add the default boolean operator between words if it is missing
@@ -304,7 +297,7 @@ function performSearch(searchQuery) {
     }
     // Filter expression to cross site scripting possibility
     initialSearchExpression = filterOriginalSearchExpression(initialSearchExpression);
-    var searchResult = new SearchResult(realSearchQuery, excluded, initialSearchExpression, docInfos, errorMsg);
+    var searchResult = new SearchResult(realSearchQuery, excluded, initialSearchExpression, docInfos);
     return searchResult;
 }
 
@@ -518,38 +511,6 @@ function filterOriginalSearchExpression(searchTextField) {
  */
 function preprocessSearchQuery(query, phraseSearch){
     var searchTextField = trim(query);
-
-    /** 
-      * Validate brackets
-      */
-    var openBracket = [],
-        closedBracket = [];
-
-    var index = 0,
-        oIndex;
-    while (query.indexOf("(", index) !== -1) {
-        index = query.indexOf("(", index);
-        openBracket.push(index);
-        index++;
-    }
-
-    index = 0;
-    while (query.indexOf(")", index) !== -1) {
-        index = query.indexOf(")", index);
-        closedBracket.push(index);
-        index++;
-    }
-
-    if (openBracket.length != closedBracket.length) {
-        throw new Error("Invalid expression!");
-    } else {
-        while (oIndex = openBracket.shift()) {
-            var cIndex = closedBracket.shift();
-            if (oIndex > cIndex) {
-                throw new Error("Invalid expression!");
-            }
-        }
-    }
 
     // Add a space between '(' or ')' and the real word
     searchTextField = searchTextField.replace(/\((\S*)/g, '( $1');
@@ -829,7 +790,7 @@ function convertToRPNExpression(search) {
  */
 function calculateRPN(rpn) {
     debug("calculate(" + rpn + ")");
-    var lastResult1, lastResult2;
+    var lastResult;
     var rpnTokens = trim(rpn);
     rpnTokens = rpnTokens.split(' ');
     var result;
@@ -855,31 +816,21 @@ function calculateRPN(rpn) {
             switch (token) {
                 case "and":
                     // debug("Implement AND operator");
-                    lastResult2 = stackResults.pop();
-                    lastResult1 = stackResults.pop();
-
-                    if (lastResult1.value == undefined || !inArray(token,knownOperators)) {
-                        debug("Error in calculateRPN(string) Method!");
-                    } else {
-                        stackResults.push(lastResult1.and(lastResult2));
+                    lastResult = stackResults.pop();
+                    if (lastResult.value !== undefined) {
+                        stackResults.push(stackResults.pop().and(lastResult));
                     }
                     break;
                 case "or":
-                    lastResult2 = stackResults.pop();
-                    lastResult1 = stackResults.pop();
-                    if (lastResult1.value == undefined || !inArray(token,knownOperators)) {
-                        debug("Error in calculateRPN(string) Method!");
-                    } else {
-                        stackResults.push(lastResult1.or(lastResult2));
+                    lastResult = stackResults.pop();
+                    if (lastResult.value !== undefined) {
+                        stackResults.push(stackResults.pop().or(lastResult));
                     }
                     break;
                 case "not":
-                    lastResult2 = stackResults.pop();
-                    lastResult1 = stackResults.pop();
-                    if (lastResult1.value == undefined || !inArray(token,knownOperators)) {
-                        debug("Error in calculateRPN(string) Method!");
-                    } else {
-                        stackResults.push(lastResult1.not(lastResult2));
+                    lastResult = stackResults.pop();
+                    if (lastResult.value !== undefined) {
+                        stackResults.push(stackResults.pop().not(lastResult));
                     }
                     break;
                 default:
@@ -1015,15 +966,17 @@ function searchSingleWord(wordToFind) {
 
 // Return true if "word" value is an element of "arrayOfWords"
 function contains(arrayOfWords, word) {
-    var found = false;
+    var found = true;
 
+    if (word.length >= 2 || (indexerLanguage == "ja" && word.length >= 1)) {
+        found = false;
         for (var w in arrayOfWords) {
             if (arrayOfWords[w] === word) {
                 found = true;
                 break;
             }
         }
-
+    }
     return found;
 }
 
@@ -1491,9 +1444,6 @@ function BooleanSearchOperand(resPerFileArray) {
      * @returns {BooleanSearchOperand} The AND operation result.
      */
     this.and = function and(secondOperand) {
-        if (typeof secondOperand == "undefined" || secondOperand == null) {
-            return this;
-        }
         var result = [];
 
         for (var x=0; x < this.value.length; x++) {
@@ -1523,9 +1473,6 @@ function BooleanSearchOperand(resPerFileArray) {
      * @returns {BooleanSearchOperand} The new operand after applying the OR operator.
      */
     this.or = function or(operand) {
-        if (typeof operand == "undefined" || operand == null) {
-            return this;
-        }
         this.value = this.value.concat(operand.value);
         var result = [];
 
@@ -1551,9 +1498,6 @@ function BooleanSearchOperand(resPerFileArray) {
     };
 
     this.not = function not(newArray) {
-        if (typeof newArray == "undefined" || newArray == null) {
-            return this;
-        }
         var result = [];
 
         for (var x=0; x < this.value.length; x++) {
@@ -1642,6 +1586,6 @@ function startsWith(word1, word2) {
  * @returns {boolean} True if the search query seems to be an URL or file path.
  */
 function isURLorFilePath(toTest) {
-    var re = new RegExp('[\./\\\-:_]');
+    var re = new RegExp('[\./\\\-:]');
     return re.test(toTest);
 }

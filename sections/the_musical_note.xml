@@ -4,6 +4,8 @@
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended"
     xmlns:xila="http://www.w3.org/2001/XInclude/local-attributes"
     xmlns:xi="http://www.w3.org/2001/XInclude">
+    <?dbhtml filename="the_musical_note.html" ?>
+    
     <info>
         <title>The musical note</title>
     </info>
@@ -15,21 +17,15 @@
     <para>It is easy to learn where this seven notes are because of their physical location on
         the keyboard. It’s like playing on the piano, but without the black keys.</para>
     
-    <!--<mediaobject>
-        <imageobject>
-            <imagedata fileref="images/keyboard_basic.png"/>
-        </imageobject>
-    </mediaobject>-->
+    <cav:figure id="keyboard-full"></cav:figure>
+    
+    <cav:music-notation id="notation-scale">  A  S  D  F  G  H  J</cav:music-notation>
     
     <para>Most musicians aren't happy with just seven notes. Following the idea above, we get a
         new octave for each of the four rows of the keyboard above the space bar, with the top
         row having three additional notes, like this:</para>
-    
-    <!--<mediaobject>
-        <imageobject>
-            <imagedata fileref="images/keyboard_overview.png"/>
-        </imageobject>
-    </mediaobject>-->
+   
+    <cav:figure id="keyboard-overview"></cav:figure>
     
     <note>
         <para>Notice each column contains the same note in different octaves.</para>

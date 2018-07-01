@@ -3,6 +3,8 @@
     xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     version="5.1-extended">
+    <?dbhtml filename="note_length.html" ?>
+
     <info>
         <title>Note length</title>
     </info>

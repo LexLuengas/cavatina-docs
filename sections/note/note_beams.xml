@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns="http://docbook.org/ns/docbook"
     xmlns:cav="http://cavatina-font.com/docbook"
-    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <?dbhtml filename="note_beams.html" ?>
+
     <info>
         <title>Note beams</title>
     </info>
@@ -27,4 +29,6 @@
             </tbody>
         </informaltable>
     </example>
+    
 </section>
+

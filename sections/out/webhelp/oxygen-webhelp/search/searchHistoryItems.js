@@ -19,7 +19,6 @@ function localStorageAvailable() {
         return true;
     }
     catch(e) {
-        error(e);
         return false;
     }
 }
@@ -68,7 +67,7 @@ function addSearchQueryToHistory(searchQuery) {
 
             }
         } catch (e) {
-            error("Exception when try to save to local storage: ", e);
+            console.log("Exception when try to save to local storage: ", e);
             window.localStorage.removeItem(localStorageKey);
         }
 
@@ -98,7 +97,7 @@ function getHistorySearchItems () {
                 }
             }
         } catch (e) {
-            error("Exception when read from local storage: ", e);
+            console.log("Exception when read from local storage: ", e);
             window.localStorage.removeItem(localStorageKey);
         }
     }
@@ -113,8 +112,6 @@ function getSearchHistoryKey() {
     var wh_root = $('meta[name=wh-path2root]').attr('content');
     if (wh_root == null || wh_root == undefined || wh_root.length == 0) {
         wh_root = "index.html";
-    } else {
-        wh_root += "index.html";
     }
 
     var wh_root_path = resolveRelativePath(wh_root);
@@ -164,7 +161,7 @@ function removeSearchHistoryItem(historyItem) {
                 }
             }
         } catch (e) {
-            error("Exception when remove from local storage: ", e);
+            console.log("Exception when remove from local storage: ", e);
             window.localStorage.removeItem(localStorageKey);
         }
     }

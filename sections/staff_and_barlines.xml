@@ -3,6 +3,8 @@
   xmlns="http://docbook.org/ns/docbook" 
   xmlns:cav="http://cavatina-font.com/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <?dbhtml filename="staffs_and_barlines.html" ?>
+
   <info>
     <title>Staff and Barlines</title>
   </info>

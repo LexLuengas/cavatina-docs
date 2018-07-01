@@ -1,0 +1,329 @@
+@include keyframes(boxPulse) {
+  0%,
+  100% {
+    width: 54px;
+    height: 43px;
+    left: -4px;
+    top: -6px;
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    width: 55px;
+    height: 44px;
+    left: -5px;
+    top: -7px;
+  }
+}
+@include keyframes(boxPulseS) {
+  0%,
+  100% {
+    left: -3px;
+    top: -8px;
+    width: 50px;
+    height: 39px;
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    left: -4px;
+    top: -10px;
+    width: 52px;
+    height: 40px;
+  }
+}
+@include keyframes(boxPulseS2) {
+  0%,
+  100% {
+    left: -2px;
+    top: -3px;
+    width: 47px;
+    height: 34px;
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    left: -2px;
+    top: -4px;
+    width: 47px;
+    height: 34px;
+  }
+}
+ul.keyboard {
+  display: inline-block;
+  list-style-type: none;
+  margin-left: 0;
+}
+ul.keyboard li {
+  float: left;
+  width: 52px;
+  height: 52px;
+  margin: 0;
+}
+ul.keyboard li a {
+  float: left;
+  width: 52px;
+  height: 37px;
+  font-size: 16px;
+  font-family: myriad-pro, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+ul.keyboard li a > div {
+  height: 40%;
+  margin-bottom: 6px;
+}
+ul.keyboard li,
+ul.keyboard a {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+ul.keyboard li a.box {
+  background-color: #1d2831;
+  color: #fff;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 13px;
+  cursor: default;
+  left: 0;
+  top: 0;
+  position: relative;
+  -webkit-box-shadow: 1px 1px #090909, 2px 2px #090909, 3px 3px #090909;
+  -moz-box-shadow: 1px 1px #090909, 2px 2px #090909, 3px 3px #090909;
+  box-shadow: 1px 1px #090909, 2px 2px #090909, 3px 3px #090909;
+  -webkit-transition: all 0.12s ease-out;
+  -moz-transition: all 0.12s ease-out;
+  -o-transition: all 0.12s ease-out;
+  transition: all 0.12s ease-out;
+  -webkit-border-radius: 0;
+  text-shadow: 0 -1px #090909;
+  border: 1px solid #090909;
+}
+ul.keyboard#koverlay1 li a.box {
+  height: 36px;
+  padding-top: 15px;
+  font-style: italic;
+  font-weight: 600;
+}
+ul.keyboard li a.box.on {
+  background-color: #2b3841;
+}
+/*ul.keyboard#koverlay1 li a.box.on {
+	background-color: #32566f;
+}*/
+ul.keyboard li a.box.on.visited {
+  background-color: #4f100b;
+  font-weight: bold;
+}
+#k1 ul.keyboard.pop li a.box.on:hover {
+  left: -4px;
+  top: -6px;
+  width: 54px;
+  height: 43px;
+  z-index: 1;
+  font-size: 1.3em;
+  cursor: default;
+  @include animation-name(boxPulse);
+  @include animation-duration(.7s);
+  @include animation-iteration-count(infinite);
+  @include animation-delay(.12s);
+}
+ul.keyboard.pop li a.red:hover {
+  background-color: red;
+  -webkit-box-shadow: 1px 1px #b60000, 2px 2px #b60000, 3px 3px #b60000;
+  -moz-box-shadow: 1px 1px #b60000, 2px 2px #b60000, 3px 3px #b60000;
+  box-shadow: 1px 1px #b60000, 2px 2px #b60000, 3px 3px #b60000;
+  border: 1px solid red;
+}
+ul.keyboard.pop li a.cnote:hover,
+ul.keyboard.pop li a.cnote.triggerPulse {
+  background-color: #ff5c00;
+  -webkit-box-shadow: 1px 1px #d45500, 2px 2px #d45500, 3px 3px #d45500;
+  -moz-box-shadow: 1px 1px #d45500, 2px 2px #d45500, 3px 3px #d45500;
+  box-shadow: 1px 1px #d45500, 2px 2px #d45500, 3px 3px #d45500;
+  border: 1px solid #ff5c00;
+}
+ul.keyboard.pop li a.cnote.triggerPulse {
+  -webkit-box-shadow: 1px 1px #d45500, 2px 2px #d45500, 3px 3px #d45500;
+  -moz-box-shadow: 1px 1px #d45500, 2px 2px #d45500, 3px 3px #d45500;
+  box-shadow: 1px 1px #d45500, 2px 2px #d45500, 3px 3px #d45500;
+}
+ul.keyboard.pop li a.dnote:hover,
+ul.keyboard.pop li a.dnote.triggerPulse {
+  background-color: #fc9200;
+  -webkit-box-shadow: 1px 1px #d17200, 2px 2px #d17200, 3px 3px #d17200;
+  -moz-box-shadow: 1px 1px #d17200, 2px 2px #d17200, 3px 3px #d17200;
+  box-shadow: 1px 1px #d17200, 2px 2px #d17200, 3px 3px #d17200;
+  border: 1px solid #fc9200;
+}
+ul.keyboard.pop li a.dnote.triggerPulse {
+  -webkit-box-shadow: 1px 1px #d17200, 2px 2px #d17200, 3px 3px #d17200, 4px 4px #d17200;
+  -moz-box-shadow: 1px 1px #d17200, 2px 2px #d17200, 3px 3px #d17200, 4px 4px #d17200;
+  box-shadow: 1px 1px #d17200, 2px 2px #d17200, 3px 3px #d17200, 4px 4px #d17200;
+}
+ul.keyboard.pop li a.enote:hover,
+ul.keyboard.pop li a.enote.triggerPulse {
+  background-color: #ffc600;
+  -webkit-box-shadow: 1px 1px #cfa100, 2px 2px #cfa100, 3px 3px #cfa100;
+  -moz-box-shadow: 1px 1px #cfa100, 2px 2px #cfa100, 3px 3px #cfa100;
+  box-shadow: 1px 1px #cfa100, 2px 2px #cfa100, 3px 3px #cfa100;
+  border: 1px solid #ffc600;
+}
+ul.keyboard.pop li a.enote.triggerPulse {
+  -webkit-box-shadow: 1px 1px #cfa100, 2px 2px #cfa100, 3px 3px #cfa100, 4px 4px #cfa100;
+  -moz-box-shadow: 1px 1px #cfa100, 2px 2px #cfa100, 3px 3px #cfa100, 4px 4px #cfa100;
+  box-shadow: 1px 1px #cfa100, 2px 2px #cfa100, 3px 3px #cfa100, 4px 4px #cfa100;
+}
+ul.keyboard.pop li a.fnote:hover,
+ul.keyboard.pop li a.fnote.triggerPulse {
+  background-color: #b8d30b;
+  -webkit-box-shadow: 1px 1px #95a105, 2px 2px #95a105, 3px 3px #95a105;
+  -moz-box-shadow: 1px 1px #95a105, 2px 2px #95a105, 3px 3px #95a105;
+  box-shadow: 1px 1px #95a105, 2px 2px #95a105, 3px 3px #95a105;
+  border: 1px solid #b8d30b;
+}
+ul.keyboard.pop li a.fnote.triggerPulse {
+  -webkit-box-shadow: 1px 1px #95a105, 2px 2px #95a105, 3px 3px #95a105, 4px 4px #95a105;
+  -moz-box-shadow: 1px 1px #95a105, 2px 2px #95a105, 3px 3px #95a105, 4px 4px #95a105;
+  box-shadow: 1px 1px #95a105, 2px 2px #95a105, 3px 3px #95a105, 4px 4px #95a105;
+}
+ul.keyboard.pop li a.gnote:hover,
+ul.keyboard.pop li a.gnote.triggerPulse {
+  background-color: #2daebf;
+  -webkit-box-shadow: 1px 1px #007d9a, 2px 2px #007d9a, 3px 3px #007d9a;
+  -moz-box-shadow: 1px 1px #007d9a, 2px 2px #007d9a, 3px 3px #007d9a;
+  box-shadow: 1px 1px #007d9a, 2px 2px #007d9a, 3px 3px #007d9a;
+  border: 1px solid #2daebf;
+}
+ul.keyboard.pop li a.gnote.triggerPulse {
+  -webkit-box-shadow: 1px 1px #007d9a, 2px 2px #007d9a, 3px 3px #007d9a, 4px 4px #007d9a;
+  -moz-box-shadow: 1px 1px #007d9a, 2px 2px #007d9a, 3px 3px #007d9a, 4px 4px #007d9a;
+  box-shadow: 1px 1px #007d9a, 2px 2px #007d9a, 3px 3px #007d9a, 4px 4px #007d9a;
+}
+ul.keyboard.pop li a.anote:hover,
+ul.keyboard.pop li a.anote.triggerPulse {
+  background-color: #067ccf;
+  -webkit-box-shadow: 1px 1px #015895, 2px 2px #015895, 3px 3px #015895;
+  -moz-box-shadow: 1px 1px #015895, 2px 2px #015895, 3px 3px #015895;
+  box-shadow: 1px 1px #015895, 2px 2px #015895, 3px 3px #015895;
+  border: 1px solid #067ccf;
+}
+ul.keyboard.pop li a.anote.triggerPulse {
+  -webkit-box-shadow: 1px 1px #015895, 2px 2px #015895, 3px 3px #015895, 4px 4px #015895;
+  -moz-box-shadow: 1px 1px #015895, 2px 2px #015895, 3px 3px #015895, 4px 4px #015895;
+  box-shadow: 1px 1px #015895, 2px 2px #015895, 3px 3px #015895, 4px 4px #015895;
+}
+ul.keyboard.pop li a.bnote:hover,
+ul.keyboard.pop li a.bnote.triggerPulse {
+  background-color: #b445d9;
+  -webkit-box-shadow: 1px 1px #7e2e98, 2px 2px #7e2e98, 3px 3px #7e2e98;
+  -moz-box-shadow: 1px 1px #7e2e98, 2px 2px #7e2e98, 3px 3px #7e2e98;
+  box-shadow: 1px 1px #7e2e98, 2px 2px #7e2e98, 3px 3px #7e2e98;
+  border: 1px solid #b445d9;
+}
+ul.keyboard.pop li a.bnote.triggerPulse {
+  -webkit-box-shadow: 1px 1px #7e2e98, 2px 2px #7e2e98, 3px 3px #7e2e98, 4px 4px #7e2e98;
+  -moz-box-shadow: 1px 1px #7e2e98, 2px 2px #7e2e98, 3px 3px #7e2e98, 4px 4px #7e2e98;
+  box-shadow: 1px 1px #7e2e98, 2px 2px #7e2e98, 3px 3px #7e2e98, 4px 4px #7e2e98;
+}
+ul.keyboard li#shift {
+  width: 90px;
+}
+ul.keyboard li#shift a {
+  width: 90px;
+}
+#notes {
+  display: block;
+  margin: -40px 0 -16px -134px;
+  white-space: pre;
+  font-size: 144px;
+  font-family: "Cavatina US", sans-serif;
+}
+#k2 ul.keyboard {
+  margin-bottom: 4px;
+}
+#k2 ul.keyboard li {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+#k2 ul.keyboard li a {
+  float: left;
+  width: 50px;
+  height: 33px;
+  font-size: 14px;
+  font-family: myriad-pro, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+#k2 ul.keyboard li a.box {
+  padding-top: 13px;
+  padding-bottom: 1px;
+}
+ul.keyboard#koverlay2 li a.box {
+  background-color: #1d2831;
+  font-style: italic;
+  font-weight: 600;
+}
+#k2 ul.keyboard.pop li a.box.on:hover,
+#k2 ul.keyboard.pop li a.box.on.triggerPulse {
+  z-index: 1;
+  cursor: default;
+}
+#k2 ul.keyboard.pop li a.box.on:hover {
+  left: -3px;
+  top: -8px;
+  width: 50px;
+  height: 39px;
+  font-size: 1.2em;
+  padding-left: 1px;
+  @include animation-name(boxPulseS);
+  @include animation-duration(.7s);
+  @include animation-iteration-count(infinite);
+  @include animation-delay(.12s);
+}
+#k2 ul.keyboard.pop li a.box.on.triggerPulse {
+  left: -2px;
+  top: -4px;
+  width: 47px;
+  height: 34px;
+  font-size: 1em;
+}
+#k2 ul.keyboard li#shift,
+#k2 ul.keyboard li#shift a {
+  width: 113px;
+}
+#k2 ul.keyboard li#shift-small,
+#k2 ul.keyboard li#shift-small a {
+  width: 61px;
+}
+#k2 ul.keyboard li#capslock,
+#k2 ul.keyboard li#capslock a {
+  width: 85px;
+}
+#k2 ul.keyboard li#return,
+#k2 ul.keyboard li#return a {
+  width: 91px;
+}
+#k2 ul.keyboard li#return-small,
+#k2 ul.keyboard li#return-small a {
+  width: 39px;
+}
+#k2 ul.keyboard li#tab,
+#k2 ul.keyboard li#tab a {
+  width: 76px;
+}
+#k2 ul.keyboard li.hidden,
+#k1 ul.keyboard li.hidden {
+  display: none !important;
+}
+#k2 ul.keyboard li#return-upper.hidden {
+  display: inherit !important;
+}
+#k1 ul#koverlay1 li.ghost {
+  visibility: hidden;
+}
+ul.keyboard {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*# sourceMappingURL=keys.css.map */

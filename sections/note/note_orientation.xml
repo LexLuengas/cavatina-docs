@@ -2,6 +2,8 @@
 <section xmlns="http://docbook.org/ns/docbook"
     xmlns:cav="http://cavatina-font.com/docbook"
     xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
+    <?dbhtml filename="note_orientation.html" ?>
+
     <info>
         <title>Note orientation</title>
     </info>

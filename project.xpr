@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="20.0">
+<project version="19.0">
     <meta>
         <filters directoryPatterns="" filePatterns="project.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
         <options>
-            <serialized version="20.0" xml:space="preserve">
+            <serialized version="19.0" xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
                         <String>enable.project.master.files.support</String>
@@ -14,31 +14,16 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>out/docbook/documentation.xml</String>
+                                    <String>documentation.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>DocBook WebHelp (Custom)</String>
+                                        <String>WebHelp (Custom 2)</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
                                         <String>ANT</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>documentation.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>cavatina2docbook</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
                                     </list>
                                 </field>
                             </scenarioAssociation>
@@ -249,92 +234,6 @@
                                     <String-array/>
                                 </field>
                             </scenario>
-                            <scenario>
-                                <field name="advancedOptionsMap">
-                                    <null/>
-                                </field>
-                                <field name="name">
-                                    <String>htmlhelp</String>
-                                </field>
-                                <field name="baseURL">
-                                    <String></String>
-                                </field>
-                                <field name="footerURL">
-                                    <String></String>
-                                </field>
-                                <field name="fOPMethod">
-                                    <String>pdf</String>
-                                </field>
-                                <field name="fOProcessorName">
-                                    <String>Apache FOP</String>
-                                </field>
-                                <field name="headerURL">
-                                    <String></String>
-                                </field>
-                                <field name="inputXSLURL">
-                                    <String>${pdu}/stylesheets/htmlhelp.xsl</String>
-                                </field>
-                                <field name="inputXMLURL">
-                                    <String>${currentFileURL}</String>
-                                </field>
-                                <field name="defaultScenario">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="isFOPPerforming">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="type">
-                                    <String>XSL</String>
-                                </field>
-                                <field name="saveAs">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="openInBrowser">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="outputFile">
-                                    <File>${pd}/out/html/${cfn}.html</File>
-                                </field>
-                                <field name="outputResource">
-                                    <String>${pd}/out/html/${cfn}.html</String>
-                                </field>
-                                <field name="openOtherLocationInBrowser">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="locationToOpenInBrowserURL">
-                                    <null/>
-                                </field>
-                                <field name="openInEditor">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInHTMLPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInXMLPane">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="showInSVGPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="showInResultSetPane">
-                                    <Boolean>false</Boolean>
-                                </field>
-                                <field name="useXSLTInput">
-                                    <Boolean>true</Boolean>
-                                </field>
-                                <field name="xsltParams">
-                                    <list/>
-                                </field>
-                                <field name="cascadingStylesheets">
-                                    <String-array/>
-                                </field>
-                                <field name="xslTransformer">
-                                    <String>Saxon6.5.5</String>
-                                </field>
-                                <field name="extensionURLs">
-                                    <String-array/>
-                                </field>
-                            </scenario>
                             <antScenario>
                                 <field name="additionalAntArgs">
                                     <String></String>
@@ -343,7 +242,7 @@
                                     <String>webhelp</String>
                                 </field>
                                 <field name="buildFilePath">
-                                    <String>${frameworksDir}/docbook/xsl/com.oxygenxml.webhelp.classic/build_docbook.xml</String>
+                                    <String>${pd}/stylesheets/docbook-xsl/com.oxygenxml.webhelp/build_docbook.xml</String>
                                 </field>
                                 <field name="ditaParams">
                                     <list>
@@ -449,7 +348,7 @@
                                                 <String>Base directory for output HTML files.</String>
                                             </field>
                                             <field name="value">
-                                                <String>${cfd}/out/webhelp2/</String>
+                                                <String>${cfd}/out/webhelp/</String>
                                             </field>
                                             <field name="defaultValue">
                                                 <null/>
@@ -819,6 +718,52 @@
                                         </antParameter>
                                         <antParameter>
                                             <field name="name">
+                                                <String>html.script</String>
+                                            </field>
+                                            <field name="description">
+                                                <String>The html.script parameter is either empty (default), indicating that no script element should be generated in the html output, or it is a list of one or more script locations. Multiple script locations are space-delimited. If you need to reference a script URI that includes a space, encode it with %20. A separate html script element will be generated for each script in the order they are listed in the parameter.</String>
+                                            </field>
+                                            <field name="value">
+                                                <String>js/script.js</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <String></String>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>2</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <null/>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <null/>
+                                            </field>
+                                        </antParameter>
+                                        <antParameter>
+                                            <field name="name">
+                                                <String>html.stylesheet</String>
+                                            </field>
+                                            <field name="description">
+                                                <String>The html.stylesheet parameter is either empty, indicating that no stylesheet link tag should be generated in the html output, or it is a list of one or more stylesheet files. Multiple stylesheets are space-delimited. If you need to reference a stylesheet URI that includes a space, encode it with %20. A separate html link element will be generated for each stylesheet in the order they are listed in the parameter.</String>
+                                            </field>
+                                            <field name="value">
+                                                <String>css/main.css</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <String></String>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>2</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <null/>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <null/>
+                                            </field>
+                                        </antParameter>
+                                        <antParameter>
+                                            <field name="name">
                                                 <String>inherit.keywords</String>
                                             </field>
                                             <field name="description">
@@ -963,7 +908,7 @@
                                                 <String>Path where the output files will be created.</String>
                                             </field>
                                             <field name="value">
-                                                <String>${cfd}/out/webhelp2</String>
+                                                <String>${cfd}/out/webhelp</String>
                                             </field>
                                             <field name="defaultValue">
                                                 <null/>
@@ -1306,13 +1251,59 @@
                                         </antParameter>
                                         <antParameter>
                                             <field name="name">
+                                                <String>webhelp.custom.resources</String>
+                                            </field>
+                                            <field name="description">
+                                                <String>The file path to a directory that contains resources files. All files from this directory will be copied to the root of the WebHelp output.</String>
+                                            </field>
+                                            <field name="value">
+                                                <String>${pd}/resources/</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <String></String>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>5</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <null/>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <null/>
+                                            </field>
+                                        </antParameter>
+                                        <antParameter>
+                                            <field name="name">
+                                                <String>webhelp.favicon</String>
+                                            </field>
+                                            <field name="description">
+                                                <String>The file path of a small image used as favicon.</String>
+                                            </field>
+                                            <field name="value">
+                                                <String>images/favicon.png</String>
+                                            </field>
+                                            <field name="defaultValue">
+                                                <String></String>
+                                            </field>
+                                            <field name="type">
+                                                <Integer>2</Integer>
+                                            </field>
+                                            <field name="possibleValues">
+                                                <null/>
+                                            </field>
+                                            <field name="possibleValuesDescriptions">
+                                                <null/>
+                                            </field>
+                                        </antParameter>
+                                        <antParameter>
+                                            <field name="name">
                                                 <String>xml.file</String>
                                             </field>
                                             <field name="description">
                                                 <String>Path to Docbook XML file.</String>
                                             </field>
                                             <field name="value">
-                                                <String>${cf}</String>
+                                                <String>${pd}/documentation.xml</String>
                                             </field>
                                             <field name="defaultValue">
                                                 <null/>
@@ -3407,29 +3398,6 @@
                                         </antParameter>
                                         <antParameter>
                                             <field name="name">
-                                                <String>html.script</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>The html.script parameter is either empty (default), indicating that no script element should be generated in the html output, or it is a list of one or more script locations. Multiple script locations are space-delimited. If you need to reference a script URI that includes a space, encode it with %20. A separate html script element will be generated for each script in the order they are listed in the parameter.</String>
-                                            </field>
-                                            <field name="value">
-                                                <null/>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <String></String>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>2</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
                                                 <String>html.script.type</String>
                                             </field>
                                             <field name="description">
@@ -3440,29 +3408,6 @@
                                             </field>
                                             <field name="defaultValue">
                                                 <String>text/javascript</String>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>2</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>html.stylesheet</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>The html.stylesheet parameter is either empty, indicating that no stylesheet link tag should be generated in the html output, or it is a list of one or more stylesheet files. Multiple stylesheets are space-delimited. If you need to reference a stylesheet URI that includes a space, encode it with %20. A separate html link element will be generated for each stylesheet in the order they are listed in the parameter.</String>
-                                            </field>
-                                            <field name="value">
-                                                <null/>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <String></String>
                                             </field>
                                             <field name="type">
                                                 <Integer>2</Integer>
@@ -6313,52 +6258,6 @@
                                         </antParameter>
                                         <antParameter>
                                             <field name="name">
-                                                <String>webhelp.custom.resources</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>The file path to a directory that contains resources files. All files from this directory will be copied to the root of the WebHelp output.</String>
-                                            </field>
-                                            <field name="value">
-                                                <null/>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <String></String>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>5</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
-                                                <String>webhelp.favicon</String>
-                                            </field>
-                                            <field name="description">
-                                                <String>The file path of a small image used as favicon.</String>
-                                            </field>
-                                            <field name="value">
-                                                <null/>
-                                            </field>
-                                            <field name="defaultValue">
-                                                <String></String>
-                                            </field>
-                                            <field name="type">
-                                                <Integer>2</Integer>
-                                            </field>
-                                            <field name="possibleValues">
-                                                <null/>
-                                            </field>
-                                            <field name="possibleValuesDescriptions">
-                                                <null/>
-                                            </field>
-                                        </antParameter>
-                                        <antParameter>
-                                            <field name="name">
                                                 <String>webhelp.footer.file</String>
                                             </field>
                                             <field name="description">
@@ -6485,7 +6384,7 @@
                                                 <String>webhelp.skin.css</String>
                                             </field>
                                             <field name="description">
-                                                <String>Path to a CSS file that sets the style theme in the output WebHelp pages. It can be one of the predefined skin CSS from the OXYGEN_INSTALL_DIR\frameworks\docbook\xsl\com.oxygenxml.webhelp.classic\predefined-skins directory, or it can be a custom skin CSS generated with the Oxygen Skin Builder web application.</String>
+                                                <String>Path to a CSS file that sets the style theme in the output WebHelp pages. It can be one of the predefined skin CSS from the OXYGEN_INSTALL_DIR\frameworks\docbook\xsl\com.oxygenxml.webhelp\predefined-skins directory, or it can be a custom skin CSS generated with the Oxygen Skin Builder web application.</String>
                                             </field>
                                             <field name="value">
                                                 <null/>
@@ -6639,13 +6538,13 @@
                                     <String>${cfd}</String>
                                 </field>
                                 <field name="showConsoleAlways">
-                                    <Boolean>false</Boolean>
+                                    <Boolean>true</Boolean>
                                 </field>
                                 <field name="advancedOptionsMap">
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>DocBook WebHelp (Custom)</String>
+                                    <String>WebHelp (Custom 2)</String>
                                 </field>
                                 <field name="baseURL">
                                     <null/>
@@ -6681,7 +6580,7 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="openInBrowser">
-                                    <Boolean>true</Boolean>
+                                    <Boolean>false</Boolean>
                                 </field>
                                 <field name="outputFile">
                                     <null/>
@@ -6693,7 +6592,7 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="locationToOpenInBrowserURL">
-                                    <String>${cfd}/out/webhelp2/index.html</String>
+                                    <String>${pd}/out/webhelp/index.html</String>
                                 </field>
                                 <field name="openInEditor">
                                     <Boolean>false</Boolean>
@@ -6737,7 +6636,7 @@
                                         <String>${frameworks}/docbook/xsl/extensions/saxon65.jar</String>
                                         <String>${frameworks}/docbook/xsl/extensions/xslthl*.jar</String>
                                         <String>${oxygenHome}/lib/lucene-*.jar</String>
-                                        <String>${frameworks}/docbook/xsl/com.oxygenxml.webhelp.classic/lib/xhtml-indexer.jar</String>
+                                        <String>${frameworks}/docbook/xsl/com.oxygenxml.webhelp/lib/xhtml-indexer.jar</String>
                                     </String-array>
                                 </field>
                             </antScenario>
@@ -6749,6 +6648,36 @@
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>documentation.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Cavatina DocBook</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>sections/the_musical_note.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Cavatina DocBook</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>out/docbook/documentation.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
