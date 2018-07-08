@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section xmlns="http://docbook.org/ns/docbook"
-         xmlns:cav="http://cavatina-font.com/docbook"
+         xmlns:cav="http://cavatinafont.com/docbook"
          xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1-extended">
     <?dbhtml filename="general_concept.html" ?>
 
@@ -8,10 +8,10 @@
         <title>General concept</title>
     </info>
 
-    <para>Cavatina is a language for creating musical notation and a font system that renders it. The main premises are
-        ease of input and portability. It is primarly suited for music teaching and quick drafting of ideas. Portability
-        is achieved in a very unique manner. Your music is text and as such it will support all common text
-        manipulation commands As you write, the input is interpreted straight away
+    <para>Cavatina is a language for creating musical notation and a font system that renders it. It focuses on
+        ease of input and portability and is primarly suited for music teaching and quick drafting of ideas. Portability
+        is achieved in a very unique manner. Cavatina sheet music <emphasis role="italic">is</emphasis> text and as such it will support all common text
+        manipulation commands. As you write, the input is interpreted straight away
         by the text engine, so that firstly it won't feel like coding and, more importantly, there is no need to
         “compile” it. This makes Cavatina really portable. It is ideal for traveling and teaching music. Also, it can be
         easily embedded as a webfont in any website.

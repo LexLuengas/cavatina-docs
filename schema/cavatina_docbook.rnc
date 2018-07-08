@@ -1,13 +1,13 @@
 namespace db = "http://docbook.org/ns/docbook"
 namespace r  = "http://nwalsh.com/xmlns/schema-remap/"
-namespace cav  = "http://cavatina-font.com/docbook"
+namespace cav  = "http://cavatinafont.com/docbook"
 default namespace = "http://docbook.org/ns/docbook"
 
-db.musical-term =
+cav.musical-term =
   [ r:remap [ db:emphasis [ ] ] ]
   element cav:musical-term { text }
 
-db.computer-key =
+cav.computer-key =
   [ r:remap [ db:code [ ] ] ]
   element cav:computer-key { 
     db._text,
@@ -15,14 +15,14 @@ db.computer-key =
     attribute id { text }?
   }
 
-db.cav-figure =
+cav.figure =
   [ r:remap [ db:figure [ ] ] ]
   element cav:figure {
     db._text,
     attribute id { text }?
   }
 
-db.cav-music-notation =
+cav.music-notation =
   [ r:remap [ db:figure [ ] ] ]
   element cav:music-notation {
     text,
@@ -34,8 +34,8 @@ db.cav-music-notation =
 
 # Append to docbook schema
 
-cav.inlines = db.musical-term | db.computer-key
-cav.blocks = db.cav-music-notation | db.cav-figure
+cav.inlines = cav.musical-term | cav.computer-key
+cav.blocks = cav.music-notation | cav.figure
 include "docbook.rnc"
 {
     db.general.inlines |= cav.inlines

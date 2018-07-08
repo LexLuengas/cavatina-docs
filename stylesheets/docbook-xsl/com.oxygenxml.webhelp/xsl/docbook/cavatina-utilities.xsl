@@ -3,7 +3,7 @@
                 xmlns:saxon="http://icl.com/saxon"
                 xmlns:xhtml="http://www.w3.org/1999/xhtml"
                 xmlns="http://www.w3.org/1999/xhtml"
-                xmlns:cav="http://cavatina-font.com/docbook"
+                xmlns:cav="http://cavatinafont.com/docbook"
                 exclude-result-prefixes="d saxon cav"
                 version="1.0">
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
     xmlns:db="http://docbook.org/ns/docbook" 
-    xmlns:cav="http://cavatina-font.com/docbook"
+    xmlns:cav="http://cavatinafont.com/docbook"
     exclude-result-prefixes="db cav">
     
     <!-- Import docbook HTML tranformation -->
