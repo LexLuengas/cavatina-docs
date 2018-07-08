@@ -25,6 +25,12 @@
 
     <cav:music-notation>+---~24 ] g|| g.. g.., D~"", ] f|| f.. f.., S~L, S~"",</cav:music-notation>
 
+    <note>
+        <title>Browser support</title>
+        <para>Cavatina renders on the latest versions of Chrome, Firefox and Opera. Tested on Windows 10 and MacOS High Sierra.</para>
+    </note>
+    
+
     <section>
         <?dbhtml filename="language_overview.html" ?>
 
