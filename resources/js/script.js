@@ -1,3 +1,4 @@
+
 $('ul.keyboard li a').on('click', function() {
   return false;
 });
@@ -80,6 +81,6 @@ $(document).on({
   }
 }, "#k2 ul.keyboard.pop li a.box.on");
 
-$(function() {
+$.domReady(function() {
   $("body").addClass("is-loaded");
 });
