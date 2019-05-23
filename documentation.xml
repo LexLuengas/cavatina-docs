@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="./schema/cavatina_docbook.rnc" type="application/relax-ng-compact-syntax"?>
-<article version="5.1-extended" xmlns="http://docbook.org/ns/docbook"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         xmlns:xila="http://www.w3.org/2001/XInclude/local-attributes"
-         xmlns:xi="http://www.w3.org/2001/XInclude"
-         xmlns:trans="http://docbook.org/ns/transclusion"
-         xmlns:svg="http://www.w3.org/2000/svg"
-         xmlns:m="http://www.w3.org/1998/Math/MathML"
-         xmlns:html="http://www.w3.org/1999/xhtml"
-         xmlns:db="http://docbook.org/ns/docbook">
-  <info>
-    <title>Cavatina Documentation</title>
+<article version="5.1-extended" 
+    xmlns="http://docbook.org/ns/docbook" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:xila="http://www.w3.org/2001/XInclude/local-attributes" 
+    xmlns:xi="http://www.w3.org/2001/XInclude" 
+    xmlns:trans="http://docbook.org/ns/transclusion" 
+    xmlns:svg="http://www.w3.org/2000/svg" 
+    xmlns:m="http://www.w3.org/1998/Math/MathML" 
+    xmlns:html="http://www.w3.org/1999/xhtml" 
+    xmlns:db="http://docbook.org/ns/docbook">
+    <info>
+        <title>Cavatina Documentation</title>
 
-    <author>
-      <personname><firstname>Alexis</firstname><surname>Luengas</surname></personname>
-      <affiliation>
-        <orgname>Hochschule der Medien Stuttgart</orgname>
-      </affiliation>
-    </author>
-    <pubdate>01.06.2018</pubdate>
-  </info>
+        <author>
+            <personname>
+                <firstname>Alexis</firstname>
+                <surname>Luengas</surname>
+            </personname>
+            <affiliation>
+                <orgname>Hochschule der Medien Stuttgart</orgname>
+            </affiliation>
+        </author>
+        <pubdate>01.06.2018</pubdate>
+    </info>
 
-  <xi:include href="sections/general_concept.xml" />
-  <xi:include href="sections/the_musical_note.xml" />
-  <xi:include href="sections/staff_and_barlines.xml" />
-  <xi:include href="sections/clefs.xml" />
-  <xi:include href="sections/time_signatures.xml" />
-  <xi:include href="sections/articulations.xml" />
-  <xi:include href="sections/dynamics.xml" />
-  <xi:include href="sections/ornaments.xml" />
-  <xi:include href="sections/repetition_markings.xml" />
-  <xi:include href="sections/other_notation.xml" />
-  <xi:include href="sections/staff_systems.xml" />
-  
+    <xi:include href="sections/general_concept.xml" />
+    <xi:include href="sections/the_musical_note.xml" />
+    <xi:include href="sections/staff_and_barlines.xml" />
+    <xi:include href="sections/clefs.xml" />
+    <xi:include href="sections/time_signatures.xml" />
+    <xi:include href="sections/articulations.xml" />
+    <xi:include href="sections/dynamics.xml" />
+    <xi:include href="sections/ornaments.xml" />
+    <xi:include href="sections/repetition_markings.xml" />
+    <xi:include href="sections/other_notation.xml" />
+    <xi:include href="sections/staff_systems.xml" />
+
 </article>

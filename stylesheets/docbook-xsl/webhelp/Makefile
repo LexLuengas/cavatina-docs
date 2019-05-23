@@ -1,16 +1,19 @@
 # Configuration
+
+BASE_DOCS_DIR = := ../../../$(pwd)
+
 # The name of the source DocBook xml file
-INPUT_XML = docsrc/readme.xml
+INPUT_XML = $(BASE_DOCS_DIR)/bundle2.xml
 
 # The makefile assumes that you have a 
 # directory named images that contains 
 # your images. It copies this to the 
 # output directory
-USER_IMAGES_PARENT_DIR=docsrc
+USER_IMAGES_PARENT_DIR = $(BASE_DOCS_DIR)/resources
 
 # Name of the desired output directory
 # This will be created if it doesn't exist
-OUTPUT_DIR = docs
+OUTPUT_DIR = = $(BASE_DOCS_DIR)/out
 
 # A list of files to exclude from indexing
 INDEXER_EXCLUDED_FILES = ix01.html
