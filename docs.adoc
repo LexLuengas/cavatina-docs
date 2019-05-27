@@ -29,10 +29,12 @@ The Cavatina project is open source and free. You can grab a copy of the fonts a
 [NOTE]
 Cavatina works with the latest versions of Chrome, Firefox and Opera.
 
+ifndef::env-github[]
 [subs=attributes]
 ++++
 include::html/keyboard-layout-select.html[]
 ++++
+endif::[]
 
 == Learning Cavatina
 
@@ -62,10 +64,12 @@ The location of each note on the keyboard is motivated by the fact that the lowe
 of characters just above the space bar has exactly *seven letters*: the
 seven pitches of a diatonic scale.
 
+ifndef::env-github[]
 [subs=attributes]
 ++++
 include::html/seven-keys.html[]
 ++++
+endif::[]
 
 It is easy to learn where this seven notes are due to their physical
 location on the keyboard.
@@ -75,10 +79,12 @@ above, we get a new octave for each of the four rows of the keyboard
 above the space bar, with the top row having three additional notes,
 like this:
 
+ifndef::env-github[]
 [subs=attributes] 
 ++++
 include::html/keyboard-full.html[]
 ++++
+endif::[]
 
 [NOTE]
 Each column of keyboard keys maps to the same note in different
