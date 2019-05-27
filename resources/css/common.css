@@ -1,23 +1,32 @@
 span.cavatina {
-  height: 2rem;
-  display: block;
-  overflow: visible;
-  resize: none;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  padding: 20px 0;
-  color: black;
-  font-family: "Cavatina US";
-  font-size: 75pt;
-  line-height: 0;
-  white-space: pre;
-  font-variant-ligatures: common-ligatures contextual;
-  -moz-font-feature-settings: "liga" 1, "calt" 1;
-  -moz-font-feature-settings: "liga=1, calt=1";
-  -ms-font-feature-settings: "liga" 1, "calt" 1;
-  -o-font-feature-settings: "liga" 1, "calt" 1;
-  -webkit-font-feature-settings: "liga" 1, "calt" 1;
-  font-feature-settings: "liga" 1, "calt" 1;
+    height: 2rem;
+    display: block;
+    overflow: visible;
+    resize: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    color: black;
+    font-family: 'Cavatina US';
+    font-size: 75pt;
+    line-height: 0;
+    white-space: pre;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: 'liga' 1, 'calt' 1;
 }
-/*# sourceMappingURL=common.css.map */
+
+.tableblock span.cavatina {
+    margin-top: 20px;
+}
+
+span.cavatina.cavatina-multipart {
+    height: auto;
+    min-height: 124px;
+    padding: 0 12.5pt;
+    line-height: 50pt;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,60 @@
+@import 'variables';
+
+@notes: c, d, e, f, g, a, b;
+
+.keyColorStyle(@note) {
+    @key: '@{note}-note';
+    background-color: .colors[ @@key];
+    border: 1px solid .colors[ @@key];
+}
+
+.keyStyle(@note) {
+    @key-dark: '@{note}-dark';
+    .keyColorStyle(@note);
+    box-shadow: 1px 1px .colors[ @@key-dark], 2px 2px .colors[ @@key-dark],
+        3px 3px .colors[ @@key-dark];
+    transform: translate(-2px, -2px);
+}
+
+.iter-note-styles(@index: length(@notes)) when (@index > 0) {
+    @note: extract(@notes, @index);
+    .generate-note-selector(@note);
+    .iter-note-styles(@index - 1);
+}
+
+.generate-note-selector(@note) {
+    :not(.keyboard-row-notes) > li > &.@{note}note {
+        transform: translate(0, 0);
+        &:hover,
+        &.emphasized {
+            .keyStyle(@note);
+        }
+    }
+
+    .keyboard-row-notes > li > &.@{note}note {
+        &.emphasized {
+            .keyColorStyle(@note);
+        }
+    }
+
+
+    .keyboard-container.note-emphasized-@{note}note :not(.keyboard-row-notes) > li > &.@{note}note {
+        .keyStyle(@note);
+    }
+
+    .keyboard-container.note-highlighted-@{note}note
+        .keyboard-row:not(.keyboard-row-notes)
+        &.@{note}note:not(:hover) {
+        background-color: lighten(#2b3841, 10%);
+    }
+}
+
+.iter-z-indices(@child-selector; @total: 5; @index: 0) when (@index < @total) {
+    @n: @index + 1;
+    @{child-selector} {
+        &:nth-child(@{n}) {
+            z-index: @index;
+        }
+    }
+    .iter-z-indices(@child-selector; @total; @index + 1);
+}

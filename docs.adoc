@@ -1,8 +1,13 @@
 = Cavatina Documentation
 :docinfo:
-:stylesheet:    styles.css
+:description:   Cavatina is a music font system designed for fast input.
+:keywords:      documentation, cavatina, font, music, music notation, sheet music
+:revdate:       {docdate}
+:revnumber:     2.0
+:stylesheet:    resources/css/theme.css
 :toc:           left
 :nofooter:
+:experimental:
 
 ifdef::env-github[]
 :tip-caption: :bulb:
@@ -12,54 +17,57 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-Cavatina is a language for creating musical notation and a font system
-that renders it. It focuses on ease of input and portability and is
-primarly suited for music teaching and quick drafting of ideas.
-Portability is achieved in a very unique manner. Cavatina sheet music
-_is_ text and as such it will support all common text manipulation
-commands. As you write, the input is interpreted straight away by the
-text engine, so that firstly it won't feel like coding and, more
-importantly, there is no need to “compile” it. This makes Cavatina
-really portable. It is ideal for traveling and teaching music. Also, it
-can be easily embedded as a webfont in any website.
+Cavatina is a font family for quickly writing musical notation. It focuses on speed of input and portability and is
+primarly suited for quick drafting of ideas or music teaching. The fonts can be used in any text editor that supports 
+advanced font features or included as a webfont in a browser.
 
-The font implements a rendering concept which could be called
-_image-as-text_, using implicit compilation of a text engine via
-contextual character substitutions. This has the advantage of supporting
-all common text manipulation functions of any rich text editor, such as
-copy, paste, cut, and undo. As a plain font, Cavatina can be embedded
-into a web page or web app with minimal effort.
+The idea behind Cavatina is that you don't necessarily need a heavy-weight music notation program to draft musical ideas.
+Instead, music is typed in as normal text based on a specific keyboard scheme.
+
+The Cavatina project is open source and free. You can grab a copy of the fonts and related tools on the link:[GitHub realease page].
 
 [NOTE]
-Cavatina renders on the latest versions of Chrome, Firefox and Opera.
+Cavatina works with the latest versions of Chrome, Firefox and Opera.
+
+[subs=attributes]
+++++
+include::html/keyboard-layout-select.html[]
+++++
+
+== Learning Cavatina
+
+For learning how to write music with Cavatina you have a few options, although it is strongly recommended that you do read the sections <<_the_basics>> and <<_the_musical_note>> beforehand. You can
+
+- do the link:[tutorial],
+- read on through this documentation, or
+- look at the lin:[keyboard mapping] itself.
 
 == The basics
 
-You type in your music _sequentially_, i.e. the same way as in written
-language. Chords are words, bar-lines are punctuation marks, accidentals
-are diacritics and staff lines are the space character. Here is the base
-of Cavatina’s syntax:
+The order in which you type in music in Cavatina matters. You write _sequentially_ from left to right, as in written
+language. But music is similar to written language in many other ways: chords are like words, bar-lines are like punctuation marks, accidentals
+are like diacritical marks and the staff lines are the space character. That is exactly how you should think when writing with Cavatina. 
 
-1.  Hitting space extends the staff for starting a new note/chord.
+There are only three basic rules to keep in mind when writing with Cavatina:
+
+1.  Hitting space extends the staff for starting a new note or chord.
 2.  Notes within a chord are typed in _from low to high_.
 3.  Note modifiers are written directly _after_ the corresponding note.
 
-== Character mapping
-
-Notes and all other musical symbols are accessed directly with your
-computer keyboard. The input depends on what keyboard layout you use.
-The complete keyboard mapping for each layout can be found on the
-http://cavatinafont.com/en/keyboard[keyboard page]. If you are new to
-Cavatina, it is a better idea to read through the short documentation
-first.
+The rest of learning Cavatina is really only memorizing the location on the keyboard of each musical symbol.
 
 == The musical note
 
-The location of each note is motivated by the fact that the lowest row
+The location of each note on the keyboard is motivated by the fact that the lowest row
 of characters just above the space bar has exactly *seven letters*: the
 seven pitches of a diatonic scale.
 
-It is easy to learn where this seven notes are because their physical
+[subs=attributes]
+++++
+include::html/seven-keys.html[]
+++++
+
+It is easy to learn where this seven notes are due to their physical
 location on the keyboard.
 
 Most musicians aren't happy with just seven notes. Following the idea
@@ -67,18 +75,22 @@ above, we get a new octave for each of the four rows of the keyboard
 above the space bar, with the top row having three additional notes,
 like this:
 
+[subs=attributes] 
+++++
+include::html/keyboard-full.html[]
+++++
+
 [NOTE]
-Notice each column of keyboard keys maps to the same note in different
+Each column of keyboard keys maps to the same note in different
 octaves.
 
 If you have used other notation software, you are probably used to look
-for the `+C+` key if you want to write a _C_, and so on. This is not very
-efficient, because sadly these letters aren’t ordered in such order in a
+for the `C` key if you want to write a _C_, and so on. This is not very
+efficient, because sadly these letters aren’t ordered in a
 row. When writing notes with Cavatina, once you get your fingers placed
-in the right position, you have all notes you need at your fingertips
-and you don’t have to look back down at the keyboard.
+in the right position, you don’t need to look back down at the keyboard.
 
-=== Note length
+=== Note Length
 
 So far we have 31 notes (covering a bit more than four octaves). Each of
 these characters has its lowercase and uppercase variant, which
@@ -86,45 +98,56 @@ correspond to the note in 8^th^ and 4^th^ length accordingly. Switching
 to the bold weight of Cavatina, you get 16^th^-notes in the lowercase
 and 8^th^-notes in the uppercase characters.
 
+[TIP]
+Use a keyboard shortcut to switch to the bold weight (on an interface in English use kbd:[Ctrl/Cmd+B]).
+
 [%autowidth]
-|=========================
-| | Input | Note length
+|====
+| | Sample Input | Note length
 
 .2+|Regular style 
-| `+a+` | 8^th^
-| `+A+` | 4^th^
+| `a` | 8^th^
+| `A` | 4^th^
 .2+|Bold style 
-| `+pass:q[*a*]+` | 16^th^
-| `+pass:q[*A*]+` | 8^th^
-|=========================
+| `pass:q[*a*]` | 16^th^
+| `pass:q[*A*]` | 8^th^
+|====
 
-|================================
+.Note length
+====
+|====
 | Input | Output
 
-m| , a A *a A*, | image:[image]
-|================================
+m| , a A *a A*, 
+// Note elongations are used here instead to avoid loading the bold font weight
+| [.cavatina]#, a A a~ A~,#
+|====
+====
 
-Appart from that, Cavatina has a special key that serves as a *modifier
-key*: the `+^+`/`+°+` key. We are going to call `+^+` the inverter and `+°+` the
-time character, the latter of which, among other things, extends the
-duration of notes. Every time you hit the time key after a note, the
+Appart from that, Cavatina has a special key that serves as a _modifier
+key_: the `{backtick}`/`{tilde}` key. We are going to call `{backtick}` the _inverter_ and `{tilde}` the
+_time_ character, the latter of which, among other things, extends the
+duration of notes. Every time you hit the time character after a note, the
 note’s length doubles. You can do this up to a maximum of twice per
 note, i.e. for a whole note you would need to type a 4^th^-note followed
-by two times `+°+`.
+by two times `{tilde}`.
 
-|=====================================
+.Note elongation
+====
+|====
 | Input | Output
 
-l|, f F f~ f~~ F~ F~~, | image:[image]
-|=====================================
+|`pass:[, f F f~ f~~ F~ F~~,]` | [.cavatina]#, f F f~ f~~ F~ F~~,#
+|====
+====
 
-For dotted notes you use `+<+` after the note.
+For *dotted notes* you use `<` after the note.
 
-To draw a tie after a note append an `+L+`.
+To draw a *tie* after a note append an `L`.
 
 === Note orientation
 
-The stem of a note can be inverted. This is done with the inverter `+^+`. A
+The stem of a note can be inverted. This is done with the _inverter_ `{backtick}`. A
 note can only be inverted once (which doesn’t stop you from
 un-inverting).
 
@@ -134,126 +157,171 @@ then it is automatically inverted. Otherwise keep inverting until you
 obtain the desired result. This is useful for separating voices within
 one chord.
 
-|====================================================
+.Note orientation
+====
+|====
 | Input | Output
 
-l|, f f^ j j^, afj a^fj a^f^j a^f^j^, | image:[image]
-|====================================================
+|`pass:[, f f` j j`, afj a`fj a`f`j a`f`j`,]` | [.cavatina]#, f f` j j`, afj a`fj a`f`j a`f`j`,#
+|====
+====
 
 === Rests
 
-Rests are accessed via the `+ü+`/`+Ü+` key. Their duration is changed the
+Rests are accessed via the `]`/`}` key. Their duration is changed the
 same way as for notes. Optionally, you can write the same rest twice and
 the length will increase accordingly.
 
-|===========================================
+.Rests
+====
+|====
 | Input | Output
 
-l|, ü Ü üü ÜÜ ü° ü°° Ü° Ü°°, | image:[image]
-|===========================================
+|`pass:a[, {endsb} }  {endsb}{endsb} }}  {endsb}~ {endsb}~~ }~ }~~,]` | [.cavatina]#, ] }  ]] }}  ]~ ]~~ }~ }~~,#
+|====
+====
 
 === Note beams
 
-To beam two 8^th^ or 16^th^ notes, write two dots `+..+` after the second
+To beam two 8^th^ or 16^th^ notes, write two dots `..` after the second
 note. Both notes need to have the same orientation before they can be
-beamed. Currently only pairs of notes can be beamed.
+beamed. Currently only pairs of notes can be beamed together.
 
-|======================================================
+.Note beams
+====
+|====
 | Input | Output
 
-l|,  dh sj..  d^h^ s^..j  d^h s^..j^.., | image:[image]
-|======================================================
+|`pass:[,  dh sj..  d`h` s`..j  d`h s`..j`..,]` | [.cavatina]#,  dh sj..  d`h` s`..j  d`h s`..j`..,#
+|====
+====
 
 == Staff and Barlines
 
-When you hit the spacebar you draw a new staff “block”. Before any note
-or chord, you have to draw a new _staff_ block where this note or chord
-will sit.
+When you hit the spacebar you draw a new staff _block_. Before any note
+or chord, you have to draw a new staff block to make room for a note or a chord.
 
-The barlines are located as follows:
+The barlines are mapped as follows:
 
 [%autowidth]
-|===========================
+|====
 |Musical symbol |Raw input
 
-| simple barline | `+,+`
-| double barline | `+,,+`
-| final barline | `+.+`
-| repeat barline (start) | `+;+`
-| repeat barline (end) | `+:+`
-|===========================
+| simple barline | `,`
+| double barline | `,,`
+| final barline | `.`
+| repeat barline (start) | `;`
+| repeat barline (end) | `:`
+|====
 
 Cavatina is not made to do minor adjustments to the layout, but if you
 consider it necessary, you can gain control over horizontal spacing by
-using the half space `+-+` and the quarter space `+--+`.
+using the half space `/` and the quarter space `//`.
 
-|===========================
+.Barlines
+====
+|====
 | Input | Output
 
-l|, ,, . ; : | image:[image]
-|===========================
+| `pass:[, ,, . ; :]` | [.cavatina]#, ,, . ; :#
+|====
+====
 
 == Clefs
 
 Cavatina supports three different clefs:
 
 [%autowidth]
-|=========================
+|====
 | Musical symbol | Raw input
 
-| F-clef | `+?+`
-| C-Clef | `+?ß+` or `+ß?+`
-| G-Clef | `+ß+`
-|=========================
+| F-clef | `pass:[_]`
+| C-Clef | `pass:[_+]` or `pass:[+_]`
+| G-Clef | `pass:[+]`
+|====
 
 The input of the notes is invariant of the signature; it doesn’t depend
 on the current clef.
 
-|=======================================
+.Clefs
+====
+|====
 | Input | Output
 
-l|,ß f f ,? f f,ß? f f , | image:[image]
-|=======================================
+| `pass:[,+ f f,_ f f,+_ f f,]` | [.cavatina]#,+ f f,_ f f,+_ f f,#
+|====
+====
 
 == Time Signatures
 
 Time signatures have to be written after clefs (and key signatures) or
-barlines. To start a time signature enter the _time_ key `+°+`. After that
+barlines. To start a time signature enter the _time_ key `{tilde}`. After that
 you just write the upper and lower numeral successively.
 
-To write the _common time_ or _cut time_ symbols, enter `+c+` or `+C+` after
+To write the _common time_ or _cut time_ symbols, enter `c` or `C` after
 the _time_ key.
 
 A space is automatically attached after a time signature, so that you
 don’t have to open a new staff block yourself.
 
-|===========================================
+.Time signatures
+====
+|====
 | Input | Output
 
-l|,°34 ,°1216 ,?'''°34 ,°c , | image:[image]
-|===========================================
+| `pass:[,~34 ,~1216 ,_---~34 ,~c ,]` 
+| [.cavatina]#pass:[,~34 ,~1216 ,_---~34 ,~c ,]#
+|====
+====
+
+== Accidentals and Key Signatures
+
+[%autowidth]
+|====
+| Musical symbol | Raw input
+
+| flat	        | `pass:[-]`
+| sharp	        | `pass:[=]`
+| natural	    | `pass:[-=]` or `pass:[=-]`
+| double flat	| `pass:[--]`
+| double sharp	| `pass:[==]`
+|====
+
+To write a key signature you simply type in the sharps/flats successively after a clef.
+
+.Key signatures
+====
+|====
+| Input | Output
+
+| `pass:[_----- D G,_+== ADG ]` | [.cavatina]#pass:[_----- D G,_+== ADG ]#
+|====
+====
 
 == Articulations
 
 [%autowidth]
-|=========================
+|====
 | Musical symbol | Raw input
 
-| staccato | `+ä+`
-| tenuto | `+Ä+`
-| staccatissimo | `+ää+`
-| fermata | `+ÄÄ+`
+| staccato | `+'+`
+| tenuto | `+"+`
+| staccatissimo | `+''+`
+| fermata | `+""+`
 | accent | `+>+`
-|=========================
+|====
 
 All articulations are written after the lowest note of a chord, except
 the fermata, which is written after the highest note.
 
-|===================================
+.Articulations
+====
+|====
 | Input | Output
 
-l|Aä AÄ Aää AÄÄ A> | image:[image]
-|===================================
+| `pass:a[{nbsp}{nbsp}A' A" A'' A"" A>]` | [.cavatina]#pass:[  A' A" A'' A"" A>]#
+|====
+====
 
 == Dynamics
 
@@ -264,99 +332,108 @@ chord.
 
 .Note dynamics
 [%autowidth]
-|===============================================
-| Musical symbol | Raw input
+[separator=¦]
+|====
+¦ Musical symbol ¦ Raw input
 
-| pianississimo | `pass:[***]`
-| pianissimo | `pass:[**]`
-| piano | `pass:[*]`
-| mezzo piano | `pass:[*+]`
-| mezzo forte | `pass:[+*]`
-| forte | `pass:[+]`
-| fortissimo | `pass:[++]`
-| fortississimo | `pass:[+++]`
-| sforzando | `pass:[++*]` or `pass:[**+]`
-| forte-piano | `pass:[***+]` or `pass:[+++*]` or `pass:[**^]` or `pass:[++^]`
-|===============================================
+¦ pianississimo ¦ `{backslash}{backslash}{backslash}`
+¦ pianissimo ¦ `{backslash}{backslash}`
+¦ piano ¦ `{backslash}`
+¦ mezzo piano ¦ `{backslash}|`
+¦ mezzo forte ¦ `|{backslash}`
+¦ forte ¦ `|`
+¦ fortissimo ¦ `||`
+¦ fortississimo ¦ `|||`
+¦ sforzando ¦ `||{backslash}` or `{backslash}{backslash}|`
+¦ forte-piano ¦ `{backslash}{backslash}{backslash}|` or `|||{backslash}` or `{backslash}{backslash}{backtick}` or `||{backtick}`
+|====
 
 .Phrasal dynamics
 [%autowidth]
-|=========================
+|====
 | Musical symbol | Raw input
 
-| crescendo | `+l+`
-| decrescendo | `+l^+`
-|=========================
+| crescendo | `l`
+| decrescendo | `l{backtick}`
+|====
 
-|==========================================
-| Input | Output
-
-l|d*fh  h^++er  M**+  Dl 
-| image:[image]
-|==========================================
+.Dynamics
+====
+[separator=¦]
+|====
+¦ Input ¦ Output
+ 
+¦ `pass:a[{nbsp}{nbsp}d\fh  h`||er  M\\|  Dl{nbsp}]` ¦ [.cavatina]#pass:[  d\fh  h`||er  M\\|  Dl ]#
+|====
+====
 
 == Ornaments
 
 [%autowidth]
-|=========================
+|====
 | Musical symbol | Raw input
 
-| mordent | `+ö+`
-| inv. mordent | `+ö^+`
-| trill | `+öö+`
-| turn | `+Ö+`
-| inv. turn | `+Ö^+`
-| arpeggio | `+P+`
-|=========================
+| mordent | `[`
+| inv. mordent | `[{backtick}`
+| trill | `[[`
+| turn | `{`
+| inv. turn | `{{backtick}`
+| arpeggio | `P`
+|====
 
 Note that, intuitively enough, ornaments are inverted with the
-_inverter_ key `+^+`.
+_inverter_ key `{backtick}`.
 
 To extend the trill or the arpeggio repeat that same character. The
 arpeggio is written at the end of a chord.
 
-|==========================================
+.Ornaments
+====
+|====
 | Input | Output
 
-l|Dö DÖ Dö^ DÖ^ Döö Döööö 
-|image:[image]
-|==========================================
+| `pass:[  D[ D{ D[` D{` D[[ D[[[[ ]` | [.cavatina]#pass:[  D[ D{ D[` D{` D[[ D[[[[ ]#
+|====
+====
 
 == Repetition markings
 
-Apart from the repeat barlines `+;+`/`+:+`, you can use the following
+Apart from the repeat barlines `;`/`:`, you can use the following
 repetition markings:
 
 [%autowidth]
-|=========================
+|====
 | Musical symbol | Raw input
 
-| 1^st^ repetition | `+o+`
-| 2^nd^ repetition | `+oo+`
-| end marking | `+o^+`
-|=========================
+| 1^st^ repetition | `o`
+| 2^nd^ repetition | `oo`
+| end marking | `o{backtick}`
+|====
 
 The end marking is necessary for the MusicXML/MIDI converter to detect
 the range of the repetition sections.
 
 [%autowidth]
-|=========================
+|====
 | Musical symbol | Raw input
 
-| coda | `+i+`
-| segno | `+I+`
-| D.C. | `+k+`
-| D.S. | `+K+`
-|=========================
+| coda | `i`
+| segno | `I`
+| D.C. | `k`
+| D.S. | `K`
+|====
 
 Writing _coda_ or _segno_ right after _D.C._ or _D.S._ will append the
 words "`al Coda`" and "`al Fine`" accordingly.
 
-|===================================================
+.Repetition Markings
+====
+|====
 | Input | Output
 
-l|, D F G Do, D F D Go^:oo  D S A Ü. | image:[image]
-|===================================================
+| `pass:[, D F G Do, D F D Go`:oo  D S A }.]` | [.cavatina]#pass:[, D F G Do, D F D Go`:oo  D S A }.]#
+|====
+====
 
 == Other Notation
 
@@ -364,58 +441,67 @@ Octave markings are used in a similar manner as repetition markings and
 always after the highest note in a chord.
 
 [%autowidth]
-|=========================
+|====
 | Musical symbol | Raw input
 
-| 8^va^ | `+O+`
-| 8^va^ (2) | `+OO+`
-| end 8^va^ | `+O^+`
-|=========================
+| 8^va^ | `O`
+| 8^va^ (2) | `OO`
+| end 8^va^ | `O{backtick}`
+|====
 
 The triplet is written before the chord sequence. Use tight spacing to
-fit the notes under the mark: enter three quarter-spaces `+---+` between
+fit the notes under the mark: enter three quarter-spaces `///` between
 the notes.
 
 [%autowidth]
-|=========================
+|====
 | Musical symbol | Raw input
 
-| triplet | `+_+`
-|=========================
+| triplet | `?`
+|====
 
 Pedal markings are lower markings and as such they have to be applied to
 the first note of a chord.
 
 [%autowidth]
-|=========================
+|====
 | Musical symbol | Raw input
 
-| pedal | `+p+`
-| release pedal | `+pp+`
-|=========================
+| pedal | `p`
+| release pedal | `pp`
+|====
 
-== Staff systems
+== Staff Systems
 
 To create systems of multiple staves you can extend barlines to join
 with the upper staff. To draw a _grand staff_, first enter a newline
-followed by a single barline `+,+` to start a new staff. To draw the brace
-connecting with the upper staff, type in `+**+`. Then continue with the
+followed by a single barline `,` to start a new staff. To draw the brace
+connecting with the upper staff, type in `{backslash}{backslash}`. Then continue with the
 clef and key signature as you would normally do. To connect the
-subsequent barlines, write a single `+*+` after them.
+subsequent barlines, write a single `{backslash}` after them.
 
 [%autowidth]
-|===============================
+|====
 | Musical symbol | Raw input
 
-| brace | `pass:[,**]`
-| long barlines | `pass:[,*]` or `pass:[.*]` ...
-|===============================
+| brace | `,{backslash}{backslash}`
+| long barlines | `,{backslash}` or `.{backslash}` etc.
+|====
 
-|==================================
+.Staff systems
+====
+|====
 | Input | Output
 
-.2+l|
-,ß''' DFJ DGJ J s d>..,
-,**?''' A D Ü MJ ,*
-| image:[image]
-|==================================
+.2+|
+`pass:[,+--- DFJ DGJ J s d>..,]` +
+`pass:a[,{backslash}{backslash} _--- A D } MJ ,{backslash}]`
+| 
++++
+<span class="cavatina cavatina-multipart">
+<span>,+--- DFJ DGJ J s d&gt;..</span>
+<span>,\\_--- A D } MJ ,\</span>
+</span>
++++
+|====
+====

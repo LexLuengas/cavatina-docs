@@ -1,18 +1,19 @@
 {
   "env": {
-      "node": true,
-      "es6": true
+    "node": true,
+    "es6": true
   },
   "extends": "eslint:recommended",
   "rules": {
-      "linebreak-style": [
-          "error",
-          "unix"
-      ],
-      "no-undef": "off",
-      "quotes": [
-          "error",
-          "single"
-      ]
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "no-undef": "off",
+    "no-console": "off",
+    "quotes": [
+      "error",
+      "single"
+    ]
   }
 }
