@@ -81,7 +81,7 @@ include::html/seven-keys.html[]
 endif::[]
 
 ifdef::env-github[]
-image::resources/images/seven_notes_US.png
+image::seven_notes_US.png
 endif::[]
 
 It is easy to learn where this seven notes are due to their physical
@@ -100,7 +100,7 @@ include::html/keyboard-full.html[]
 endif::[]
 
 ifdef::env-github[]
-image::resources/images/keyboard_US.png
+image::keyboard_US.png
 endif::[]
 
 [NOTE]
