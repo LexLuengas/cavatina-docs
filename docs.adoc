@@ -143,12 +143,11 @@ Use a keyboard shortcut to switch to the bold weight (on an interface in English
 
 m| , a A *a A*, 
 // Note elongations are used here instead to avoid loading the bold font weight
-a|
 ifndef::env-github[]
-[.cavatina]#, a A a~ A~,#
+| [.cavatina]#, a A a~ A~,#
 endif::[]
 ifdef::env-github[]
-image::example_1.png[]
+a| image::example_1.png[]
 endif::[]
 |====
 ====
@@ -166,7 +165,13 @@ by two times `{tilde}`.
 |====
 | Input | Output
 
-|`pass:[, f F f~ f~~ F~ F~~,]` | [.cavatina]#, f F f~ f~~ F~ F~~,#
+|`pass:[, f F f~ f~~ F~ F~~,]` 
+ifndef::env-github[]
+| [.cavatina]#, f F f~ f~~ F~ F~~,#
+endif::[]
+ifdef::env-github[]
+a| image::example_2.png[]
+endif::[]
 |====
 ====
 
@@ -191,7 +196,13 @@ one chord.
 |====
 | Input | Output
 
-|`pass:[, f f` j j`, afj a`fj a`f`j a`f`j`,]` | [.cavatina]#, f f` j j`, afj a`fj a`f`j a`f`j`,#
+|`pass:[, f f` j j`, afj a`fj a`f`j a`f`j`,]` 
+ifndef::env-github[]
+| [.cavatina]#, f f` j j`, afj a`fj a`f`j a`f`j`,#
+endif::[]
+ifdef::env-github[]
+a| image::example_3.png[]
+endif::[]
 |====
 ====
 
@@ -206,7 +217,13 @@ the length will increase accordingly.
 |====
 | Input | Output
 
-|`pass:a[, {endsb} }  {endsb}{endsb} }}  {endsb}~ {endsb}~~ }~ }~~,]` | [.cavatina]#, ] }  ]] }}  ]~ ]~~ }~ }~~,#
+|`pass:a[, {endsb} }  {endsb}{endsb} }}  {endsb}~ {endsb}~~ }~ }~~,]` 
+ifndef::env-github[]
+| [.cavatina]#, ] }  ]] }}  ]~ ]~~ }~ }~~,#
+endif::[]
+ifdef::env-github[]
+a| image::example_4.png[]
+endif::[]
 |====
 ====
 
@@ -221,7 +238,13 @@ beamed. Currently only pairs of notes can be beamed together.
 |====
 | Input | Output
 
-|`pass:[,  dh sj..  d`h` s`..j  d`h s`..j`..,]` | [.cavatina]#,  dh sj..  d`h` s`..j  d`h s`..j`..,#
+|`pass:[,  dh sj..  d`h` s`..j  d`h s`..j`..,]` 
+ifndef::env-github[]
+| [.cavatina]#,  dh sj..  d`h` s`..j  d`h s`..j`..,#
+endif::[]
+ifdef::env-github[]
+a| image::example_5.png[]
+endif::[]
 |====
 ====
 
@@ -252,7 +275,13 @@ using the half space `/` and the quarter space `//`.
 |====
 | Input | Output
 
-| `pass:[, ,, . ; :]` | [.cavatina]#, ,, . ; :#
+| `pass:[, ,, . ; :]` 
+ifndef::env-github[]
+| [.cavatina]#, ,, . ; :#
+endif::[]
+ifdef::env-github[]
+a| image::example_6.png[]
+endif::[]
 |====
 ====
 
@@ -277,7 +306,13 @@ on the current clef.
 |====
 | Input | Output
 
-| `pass:[,+ f f,_ f f,+_ f f,]` | [.cavatina]#,+ f f,_ f f,+_ f f,#
+| `pass:[,+ f f,_ f f,+_ f f,]` 
+ifndef::env-github[]
+| [.cavatina]#,+ f f,_ f f,+_ f f,#
+endif::[]
+ifdef::env-github[]
+a| image::example_7.png[]
+endif::[]
 |====
 ====
 
@@ -299,7 +334,12 @@ don’t have to open a new staff block yourself.
 | Input | Output
 
 | `pass:[,~34 ,~1216 ,_---~34 ,~c ,]` 
+ifndef::env-github[]
 | [.cavatina]#pass:[,~34 ,~1216 ,_---~34 ,~c ,]#
+endif::[]
+ifdef::env-github[]
+a| image::example_8.png[]
+endif::[]
 |====
 ====
 
@@ -323,7 +363,13 @@ To write a key signature you simply type in the sharps/flats successively after 
 |====
 | Input | Output
 
-| `pass:[_----- D G,_+== ADG ]` | [.cavatina]#pass:[_----- D G,_+== ADG ]#
+| `pass:[_----- D G,_+== ADG ]` 
+ifndef::env-github[]
+| [.cavatina]#pass:[_----- D G,_+== ADG ]#
+endif::[]
+ifdef::env-github[]
+a| image::example_9.png[]
+endif::[]
 |====
 ====
 
@@ -348,7 +394,13 @@ the fermata, which is written after the highest note.
 |====
 | Input | Output
 
-| `pass:a[{nbsp}{nbsp}A' A" A'' A"" A>]` | [.cavatina]#pass:[  A' A" A'' A"" A>]#
+| `pass:a[{nbsp}{nbsp}A' A" A'' A"" A>]` 
+ifndef::env-github[]
+| [.cavatina]#pass:[  A' A" A'' A"" A>]#
+endif::[]
+ifdef::env-github[]
+a| image::example_10.png[]
+endif::[]
 |====
 ====
 
@@ -392,7 +444,13 @@ chord.
 |====
 ¦ Input ¦ Output
  
-¦ `pass:a[{nbsp}{nbsp}d\fh  h`||er  M\\|  Dl{nbsp}]` ¦ [.cavatina]#pass:[  d\fh  h`||er  M\\|  Dl ]#
+¦ `pass:a[{nbsp}{nbsp}d\fh  h`||er  M\\|  Dl{nbsp}]` 
+ifndef::env-github[]
+¦ [.cavatina]#pass:[  d\fh  h`||er  M\\|  Dl ]#
+endif::[]
+ifdef::env-github[]
+a¦ image::example_11.png[]
+endif::[]
 |====
 ====
 
@@ -421,7 +479,13 @@ arpeggio is written at the end of a chord.
 |====
 | Input | Output
 
-| `pass:[  D[ D{ D[` D{` D[[ D[[[[ ]` | [.cavatina]#pass:[  D[ D{ D[` D{` D[[ D[[[[ ]#
+| `pass:[  D[ D{ D[` D{` D[[ D[[[[ ]` 
+ifndef::env-github[]
+| [.cavatina]#pass:[  D[ D{ D[` D{` D[[ D[[[[ ]#
+endif::[]
+ifdef::env-github[]
+a| image::example_12.png[]
+endif::[]
 |====
 ====
 
@@ -460,7 +524,13 @@ words "`al Coda`" and "`al Fine`" accordingly.
 |====
 | Input | Output
 
-| `pass:[, D F G Do, D F D Go`:oo  D S A }.]` | [.cavatina]#pass:[, D F G Do, D F D Go`:oo  D S A }.]#
+| `pass:[, D F G Do, D F D Go`:oo  D S A }.]` 
+ifndef::env-github[]
+| [.cavatina]#pass:[, D F G Do, D F D Go`:oo  D S A }.]#
+endif::[]
+ifdef::env-github[]
+a| image::example_13.png[]
+endif::[]
 |====
 ====
 
@@ -525,6 +595,7 @@ subsequent barlines, write a single `{backslash}` after them.
 .2+|
 `pass:[,+--- DFJ DGJ J s d>..,]` +
 `pass:a[,{backslash}{backslash} _--- A D } MJ ,{backslash}]`
+ifndef::env-github[]
 | 
 +++
 <span class="cavatina cavatina-multipart">
@@ -532,5 +603,9 @@ subsequent barlines, write a single `{backslash}` after them.
 <span>,\\_--- A D } MJ ,\</span>
 </span>
 +++
+endif::[]
+ifdef::env-github[]
+a| image::example_14.png[]
+endif::[]
 |====
 ====
