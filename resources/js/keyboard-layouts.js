@@ -208,14 +208,6 @@ function remapKeys(countryCode, key, isExtra) {
     }
 }
 
-function reallocateKeyboard(keyboardType) {
-    if (!(keyboardType >= 1 && keyboardType <= 3))
-        throw new Error('keyboardType outside range [1, 3].');
-    let klTypeClassList = [1, 2, 3].map(i => 'key-layout-type-' + i).join(' ');
-    $('.keyboard-container').removeClass(klTypeClassList);
-    $('.keyboard-container').addClass('key-layout-type-' + keyboardType);
-}
-
 function getKeyboardType(countryCode) {
     switch (countryCode) {
         case 'US':
@@ -227,4 +219,4 @@ function getKeyboardType(countryCode) {
     }
 }
 
-export { getKeyboardType, reallocateKeyboard, remapKeys, translateChars, getSymbolName }
+export { getKeyboardType, remapKeys, translateChars, getSymbolName }

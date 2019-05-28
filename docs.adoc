@@ -5,6 +5,7 @@
 :revdate:       {docdate}
 :revnumber:     2.0
 :stylesheet:    resources/css/theme.css
+:docinfodir:    html
 :toc:           left
 :nofooter:
 :experimental:
@@ -42,7 +43,7 @@ For learning how to write music with Cavatina you have a few options, although i
 
 - do the link:[tutorial],
 - read on through this documentation, or
-- look at the lin:[keyboard mapping] itself.
+- look at the link:[keyboard mapping] itself.
 
 == The basics
 
@@ -71,6 +72,10 @@ include::html/seven-keys.html[]
 ++++
 endif::[]
 
+ifdef::env-github[]
+image::resources/images/seven_notes_US.png
+endif::[]
+
 It is easy to learn where this seven notes are due to their physical
 location on the keyboard.
 
@@ -84,6 +89,10 @@ ifndef::env-github[]
 ++++
 include::html/keyboard-full.html[]
 ++++
+endif::[]
+
+ifdef::env-github[]
+image::resources/images/keyboard_US.png
 endif::[]
 
 [NOTE]
@@ -126,7 +135,13 @@ Use a keyboard shortcut to switch to the bold weight (on an interface in English
 
 m| , a A *a A*, 
 // Note elongations are used here instead to avoid loading the bold font weight
-| [.cavatina]#, a A a~ A~,#
+|
+ifndef::env-github[]
+[.cavatina]#, a A a~ A~,#
+endif::[]
+ifdef::env-github[]
+image::resources/images/examples/1.png
+endif::[]
 |====
 ====
 

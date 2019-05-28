@@ -1,8 +1,7 @@
 import {
     getKeyboardType,
     remapKeys,
-    translateChars,
-    reallocateKeyboard
+    translateChars
 } from './keyboard-layouts.js';
 
 const noteClassEmphList = 'cdefgab'
@@ -20,6 +19,14 @@ function setQueryParameter(key, value) {
         var url = `${protocol}//${host}${pathname}?${key}=${value}${hash}`;
         window.history.pushState({ path: url }, document.title, url);
     }
+}
+
+function reallocateKeyboard(keyboardType) {
+    if (!(keyboardType >= 1 && keyboardType <= 3))
+        throw new Error('keyboardType outside range [1, 3].');
+    let klTypeClassList = [1, 2, 3].map(i => 'key-layout-type-' + i).join(' ');
+    $('.keyboard-container').removeClass(klTypeClassList);
+    $('.keyboard-container').addClass('key-layout-type-' + keyboardType);
 }
 
 // Setup keyboard graphics
