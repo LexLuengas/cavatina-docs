@@ -5,7 +5,8 @@
 :revdate:       {docdate}
 :revnumber:     2.0
 :stylesheet:    resources/css/theme.css
-:docinfodir:    html
+:imagesdir:     resources/images/
+:docinfodir:    html/
 :toc:           left
 :nofooter:
 :experimental:
@@ -140,7 +141,7 @@ ifndef::env-github[]
 [.cavatina]#, a A a~ A~,#
 endif::[]
 ifdef::env-github[]
-image::resources/images/examples/1.png
+image::example_1.png[]
 endif::[]
 |====
 ====
