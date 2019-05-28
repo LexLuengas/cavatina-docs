@@ -1,7 +1,16 @@
 {
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6
+  },
   "env": {
     "node": true,
     "es6": true
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "$": true
   },
   "extends": "eslint:recommended",
   "rules": {
@@ -9,11 +18,13 @@
       "error",
       "unix"
     ],
-    "no-undef": "off",
     "no-console": "off",
     "quotes": [
       "error",
-      "single"
+      "single",
+      {
+        "avoidEscape": true
+      }
     ]
   }
 }

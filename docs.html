@@ -786,15 +786,15 @@ p { margin-bottom: 1.25rem; }
 <link rel="shortcut icon" href="">
 <link rel="stylesheet" href="./resources/css/styles.css">
 <script defer src="./resources/js/ender.min.js"></script>
-<script defer src="./resources/js/script.js"></script>
-<script defer src="./resources/js/keyboard-layouts.js"></script>
+<script type="module" src="./resources/js/keyboard-layouts.js"></script>
+<script type="module" src="./resources/js/script.js"></script>
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
 <h1>Cavatina Documentation</h1>
 <div class="details">
 <span id="revnumber">version 2.0,</span>
-<span id="revdate">2019-05-27</span>
+<span id="revdate">2019-05-28</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -835,7 +835,7 @@ advanced font features or included as a webfont in a browser.</p>
 Instead, music is typed in as normal text based on a specific keyboard scheme.</p>
 </div>
 <div class="paragraph">
-<p>The Cavatina project is open source and free. You can grab a copy of the fonts and related tools on the <a href="">GitHub realease page</a>.</p>
+<p>The Cavatina project is open source and free under the MIT license. You can grab a copy of the fonts and related tools on the <a href="">GitHub realease page</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -844,7 +844,7 @@ Instead, music is typed in as normal text based on a specific keyboard scheme.</
 <div class="title">Note</div>
 </td>
 <td class="content">
-Cavatina works with the latest versions of Chrome, Firefox and Opera.
+Cavatina works with the latest versions of Firefox, Chrome and Opera, so make sure to use one of those browsers to read this documentation.
 </td>
 </tr>
 </table>
@@ -927,33 +927,33 @@ seven pitches of a diatonic scale.</p>
 <div class="keyboard-container keyboard-container-single-row">
     <div class="keyboard-row-container">
         <ul class="keyboard-row">
-            <li class="is-key-shift">
-                <button href="#">Shift</button>
+            <li class="is-key-shift-left">
+                <button>Shift</button>
             </li>
-            <li class="is-hidden">
-                <button data-key="" data-extra-key="2"></button>
+            <li class="is-key-optional is-key-optional-2">
+                <button data-extra-key="2"></button>
             </li>
-            <li> <button data-key="Z">Z</button></li>
-            <li> <button data-key="X">X</button></li>
-            <li> <button data-key="C">C</button></li>
-            <li> <button data-key="V">V</button></li>
-            <li> <button data-key="B">B</button></li>
-            <li> <button data-key="N">N</button></li>
-            <li> <button data-key="M">M</button></li>
+            <li> <button>Z</button></li>
+            <li> <button>X</button></li>
+            <li> <button>C</button></li>
+            <li> <button>V</button></li>
+            <li> <button>B</button></li>
+            <li> <button>N</button></li>
+            <li> <button>M</button></li>
             <li>
-                <button data-key=",">,</button>
-            </li>
-            <li>
-                <button data-key=".">.</button>
+                <button>,</button>
             </li>
             <li>
-                <button data-key="/">/</button>
+                <button>.</button>
             </li>
-            <li class="is-hidden">
-                <button data-key="" data-extra-key="3"></button>
+            <li>
+                <button>/</button>
             </li>
-            <li class="is-key-shift">
-                <button href="#">Shift</button>
+            <li class="is-key-optional is-key-optional-3">
+                <button data-extra-key="3"></button>
+            </li>
+            <li class="is-key-shift-right">
+                <button>Shift</button>
             </li>
         </ul>
     </div>
@@ -975,7 +975,7 @@ like this:</p>
 <div class="keyboard-container keyboard-container-full">
     <div class="keyboard-row-container">
         <ul class="keyboard-row">
-            <li><button data-key="`" disabled>`</button></li>
+            <li><button disabled>`</button></li>
             <li><button class="cnote">1</button></li>
             <li><button class="dnote">2</button></li>
             <li><button class="enote">3</button></li>
@@ -986,58 +986,58 @@ like this:</p>
             <li><button class="cnote">8</button></li>
             <li><button class="dnote">9</button></li>
             <li><button class="enote">0</button></li>
-            <li><button data-key="-" disabled>-</button></li>
-            <li><button data-key="=" disabled>=</button></li>
+            <li><button disabled>-</button></li>
+            <li><button disabled>=</button></li>
             <li class="is-key-backspace"><button disabled></button></li>
         </ul>
         <ul class="keyboard-row">
             <li class="is-key-tab"><button disabled></button></li>
-            <li><button class="cnote" data-key="Q">Q</button></li>
-            <li><button class="dnote" data-key="W">W</button></li>
-            <li><button class="enote" data-key="E">E</button></li>
-            <li><button class="fnote" data-key="R">R</button></li>
-            <li><button class="gnote" data-key="T">T</button></li>
-            <li><button class="anote" data-key="Y">Y</button></li>
-            <li><button class="bnote" data-key="U">U</button></li>
-            <li><button data-key="I" disabled>I</button></li>
-            <li><button data-key="O" disabled>O</button></li>
-            <li><button data-key="P" disabled>P</button></li>
-            <li><button data-key="[" disabled>[</button></li>
-            <li><button data-key="]" disabled>]</button></li>
-            <li class="is-key-return-upper"><button data-key="\" data-extra-key="0" disabled>\</button>
+            <li><button class="cnote">Q</button></li>
+            <li><button class="dnote">W</button></li>
+            <li><button class="enote">E</button></li>
+            <li><button class="fnote">R</button></li>
+            <li><button class="gnote">T</button></li>
+            <li><button class="anote">Y</button></li>
+            <li><button class="bnote">U</button></li>
+            <li><button disabled>I</button></li>
+            <li><button disabled>O</button></li>
+            <li><button disabled>P</button></li>
+            <li><button disabled>[</button></li>
+            <li><button disabled>]</button></li>
+            <li class="is-key-return-upper"><button disabled>\</button>
             </li>
         </ul>
         <ul class="keyboard-row">
             <li class="is-key-capslock"><button disabled></button></li>
-            <li><button class="cnote" data-key="A">A</button></li>
-            <li><button class="dnote" data-key="S">S</button></li>
-            <li><button class="enote" data-key="D">D</button></li>
-            <li><button class="fnote" data-key="F">F</button></li>
-            <li><button class="gnote" data-key="G">G</button></li>
-            <li><button class="anote" data-key="H">H</button></li>
-            <li><button class="bnote" data-key="J">J</button></li>
-            <li><button data-key="K" disabled>K</button></li>
-            <li><button data-key="L" disabled>L</button></li>
-            <li><button data-key=";" disabled>;</button></li>
-            <li><button data-key="'" disabled>'</button></li>
-            <li class="is-hidden"><button data-key="" data-extra-key="1" disabled></button></li>
+            <li><button class="cnote">A</button></li>
+            <li><button class="dnote">S</button></li>
+            <li><button class="enote">D</button></li>
+            <li><button class="fnote">F</button></li>
+            <li><button class="gnote">G</button></li>
+            <li><button class="anote">H</button></li>
+            <li><button class="bnote">J</button></li>
+            <li><button disabled>K</button></li>
+            <li><button disabled>L</button></li>
+            <li><button disabled>;</button></li>
+            <li><button disabled>'</button></li>
+            <li class="is-key-optional is-key-optional-1"><button data-extra-key="1" disabled></button></li>
             <li class="is-key-return"><button disabled></button></li>
         </ul>
         <ul class="keyboard-row">
-            <li class="is-key-shift"><button disabled></button></li>
-            <li class="is-hidden"><button data-key="" data-extra-key="2" disabled></button></li>
-            <li><button class="cnote" data-key="Z">Z</button></li>
-            <li><button class="dnote" data-key="X">X</button></li>
-            <li><button class="enote" data-key="C">C</button></li>
-            <li><button class="fnote" data-key="V">V</button></li>
-            <li><button class="gnote" data-key="B">B</button></li>
-            <li><button class="anote" data-key="N">N</button></li>
-            <li><button class="bnote" data-key="N">M</button></li>
-            <li><button data-key="," disabled>,</button></li>
-            <li><button data-key="." disabled>.</button></li>
-            <li><button data-key="/" disabled>/</button></li>
-            <li class="is-hidden"><button data-key="" data-extra-key="3" disabled></button></li>
-            <li class="is-growable"><button disabled></button></li>
+            <li class="is-key-shift-left"><button disabled></button></li>
+            <li class="is-key-optional is-key-optional-2"><button data-extra-key="2" disabled></button></li>
+            <li><button class="cnote">Z</button></li>
+            <li><button class="dnote">X</button></li>
+            <li><button class="enote">C</button></li>
+            <li><button class="fnote">V</button></li>
+            <li><button class="gnote">B</button></li>
+            <li><button class="anote">N</button></li>
+            <li><button class="bnote">M</button></li>
+            <li><button disabled>,</button></li>
+            <li><button disabled>.</button></li>
+            <li><button disabled>/</button></li>
+            <li class="is-key-optional is-key-optional-3"><button data-extra-key="3" disabled></button></li>
+            <li class="is-key-shift-right"><button disabled></button></li>
         </ul>
         <ul class="keyboard-row keyboard-row-notes">
             <li><button class="cnote emphasized">C</button></li>
@@ -1046,7 +1046,7 @@ like this:</p>
             <li><button class="fnote emphasized">F</button></li>
             <li><button class="gnote emphasized">G</button></li>
             <li><button class="anote emphasized">A</button></li>
-            <li><button class="bnote emphasized" data-locl="B">B</button></li>
+            <li><button class="bnote emphasized">B</button></li>
         </ul>
     </div>
 </div>

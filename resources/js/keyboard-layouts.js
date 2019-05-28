@@ -1,29 +1,152 @@
-let keyLayout = {
+/**
+ * Translation table for Cavatina symbols with respect to the US-English dialect.
+ * The character at position n in a string corresponds to the character at the
+ * same position in the US-Layout string.
+ *
+ * NOTE: This is *not* the same as `keyLayoutRosetta`.
+ */
+const cavatinaRosetta = {
     US:
-        '`1234567890-=qwertyuiop[]\\asdfghjkl;\'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:"ZXCVBNM<>?',
+        "`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./" +
+        '~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:"ZXCVBNM<>?',
     DE:
-        '^1234567890\'#qwertzuiopöü+asdfghjkl;äyxcvbnm,.-°!"§$%&/()=?ßQWERTZUIOPÖÜ*ASDFGHJKL:ÄYXCVBNM<>_',
+        "^1234567890'#qwertzuiopöü*asdfghjkl;äyxcvbnm,.-" +
+        '°!"§$%&/()=?ßQWERTZUIOPÖÜ+ASDFGHJKL:ÄYXCVBNM<>_',
     SPh:
-        '|1234567890\'¿qwertyuiop{}*asdfghjkl;ñzxcvbnm,.-°!"#$%&/()=?¡QWERTYUIOP[]+ASDFGHJKL:ÑZXCVBNM<>_',
+        "|1234567890'¿qwertyuiop{}*asdfghjkl;ñzxcvbnm,.-" +
+        '°!"#$%&/()=?¡QWERTYUIOP[]+ASDFGHJKL:ÑZXCVBNM<>_',
     FR:
-        '!&é"\'(-è_çà)=azertyuiopmù°qsdfghjkl;*wxcvbn,/.³§1234567890£$AZERTYUIOPM%+QSDFGHJKL:μWXCVBN?<>²',
+        '!&é"\'(-è_çà)=azertyuiopmù°qsdfghjkl;*wxcvbn,/.³' +
+        '§1234567890£$AZERTYUIOPM%+QSDFGHJKL:μWXCVBN?<>²',
     IT:
-        '\\1234567890*+qwertyuiopùòlasdfghjk<;\'zxcvbnm,.-|!"£$%&/()=èéQWERTYUIOP§çLASDFGHJK>:?ZXCVBNM°à_',
+        "\\1234567890*+qwertyuiopùòlasdfghjk<;'zxcvbnm,.-" +
+        '|!"£$%&/()=èéQWERTYUIOP§çLASDFGHJK>:?ZXCVBNM°à_',
     PTb:
-        '\'1234567890-=qwertyuiop[]lasdfghjkÇ;´zxcvbnm,./"!@#$%¨&*()_+QWERTYUIOP{}LASDFGHJKç:`ZXCVBNM<>?',
+        "'1234567890-=qwertyuiop[]lasdfghjkÇ;´zxcvbnm,./" +
+        '"!@#$%¨&*()_+QWERTYUIOP{}LASDFGHJKç:`ZXCVBNM<>?',
     PTp:
-        '\\1234567890*+qwertyuiop«çlasdfghjk<;´zxcvbnm,.-|!"#$%&/()=?\'QWERTYUIOP»ÇLASDFGHJK>:`ZXCVBNMºª_',
+        '\\1234567890*+qwertyuiop«çlasdfghjk<;´zxcvbnm,.-' +
+        '|!"#$%&/()=?\'QWERTYUIOP»ÇLASDFGHJK>:`ZXCVBNMºª_',
     PTa:
-        '§1234567890*+qwertyuiop~çªasdfghjkl;´zxcvbnm,.-±!"#$%&/()=?\'QWERTYUIOP^ÇºASDFGHJKL:`ZXCVBNM<>_',
+        '§1234567890*+qwertyuiop~çªasdfghjkl;´zxcvbnm,.-' +
+        '±!"#$%&/()=?\'QWERTYUIOP^ÇºASDFGHJKL:`ZXCVBNM<>_',
     SPi:
-        'º1234567890\'¡qwertyuiopñç*asdfghjkl;´zxcvbnm,.-ª!"·$%&/()=?¿QWERTYUIOPÑÇ+ASDFGHJKL:¨ZXCVBNM<>_',
+        "º1234567890'¡qwertyuiopñç*asdfghjkl;´zxcvbnm,.-" +
+        'ª!"·$%&/()=?¿QWERTYUIOPÑÇ+ASDFGHJKL:¨ZXCVBNM<>_',
     BRw:
-        '`1234567890~#qwertyuiop[]_asdfghjkl;\'zxcvbnm,./¬!"£$%^&*()-=QWERTYUIOP{}+ASDFGHJKL:@ZXCVBNM<>?',
+        "`1234567890~#qwertyuiop[]_asdfghjkl;'zxcvbnm,./" +
+        '¬!"£$%^&*()-=QWERTYUIOP{}+ASDFGHJKL:@ZXCVBNM<>?',
     BRa:
-        '§1234567890-=qwertyuiop[]\\asdfghjkl;\'zxcvbnm,./±!@£$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:"ZXCVBNM<>?'
+        "§1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./" +
+        '±!@£$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:"ZXCVBNM<>?'
 };
 
-let cavatinaSemantic = `
+/**
+ * Mapping between one keyboard layout and another.
+ */
+const keyLayoutRosetta = {
+    US:
+        '`1234567890-=' +
+        'qwertyuiop[]\\' +
+        "asdfghjkl;' " +
+        ' zxcvbnm,./ ' +
+        '~!@#$%^&*()_+' +
+        'QWERTYUIOP{}|' +
+        'ASDFGHJKL:" ' +
+        ' ZXCVBNM<>? ',
+    DE:
+        '^1234567890ß´' +
+        'qwertzuiopü+ ' +
+        'asdfghjklöä#' +
+        '<yxcvbnm,.- ' +
+        '°!"§$%&/()=?`' +
+        'QWERTZUIOPÜ* ' +
+        "ASDFGHJKLÖÄ'" +
+        '>YXCVBNM;:_ ',
+    SPh:
+        "|1234567890'¿" +
+        'qwertyuiop´+ ' +
+        'asdfghjklñ{}' +
+        '<zxcvbnm,.- ' +
+        '°!"#$%&/()=?¡' +
+        'QWERTYUIOP¨* ' +
+        'ASDFGHJKLÑ[]' +
+        '>ZXCVBNM;:_ ',
+    FR:
+        '²&é"\'(-è_çà)=' +
+        'azertyuiop^$ ' +
+        'qsdfghjklmù*' +
+        '<wxcvbn,;:! ' +
+        ' 1234567890°+' +
+        'AZERTYUIOP¨£ ' +
+        'QSDFGHJKLM%μ' +
+        '>WXCVBN?./§ ',
+    IT:
+        "\\1234567890'ì" +
+        'qwertyuiopè+ ' +
+        'asdfghjklòàù' +
+        '<zxcvbnm,.- ' +
+        '|!"£$%&/()=?^' +
+        'QWERTYUIOPé* ' +
+        'ASDFGHJKLç°§' +
+        '>ZXCVBNM;:_ ',
+    PTb:
+        "'1234567890-=" +
+        'qwertyuiop´[ ' +
+        'asdfghjklç~]' +
+        '\\zxcvbnm,.;/' +
+        '"!@#$%¨&*()_+' +
+        'QWERTYUIOP`{ ' +
+        'ASDFGHJKLÇ^}' +
+        '|ZXCVBNM<>:?',
+    PTp:
+        "\\1234567890'«" +
+        'qwertyuiop+´ ' +
+        'asdfghjklçº~' +
+        '<zxcvbnm,.- ' +
+        '|!"#$%&/()=?»' +
+        'QWERTYUIOP*` ' +
+        'ASDFGHJKLÇª^' +
+        '>ZXCVBNM;:_ ',
+    PTa:
+        "§1234567890'+" +
+        'qwertyuiopº´ ' +
+        'asdfghjklç~\\' +
+        '<zxcvbnm,.- ' +
+        '±!"#$%&/()=?*' +
+        'QWERTYUIOPª` ' +
+        'ASDFGHJKLÇ^|' +
+        '>ZXCVBNM;:_ ',
+    SPi:
+        "º1234567890'¡" +
+        'qwertyuiop`+ ' +
+        'asdfghjklñ´ç' +
+        '<zxcvbnm,.- ' +
+        'ª!"·$%&/()=?¿' +
+        'QWERTYUIOP^* ' +
+        'ASDFGHJKLÑ¨Ç' +
+        '>ZXCVBNM;:_ ',
+    BRw:
+        '`1234567890-=' +
+        'qwertyuiop[] ' +
+        "asdfghjkl;'#" +
+        '\\zxcvbnm,./ ' +
+        '¬!"£$%^&*()_+' +
+        'QWERTYUIOP{} ' +
+        'ASDFGHJKL:@~' +
+        '|ZXCVBNM<>? ',
+    BRa:
+        '§1234567890-=' +
+        'qwertyuiop[] ' +
+        "asdfghjkl;'\\" +
+        '`zxcvbnm,./ ' +
+        '±!@£$%^&*()_+' +
+        'QWERTYUIOP{} ' +
+        'ASDFGHJKL:"|' +
+        '~ZXCVBNM<>? '
+};
+
+const cavatinaSemantic = `
 inverter,c6,d6,e6,f6,g6,a6,b6,c7,d7,e7,flat,sharp,
 c5,d5,e5,f5,g5,a5,b5,coda,1st repetition,sustain pedal,mordent,eighth rest,piano,
 c4,d4,e4,f4,g4,a4,b4,da capo,crescendo,repetition (start),staccato,
@@ -35,99 +158,73 @@ C3,D3,E3,F3,G3,A3,B3,dot,accent,triplet`
     .replace('\n', '')
     .split(',');
 
-function remapChar(countryCode, c) {
-    // always translates from US-layout
-    if (c === ' ') return c;
-    var i = keyLayout['US'].indexOf(c);
-    return keyLayout[countryCode].charAt(i);
+const extraKeyToUsIndex = {
+    '0': 25,
+    '1': 37,
+    '2': 38,   
+    '3': 49
 }
 
-function remapChars(countryCode, s) {
+function getSymbolName(c) {
+    // Assumes c is a character from the US-Layout dialect
+    if (c === ' ') return 'space';
+    var i = cavatinaRosetta['US'].indexOf(c);
+    return cavatinaSemantic[i];
+}
+
+function translateChar(countryCode, c) {
+    // always translates from US-layout
+    if (c === ' ') return c;
+    var i = cavatinaRosetta['US'].indexOf(c);
+    return cavatinaRosetta[countryCode].charAt(i);
+}
+
+function translateChars(countryCode, s) {
+    if (countryCode === 'US') return s;
     return s
         .split('')
-        .map(c => remapChar(countryCode, c))
+        .map(c => translateChar(countryCode, c))
         .join('');
 }
 
-function remapKeys(countryCode, key) {
-    if (typeof key == 'string') {
-        return remapChar(countryCode, key);
+/**
+ * Remaps keys from the 'US' keyboard layout to the given layout.
+ * @param {string} countryCode
+ * @param {string} key
+ * @param {boolean} isExtra
+ * @returns {Array<string>} Array containing up to two key strings.
+ */
+function remapKeys(countryCode, key, isExtra) {
+    let remappedKeyAt = i => keyLayoutRosetta[countryCode].charAt(i);
+    let remappedCompoundKeyAt = i => [remappedKeyAt(i), remappedKeyAt(i + 50)];
+
+    if (!isExtra) {
+        if (countryCode === 'US' || key.length !== 1) return [key];
+        let i = keyLayoutRosetta['US'].indexOf(key);
+        return [remappedKeyAt(i)];
     } else {
-        // number, extra keys
-        if (key == 0) return ['\\', '|'];
-        if (key == 1)
-            return [
-                keyLayout[countryCode].charAt(37),
-                keyLayout[countryCode].charAt(87)
-            ];
-        if (key == 2)
-            return [
-                keyLayout[countryCode].charAt(38),
-                keyLayout[countryCode].charAt(88)
-            ];
-        if (key == 3)
-            return [
-                keyLayout[countryCode].charAt(49),
-                keyLayout[countryCode].charAt(99)
-            ];
+        let i = extraKeyToUsIndex[key];
+        return remappedCompoundKeyAt(i);
     }
 }
 
-var states = [
-    [true, false, false, false],
-    [false, true, true, false],
-    [false, true, true, true]
-];
-
-function reallocateKeyboard(i) {
-    // i in [0, 1, 2],
-    var s = states[i];
+function reallocateKeyboard(keyboardType) {
+    if (!(keyboardType >= 1 && keyboardType <= 3))
+        throw new Error('keyboardType outside range [1, 3].');
+    let klTypeClassList = [1, 2, 3].map(i => 'key-layout-type-' + i).join(' ');
+    $('.keyboard-container').removeClass(klTypeClassList);
+    $('.keyboard-container').addClass('key-layout-type-' + keyboardType);
 }
 
-function extraKeysForLang(countryCode) {
+function getKeyboardType(countryCode) {
     switch (countryCode) {
         case 'US':
-            return 0;
-        case 'PTb':
-            return 2;
-        default:
             return 1;
+        case 'PTb':
+            return 3;
+        default:
+            return 2;
     }
 }
 
-{
-    let codeEls = $('p').find('code');
-
-    // Store inital US-Layout character for later conversion
-    codeEls.each(codeEl => {
-        codeEl.dataset.usLayoutChars = codeEl.textContent;
-    });
-
-    let lastLang = 'US';
-
-    $('select.select-keyboard-layout')
-        .on('change', e => {
-            var countryCode = $(e.target).val();
-            if (countryCode === lastLang) return;
-            lastLang = countryCode;
-
-            let extraKeys = extraKeysForLang(countryCode);
-
-            // Most of the times, no reallocation is necessary
-            if (
-                ['US', 'PTb'].includes(countryCode) ||
-                ['US', 'PTb'].includes(lastLang)
-            ) {
-                reallocateKeyboard(extraKeys);
-            }
-
-            codeEls.each(codeEl => {
-                codeEl.textContent = remapChars(
-                    countryCode,
-                    codeEl.dataset.usLayoutChars
-                );
-            });
-        })
-        // Apply selected country code
-        .trigger('change');
-}
+export { getKeyboardType, reallocateKeyboard, remapKeys, translateChars, getSymbolName }
