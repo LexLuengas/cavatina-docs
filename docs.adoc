@@ -81,7 +81,7 @@ include::html/seven-keys.html[]
 endif::[]
 
 ifdef::env-github[]
-image::seven_notes_US.png
+image::seven_notes_US.png[]
 endif::[]
 
 It is easy to learn where this seven notes are due to their physical
@@ -100,7 +100,7 @@ include::html/keyboard-full.html[]
 endif::[]
 
 ifdef::env-github[]
-image::keyboard_US.png
+image::keyboard_US.png[]
 endif::[]
 
 [NOTE]
@@ -143,7 +143,7 @@ Use a keyboard shortcut to switch to the bold weight (on an interface in English
 
 m| , a A *a A*, 
 // Note elongations are used here instead to avoid loading the bold font weight
-|
+a|
 ifndef::env-github[]
 [.cavatina]#, a A a~ A~,#
 endif::[]
