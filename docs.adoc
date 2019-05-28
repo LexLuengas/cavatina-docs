@@ -5,11 +5,18 @@
 :revdate:       {docdate}
 :revnumber:     2.0
 :stylesheet:    resources/css/theme.css
-:imagesdir:     resources/images/
 :docinfodir:    html/
 :toc:           left
 :nofooter:
 :experimental:
+
+ifndef::env-github[]
+:imagesdir:     resources/images/
+endif::[]
+
+ifdef::env-github[]
+:imagesdir:     https://github.com/LexLuengas/cavatina-docs/blob/master/resources/images
+endif::[]
 
 ifdef::env-github[]
 :tip-caption: :bulb:
