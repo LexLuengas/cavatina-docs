@@ -1,5 +1,6 @@
 = Cavatina Documentation
 :docinfo:
+:toc:           left
 :description:   Cavatina is a music font system designed for fast input.
 :keywords:      documentation, cavatina, font, music, music notation, sheet music
 :revdate:       {docdate}
@@ -10,15 +11,14 @@
 :experimental:
 
 ifndef::env-github[]
-:toc:                   left
 :imagesdir:             resources/images/
 :link-tutorial:         tutorial.html
 :link-keyboard-mapping: keyboard_mapping.html
 endif::[]
 
 ifdef::env-github[]
-:toc:                   
-:toc-placement!:            
+:toc-title:             _Contents_
+:toc-placement!:
 :imagesdir:             https://github.com/LexLuengas/cavatina-docs/blob/master/resources/images
 :link-tutorial:         tutorial.adoc
 :link-keyboard-mapping: keyboard_mapping.adoc
@@ -29,8 +29,9 @@ ifdef::env-github[]
 :caution-caption:       :fire:
 :warning-caption:       :warning:
 
+****
 toc::[]
-
+****
 endif::[]
 
 Cavatina is a font family for quickly writing musical notation. It focuses on speed of input and portability and is
