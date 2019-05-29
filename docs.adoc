@@ -6,31 +6,33 @@
 :revnumber:     2.0
 :stylesheet:    resources/css/theme.css
 :docinfodir:    html/
-:toc:           left
 :nofooter:
 :experimental:
 
 ifndef::env-github[]
+:toc:                   left
 :imagesdir:             resources/images/
 :link-tutorial:         tutorial.html
 :link-keyboard-mapping: keyboard_mapping.html
 endif::[]
 
 ifdef::env-github[]
-:toc-placement!:
-:imagesdir:     https://github.com/LexLuengas/cavatina-docs/blob/master/resources/images
+:toc:                   macro
+:toc-title!:            
+:imagesdir:             https://github.com/LexLuengas/cavatina-docs/blob/master/resources/images
 :link-tutorial:         tutorial.adoc
 :link-keyboard-mapping: keyboard_mapping.adoc
 
-:tip-caption: :bulb:
-:note-caption: :information_source:
-:important-caption: :heavy_exclamation_mark:
-:caution-caption: :fire:
-:warning-caption: :warning:
+:tip-caption:           :bulb:
+:note-caption:          :information_source:
+:important-caption:     :heavy_exclamation_mark:
+:caution-caption:       :fire:
+:warning-caption:       :warning:
 
-****
+._Contents_
+====
 toc::[]
-****
+====
 endif::[]
 
 Cavatina is a font family for quickly writing musical notation. It focuses on speed of input and portability and is
