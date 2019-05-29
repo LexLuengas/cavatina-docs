@@ -19,7 +19,7 @@ endif::[]
 ifdef::env-github[]
 :toc:                   macro
 :toc-placement!:            
-:toc-title:            
+:toc-title:             _Contents_
 :imagesdir:             https://github.com/LexLuengas/cavatina-docs/blob/master/resources/images
 :link-tutorial:         tutorial.adoc
 :link-keyboard-mapping: keyboard_mapping.adoc
@@ -30,10 +30,8 @@ ifdef::env-github[]
 :caution-caption:       :fire:
 :warning-caption:       :warning:
 
-._Contents_
-====
 toc::[]
-====
+
 endif::[]
 
 Cavatina is a font family for quickly writing musical notation. It focuses on speed of input and portability and is
