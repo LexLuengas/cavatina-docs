@@ -3,7 +3,6 @@
 :toc:           left
 :description:   Cavatina is a music font system designed for fast input.
 :keywords:      documentation, cavatina, font, music, music notation, sheet music
-:revdate:       {docdate}
 :revnumber:     2.0
 :stylesheet:    resources/css/theme.css
 :docinfodir:    html/

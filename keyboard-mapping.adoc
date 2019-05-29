@@ -1,0 +1,16 @@
+= Cavatina Keyboard Mapping
+:docinfo:
+:keywords:      documentation, cavatina, font, music, music notation, sheet music
+:revnumber:     2.0
+:stylesheet:    resources/css/theme.css
+:docinfodir:    html/
+:nofooter:
+:experimental:
+
+ifdef::env-github[]
+:important-caption: :heavy_exclamation_mark:
+
+[IMPORTANT]
+To view this page, please visit the link:https://github.com/LexLuengas/cavatina-docs/blob/master/keyboard-mapping.html[HTML version] of it.
+endif::[]
+

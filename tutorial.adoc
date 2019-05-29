@@ -1,7 +1,6 @@
 = Cavatina 10-Minute Tutorial
 :docinfo:
 :keywords:      tutorial, cavatina, font, music, music notation, sheet music
-:revdate:       {docdate}
 :revnumber:     2.0
 :stylesheet:    resources/css/theme.css
 :docinfodir:    html/
