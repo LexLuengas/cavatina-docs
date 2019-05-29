@@ -30,3 +30,25 @@ span.cavatina.cavatina-multipart {
     align-items: center;
     justify-content: center;
 }
+
+.cavatina-input {
+    margin: 1em 0;
+}
+
+.cavatina-input > textarea {
+    border: 10px solid #eee;
+    padding: 0 12px;
+    width: 100%;
+    line-height: 1;
+    overflow: hidden;
+    font-size: 144pt;
+    font-family: 'Cavatina US';
+    resize: none;
+    color: black;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+.cavatina-input > textarea:focus {
+    border-color: #e5e5e5;
+}

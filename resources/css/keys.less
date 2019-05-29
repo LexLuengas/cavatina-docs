@@ -3,9 +3,7 @@
 .iter-note-styles();
 
 .container-select-keyboard-layout {
-    position: fixed;
-    top: 0;
-    right: 0;
+    display: inline-block;
     background-color: #f3f3f3;
     padding: 4px 8px;
     label {
@@ -13,10 +11,16 @@
         margin-bottom: 4px;
         font-size: 14px;
     }
-    .select-keyboard-layout {
-        display: block;
-        width: 180px;
+    &.is-fixed {
+        position: fixed;
+        top: 0;
+        right: 0;
     }
+}
+
+.select-keyboard-layout {
+    display: block;
+    width: 180px;
 }
 
 @media screen and (orientation: portrait) and not(hover), (max-width: 600px) {
@@ -115,8 +119,8 @@
         height: 100%;
         font-size: 15px;
         font-weight: normal;
-        font-family: myriad-pro, 'San Francisco', 'Helvetica Neue', 'Helvetica', Helvetica, Arial,
-            sans-serif;
+        font-family: myriad-pro, 'San Francisco', 'Helvetica Neue', 'Helvetica',
+            Helvetica, Arial, sans-serif;
         /*         transition: background-color 0.12s linear; */
         border: 1px solid #090909;
         border: 1px solid #090909;

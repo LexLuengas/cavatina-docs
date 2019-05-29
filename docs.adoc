@@ -11,14 +11,16 @@
 :experimental:
 
 ifndef::env-github[]
-:imagesdir:     resources/images/
+:imagesdir:             resources/images/
+:link-tutorial:         tutorial.html
+:link-keyboard-mapping: keyboard_mapping.html
 endif::[]
 
 ifdef::env-github[]
 :imagesdir:     https://github.com/LexLuengas/cavatina-docs/blob/master/resources/images
-endif::[]
+:link-tutorial:         tutorial.adoc
+:link-keyboard-mapping: keyboard_mapping.adoc
 
-ifdef::env-github[]
 :tip-caption: :bulb:
 :note-caption: :information_source:
 :important-caption: :heavy_exclamation_mark:
@@ -41,7 +43,9 @@ Cavatina works with the latest versions of Firefox, Chrome and Opera, so make su
 ifndef::env-github[]
 [subs=attributes]
 ++++
+<div class="container-select-keyboard-layout is-fixed">
 include::html/keyboard-layout-select.html[]
+</div>
 ++++
 endif::[]
 
@@ -49,11 +53,11 @@ endif::[]
 
 For learning how to write music with Cavatina you have a few options, although it is strongly recommended that you do read the sections <<_the_basics>> and <<_the_musical_note>> beforehand. You can
 
-- do the link:[tutorial],
+- do the link:{link-tutorial}[tutorial],
 - read on through this documentation, or
-- look at the link:[keyboard mapping] itself.
+- look at the link:{link-keyboard-mapping}[keyboard mapping] itself.
 
-== The basics
+== The Basics
 
 The order in which you type in music in Cavatina matters. You write _sequentially_ from left to right, as in written
 language. But music is similar to written language in many other ways: chords are like words, bar-lines are like punctuation marks, accidentals
@@ -67,7 +71,7 @@ There are only three basic rules to keep in mind when writing with Cavatina:
 
 The rest of learning Cavatina is really only memorizing the location on the keyboard of each musical symbol.
 
-== The musical note
+== The Musical Note
 
 The location of each note on the keyboard is motivated by the fact that the lowest row
 of characters just above the space bar has exactly *seven letters*: the
@@ -113,7 +117,7 @@ efficient, because sadly these letters aren’t ordered in a
 row. When writing notes with Cavatina, once you get your fingers placed
 in the right position, you don’t need to look back down at the keyboard.
 
-=== Note Length
+=== Note length
 
 So far we have 31 notes (covering a bit more than four octaves). Each of
 these characters has its lowercase and uppercase variant, which
@@ -142,7 +146,7 @@ Use a keyboard shortcut to switch to the bold weight (on an interface in English
 | Input | Output
 
 m| , a A *a A*, 
-// Note elongations are used here instead to avoid loading the bold font weight
+// Note prolongation are used here instead to avoid loading the bold font weight
 ifndef::env-github[]
 | [.cavatina]#, a A a~ A~,#
 endif::[]
@@ -160,7 +164,7 @@ note’s length doubles. You can do this up to a maximum of twice per
 note, i.e. for a whole note you would need to type a 4^th^-note followed
 by two times `{tilde}`.
 
-.Note elongation
+.Note prolongation
 ====
 |====
 | Input | Output
@@ -231,7 +235,7 @@ endif::[]
 
 To beam two 8^th^ or 16^th^ notes, write two dots `..` after the second
 note. Both notes need to have the same orientation before they can be
-beamed. Currently only pairs of notes can be beamed together.
+beamed. Only pairs of notes can be beamed together.
 
 .Note beams
 ====

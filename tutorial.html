@@ -5,9 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="description" content="Cavatina is a music font system designed for fast input.">
-<meta name="keywords" content="documentation, cavatina, font, music, music notation, sheet music">
-<title>Cavatina Documentation</title>
+<meta name="keywords" content="tutorial, cavatina, font, music, music notation, sheet music">
+<title>Cavatina 10-Minute Tutorial</title>
 <style>
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -788,68 +787,26 @@ p { margin-bottom: 1.25rem; }
 <script defer src="./resources/js/ender.min.js"></script>
 <script type="module" src="./resources/js/keyboard-layouts.js"></script>
 <script type="module" src="./resources/js/script.js"></script>
+<script type="module" src="./resources/js/select-cavatina-font.js"></script>
 </head>
-<body class="article toc2 toc-left">
+<body class="article">
 <div id="header">
-<h1>Cavatina Documentation</h1>
+<h1>Cavatina 10-Minute Tutorial</h1>
 <div class="details">
 <span id="revnumber">version 2.0,</span>
-<span id="revdate">2019-05-28</span>
-</div>
-<div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_learning_cavatina">Learning Cavatina</a></li>
-<li><a href="#_the_basics">The Basics</a></li>
-<li><a href="#_the_musical_note">The Musical Note</a>
-<ul class="sectlevel2">
-<li><a href="#_note_length">Note length</a></li>
-<li><a href="#_note_orientation">Note orientation</a></li>
-<li><a href="#_rests">Rests</a></li>
-<li><a href="#_note_beams">Note beams</a></li>
-</ul>
-</li>
-<li><a href="#_staff_and_barlines">Staff and Barlines</a></li>
-<li><a href="#_clefs">Clefs</a></li>
-<li><a href="#_time_signatures">Time Signatures</a></li>
-<li><a href="#_accidentals_and_key_signatures">Accidentals and Key Signatures</a></li>
-<li><a href="#_articulations">Articulations</a></li>
-<li><a href="#_dynamics">Dynamics</a></li>
-<li><a href="#_ornaments">Ornaments</a></li>
-<li><a href="#_repetition_markings">Repetition markings</a></li>
-<li><a href="#_other_notation">Other Notation</a></li>
-<li><a href="#_staff_systems">Staff Systems</a></li>
-</ul>
+<span id="revdate">2019-05-29</span>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
 <div class="paragraph">
-<p>Cavatina is a font family for quickly writing musical notation. It focuses on speed of input and portability and is
-primarly suited for quick drafting of ideas or music teaching. The fonts can be used in any text editor that supports
-advanced font features or included as a webfont in a browser.</p>
+<p>This is a learn-by-doing kind of quickstart into Cavatina to get the
+feel of writing with the font. If you haven’t at least quickly checked
+the <a href="docs.html">documentation</a>, we recommend doing so, specially the <a href="docs.html#_the_basics">Basics</a> and <a href="docs.html#_the_musical_note">Musical Note</a> chapters.</p>
 </div>
 <div class="paragraph">
-<p>The idea behind Cavatina is that you don&#8217;t necessarily need a heavy-weight music notation program to draft musical ideas.
-Instead, music is typed in as normal text based on a specific keyboard scheme.</p>
+<p>After having selected your keyboard layout, you will be able to follow the tutorial by writing on the textbox below.</p>
 </div>
-<div class="paragraph">
-<p>The Cavatina project is open source and free under the MIT license. You can grab a copy of the fonts and related tools on the <a href="">GitHub realease page</a>.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Cavatina works with the latest versions of Firefox, Chrome and Opera, so make sure to use one of those browsers to read this documentation.
-</td>
-</tr>
-</table>
-</div>
-<div class="container-select-keyboard-layout is-fixed">
+<div class="container-select-keyboard-layout">
 <label for="select-keyboard-layout">Select your keyboard layout</label>
 <select class="select-keyboard-layout" id="select-keyboard-layout">
     <option value="DE">German</option>
@@ -864,220 +821,9 @@ Cavatina works with the latest versions of Firefox, Chrome and Opera, so make su
     <option value="US" selected="selected">U.S.</option>
 </select>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_learning_cavatina">Learning Cavatina</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>For learning how to write music with Cavatina you have a few options, although it is strongly recommended that you do read the sections <a href="#_the_basics">The Basics</a> and <a href="#_the_musical_note">The Musical Note</a> beforehand. You can</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>do the <a href="tutorial.html">tutorial</a>,</p>
-</li>
-<li>
-<p>read on through this documentation, or</p>
-</li>
-<li>
-<p>look at the <a href="keyboard_mapping.html">keyboard mapping</a> itself.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_the_basics">The Basics</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The order in which you type in music in Cavatina matters. You write <em>sequentially</em> from left to right, as in written
-language. But music is similar to written language in many other ways: chords are like words, bar-lines are like punctuation marks, accidentals
-are like diacritical marks and the staff lines are the space character. That is exactly how you should think when writing with Cavatina.</p>
-</div>
-<div class="paragraph">
-<p>There are only three basic rules to keep in mind when writing with Cavatina:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Hitting space extends the staff for starting a new note or chord.</p>
-</li>
-<li>
-<p>Notes within a chord are typed in <em>from low to high</em>.</p>
-</li>
-<li>
-<p>Note modifiers are written directly <em>after</em> the corresponding note.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>The rest of learning Cavatina is really only memorizing the location on the keyboard of each musical symbol.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_the_musical_note">The Musical Note</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The location of each note on the keyboard is motivated by the fact that the lowest row
-of characters just above the space bar has exactly <strong>seven letters</strong>: the
-seven pitches of a diatonic scale.</p>
-</div>
-<div class="keyboard-container keyboard-container-single-row">
-    <div class="keyboard-row-container">
-        <ul class="keyboard-row">
-            <li class="is-key-shift-left">
-                <button>Shift</button>
-            </li>
-            <li class="is-key-optional is-key-optional-2">
-                <button data-extra-key="2"></button>
-            </li>
-            <li> <button>Z</button></li>
-            <li> <button>X</button></li>
-            <li> <button>C</button></li>
-            <li> <button>V</button></li>
-            <li> <button>B</button></li>
-            <li> <button>N</button></li>
-            <li> <button>M</button></li>
-            <li>
-                <button>,</button>
-            </li>
-            <li>
-                <button>.</button>
-            </li>
-            <li>
-                <button>/</button>
-            </li>
-            <li class="is-key-optional is-key-optional-3">
-                <button data-extra-key="3"></button>
-            </li>
-            <li class="is-key-shift-right">
-                <button>Shift</button>
-            </li>
-        </ul>
-    </div>
-</div>
 
-<div class="cavatina-display-block">
-    <span class="notes">  A  S  D  F  G  H  J</span>
-</div>
-<div class="paragraph">
-<p>It is easy to learn where this seven notes are due to their physical
-location on the keyboard.</p>
-</div>
-<div class="paragraph">
-<p>Most musicians aren&#8217;t happy with just seven notes. Following the idea
-above, we get a new octave for each of the four rows of the keyboard
-above the space bar, with the top row having three additional notes,
-like this:</p>
-</div>
-<div class="keyboard-container keyboard-container-full key-layout-type-1">
-    <div class="keyboard-row-container">
-        <ul class="keyboard-row">
-            <li><button disabled>`</button></li>
-            <li><button class="cnote">1</button></li>
-            <li><button class="dnote">2</button></li>
-            <li><button class="enote">3</button></li>
-            <li><button class="fnote">4</button></li>
-            <li><button class="gnote">5</button></li>
-            <li><button class="anote">6</button></li>
-            <li><button class="bnote">7</button></li>
-            <li><button class="cnote">8</button></li>
-            <li><button class="dnote">9</button></li>
-            <li><button class="enote">0</button></li>
-            <li><button disabled>-</button></li>
-            <li><button disabled>=</button></li>
-            <li class="is-key-backspace"><button disabled></button></li>
-        </ul>
-        <ul class="keyboard-row">
-            <li class="is-key-tab"><button disabled></button></li>
-            <li><button class="cnote">Q</button></li>
-            <li><button class="dnote">W</button></li>
-            <li><button class="enote">E</button></li>
-            <li><button class="fnote">R</button></li>
-            <li><button class="gnote">T</button></li>
-            <li><button class="anote">Y</button></li>
-            <li><button class="bnote">U</button></li>
-            <li><button disabled>I</button></li>
-            <li><button disabled>O</button></li>
-            <li><button disabled>P</button></li>
-            <li><button disabled>[</button></li>
-            <li><button disabled>]</button></li>
-            <li class="is-key-return-upper"><button disabled>\</button>
-            </li>
-        </ul>
-        <ul class="keyboard-row">
-            <li class="is-key-capslock"><button disabled></button></li>
-            <li><button class="cnote">A</button></li>
-            <li><button class="dnote">S</button></li>
-            <li><button class="enote">D</button></li>
-            <li><button class="fnote">F</button></li>
-            <li><button class="gnote">G</button></li>
-            <li><button class="anote">H</button></li>
-            <li><button class="bnote">J</button></li>
-            <li><button disabled>K</button></li>
-            <li><button disabled>L</button></li>
-            <li><button disabled>;</button></li>
-            <li><button disabled>'</button></li>
-            <li class="is-key-optional is-key-optional-1"><button data-extra-key="1" disabled></button></li>
-            <li class="is-key-return"><button disabled></button></li>
-        </ul>
-        <ul class="keyboard-row">
-            <li class="is-key-shift-left"><button disabled></button></li>
-            <li class="is-key-optional is-key-optional-2"><button data-extra-key="2" disabled></button></li>
-            <li><button class="cnote">Z</button></li>
-            <li><button class="dnote">X</button></li>
-            <li><button class="enote">C</button></li>
-            <li><button class="fnote">V</button></li>
-            <li><button class="gnote">B</button></li>
-            <li><button class="anote">N</button></li>
-            <li><button class="bnote">M</button></li>
-            <li><button disabled>,</button></li>
-            <li><button disabled>.</button></li>
-            <li><button disabled>/</button></li>
-            <li class="is-key-optional is-key-optional-3"><button data-extra-key="3" disabled></button></li>
-            <li class="is-key-shift-right"><button disabled></button></li>
-        </ul>
-        <ul class="keyboard-row keyboard-row-notes">
-            <li><button class="cnote emphasized">C</button></li>
-            <li><button class="dnote emphasized">D</button></li>
-            <li><button class="enote emphasized">E</button></li>
-            <li><button class="fnote emphasized">F</button></li>
-            <li><button class="gnote emphasized">G</button></li>
-            <li><button class="anote emphasized">A</button></li>
-            <li><button class="bnote emphasized">B</button></li>
-        </ul>
-    </div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Each column of keyboard keys maps to the same note in different
-octaves.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>If you have used other notation software, you are probably used to look
-for the <code>C</code> key if you want to write a <em>C</em>, and so on. This is not very
-efficient, because sadly these letters aren’t ordered in a
-row. When writing notes with Cavatina, once you get your fingers placed
-in the right position, you don’t need to look back down at the keyboard.</p>
-</div>
-<div class="sect2">
-<h3 id="_note_length">Note length</h3>
-<div class="paragraph">
-<p>So far we have 31 notes (covering a bit more than four octaves). Each of
-these characters has its lowercase and uppercase variant, which
-correspond to the note in 8<sup>th</sup> and 4<sup>th</sup> length accordingly. Switching
-to the bold weight of Cavatina, you get 16<sup>th</sup>-notes in the lowercase
-and 8<sup>th</sup>-notes in the uppercase characters.</p>
+<div class='cavatina-input'>
+    <textarea class='textarea-cavatina-input' rows='1' placeholder='' spellcheck='false'></textarea>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1086,945 +832,134 @@ and 8<sup>th</sup>-notes in the uppercase characters.</p>
 <div class="title">Tip</div>
 </td>
 <td class="content">
-Use a keyboard shortcut to switch to the bold weight (on an interface in English use <span class="keyseq"><kbd>Ctrl/Cmd</kbd>+<kbd>B</kbd></span>).
+Try to concentrate in what you <em>see</em> rather than in what you <em>type</em>.
 </td>
 </tr>
 </table>
 </div>
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"></th>
-<th class="tableblock halign-left valign-top">Sample Input</th>
-<th class="tableblock halign-left valign-top">Note length</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Regular style</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>a</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8<sup>th</sup></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>A</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4<sup>th</sup></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">Bold style</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>a</strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">16<sup>th</sup></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code><strong>A</strong></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8<sup>th</sup></p></td>
-</tr>
-</tbody>
-</table>
-<div class="exampleblock">
-<div class="title">Example 1. Note length</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>, a A <strong>a A</strong>,</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">, a A a~ A~,</span></p></td>
-</tr>
-</tbody>
-</table>
+<div class="paragraph">
+<p>Let’s write some <strong>notes</strong>:</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start by hitting space twice to draw some staff lines.</p>
+</li>
+<li>
+<p>Now write a C-chord: write <code>adg</code>. Wait, wait, don’t get confused –
+I’ll explain. Take a moment to look at where that keys are on your
+computer keyboard. Did you notice it? These are the first, third and
+fifth keys on one row, just like C, E and G are the first, third and
+fifth notes in the diatonic scale on C<sub>4</sub>: <strong>C</strong>-D-<strong>E</strong>-F-<strong>G</strong>-A-B.</p>
+</li>
+<li>
+<p>Well, with that in mind, why don’t we write that same chord <em>one
+octave higher</em>? Write a space to open a new chord block and then write
+<code>qet</code>. Get it? If not, take a look at the computer keyboard once again.
+It happens to be that <code>q</code>, <code>e</code> and <code>t</code> are the first, third and fifth
+keys on the row above the row where <code>a</code>, <code>d</code> and <code>g</code> are. Coincidence?</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>Appart from that, Cavatina has a special key that serves as a <em>modifier
-key</em>: the <code>`</code>/<code>~</code> key. We are going to call <code>`</code> the <em>inverter</em> and <code>~</code> the
-<em>time</em> character, the latter of which, among other things, extends the
-duration of notes. Every time you hit the time character after a note, the
-note’s length doubles. You can do this up to a maximum of twice per
-note, i.e. for a whole note you would need to type a 4<sup>th</sup>-note followed
-by two times <code>~</code>.</p>
+<p>Next level: <strong>note length</strong>.</p>
 </div>
-<div class="exampleblock">
-<div class="title">Example 2. Note prolongation</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>, f F f~ f~~ F~ F~~,</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">, f F f~ f~~ F~ F~~,</span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Hit the spacebar to end the last chord. Write a note, say, <code>h</code>.</p>
+</li>
+<li>
+<p>Hit the spacebar again and write the uppercase of that letter, <code>H</code>.</p>
+</li>
+<li>
+<p>Don’t hit spacebar.</p>
+</li>
+<li>
+<p>Now write <code>~</code>, that character you have probably never used. Ta-da!
+The A-note you wrote has now twice its former length. <code>~</code> is called the
+<em>time</em> character and is a <strong>modifier</strong>: it is used together with other
+characters rather than by itself.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>For <strong>dotted notes</strong> you use <code>&lt;</code> after the note.</p>
+<p>Let’s move on to <strong>note accidentals</strong>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make a new chord block, or start from scratch, and write any note,
+like <code>W</code>.</p>
+</li>
+<li>
+<p>Without hitting space after the note, write <code>-</code>.</p>
+</li>
+<li>
+<p>Hit space. Do the same for a new note, the same note if you wish,
+but write <code>=</code> instead of <code>-</code>.</p>
+</li>
+<li>
+<p>If everything went well, you should now have a note with a flat
+symbol and another with a sharp symbol.</p>
+</li>
+<li>
+<p>Wonder how you write a natural? Write both a flat and a sharp symbol
+next to each other. The order doesn’t matter.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>To draw a <strong>tie</strong> after a note append an <code>L</code>.</p>
+<p>OK. It’s time to learn how to write <strong>key signatures</strong> and <strong>time
+signatures</strong>. Delete what you have written so far; you won’t need it.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_note_orientation">Note orientation</h3>
-<div class="paragraph">
-<p>The stem of a note can be inverted. This is done with the <em>inverter</em> <code>`</code>. A
-note can only be inverted once (which doesn’t stop you from
-un-inverting).</p>
-</div>
-<div class="paragraph">
-<p>To invert the stem of a chord you invert the first note of the chord. If
-the next note in the chord would collide in its default orientation,
-then it is automatically inverted. Otherwise keep inverting until you
-obtain the desired result. This is useful for separating voices within
-one chord.</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 3. Note orientation</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>, f f` j j`, afj a`fj a`f`j a`f`j`,</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">, f f` j j`, afj a`fj a`f`j a`f`j`,</span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_rests">Rests</h3>
-<div class="paragraph">
-<p>Rests are accessed via the <code>]</code>/<code>}</code> key. Their duration is changed the
-same way as for notes. Optionally, you can write the same rest twice and
-the length will increase accordingly.</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 4. Rests</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>, ] }  ]] }}  ]~ ]~~ }~ }~~,</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">, ] }  ]] }}  ]~ ]~~ }~ }~~,</span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_note_beams">Note beams</h3>
-<div class="paragraph">
-<p>To beam two 8<sup>th</sup> or 16<sup>th</sup> notes, write two dots <code>..</code> after the second
-note. Both notes need to have the same orientation before they can be
-beamed. Only pairs of notes can be beamed together.</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 5. Note beams</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>,  dh sj..  d`h` s`..j  d`h s`..j`..,</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">,  dh sj..  d`h` s`..j  d`h s`..j`..,</span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_staff_and_barlines">Staff and Barlines</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>When you hit the spacebar you draw a new staff <em>block</em>. Before any note
-or chord, you have to draw a new staff block to make room for a note or a chord.</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Write a <code>+</code>; that’s a G-clef.</p>
+</li>
+<li>
+<p>To specify the key signature, just add flats or sharps right after
+the clef. Write <code>-----</code>.</p>
+</li>
+<li>
+<p>Write a space. Now we will write a time signature. Time signatures
+can be written directly after key signatures or after <strong>barlines</strong>&#8230;&#8203;
+Barlines! Barlines are written by typing <code>,</code>. Now it’s perfect time to
+write a barline.</p>
+</li>
+<li>
+<p>To start a key signature, you first write the <em>time</em> character <code>~</code>.</p>
+</li>
+<li>
+<p>After the time character you simply write the time signature
+sequentially. Write <code>34</code>.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>The barlines are mapped as follows:</p>
+<p>That’s it – Now you have an impression of how Cavatina works. There are
+many more features like dynamics, articulations and staff systems that
+you can check out in the <a href="docs">documentation</a>.</p>
 </div>
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">simple barline</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>,</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">double barline</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>,,</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">final barline</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>.</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">repeat barline (start)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>;</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">repeat barline (end)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>:</code></p></td>
-</tr>
-</tbody>
-</table>
+<hr>
 <div class="paragraph">
-<p>Cavatina is not made to do minor adjustments to the layout, but if you
-consider it necessary, you can gain control over horizontal spacing by
-using the half space <code>/</code> and the quarter space <code>//</code>.</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 6. Barlines</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>, ,, . ; :</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">, ,, . ; :</span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_clefs">Clefs</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Cavatina supports three different clefs:</p>
-</div>
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">F-clef</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>_</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">C-Clef</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>_+</code> or <code>+_</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">G-Clef</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>+</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The input of the notes is invariant of the signature; it doesn’t depend
-on the current clef.</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 7. Clefs</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>,+ f f,_ f f,+_ f f,</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">,+ f f,_ f f,+_ f f,</span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_time_signatures">Time Signatures</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Time signatures have to be written after clefs (and key signatures) or
-barlines. To start a time signature enter the <em>time</em> key <code>~</code>. After that
-you just write the upper and lower numeral successively.</p>
+<p>Now try it yourself: write the first measures of Beethoven’s 5<sup>th</sup>:</p>
 </div>
 <div class="paragraph">
-<p>To write the <em>common time</em> or <em>cut time</em> symbols, enter <code>c</code> or <code>C</code> after
-the <em>time</em> key.</p>
+<p><span class="cavatina">+---~24 ] g|| g.. g.., D~"", ] f|| f.. f.., S~L, S~"",</span></p>
 </div>
-<div class="paragraph">
-<p>A space is automatically attached after a time signature, so that you
-don’t have to open a new staff block yourself.</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 8. Time signatures</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
+<div class="admonitionblock tip">
+<table>
 <tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Pssst! You can also cheat and copy-paste the notes above.
+</td>
 </tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>,~34 ,~1216 ,_---~34 ,~c ,</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">,~34 ,~1216 ,_---~34 ,~c ,</span></p></td>
-</tr>
-</tbody>
 </table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_accidentals_and_key_signatures">Accidentals and Key Signatures</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">flat</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sharp</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>=</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">natural</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>-=</code> or <code>=-</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">double flat</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">double sharp</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>==</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>To write a key signature you simply type in the sharps/flats successively after a clef.</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 9. Key signatures</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>_----- D G,_+== ADG </code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">_----- D G,_+== ADG </span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_articulations">Articulations</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">staccato</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>'</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tenuto</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>"</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">staccatissimo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>''</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fermata</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>""</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">accent</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&gt;</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>All articulations are written after the lowest note of a chord, except
-the fermata, which is written after the highest note.</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 10. Articulations</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&#160;&#160;A' A" A'' A"" A></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">  A' A" A'' A"" A></span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_dynamics">Dynamics</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Dynamics are aligned with respect to the note to which they are applied.
-Therefore, if you are writing a chord with some dynamics marking, you
-should write that marking just after the first (lowest) note of the
-chord.</p>
-</div>
-<table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 1. Note dynamics</caption>
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">pianississimo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\\\</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">pianissimo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\\</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">piano</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mezzo piano</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\|</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mezzo forte</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>|\</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">forte</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>|</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fortissimo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>||</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fortississimo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>|||</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sforzando</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>||\</code> or <code>\\|</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">forte-piano</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>\\\|</code> or <code>|||\</code> or <code>\\`</code> or <code>||`</code></p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all fit-content">
-<caption class="title">Table 2. Phrasal dynamics</caption>
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">crescendo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>l</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">decrescendo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>l`</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="exampleblock">
-<div class="title">Example 11. Dynamics</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&#160;&#160;d\fh  h`||er  M\\|  Dl&#160;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">  d\fh  h`||er  M\\|  Dl </span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_ornaments">Ornaments</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mordent</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">inv. mordent</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[`</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">trill</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[[</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">turn</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">inv. turn</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{`</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">arpeggio</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>P</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Note that, intuitively enough, ornaments are inverted with the
-<em>inverter</em> key <code>`</code>.</p>
-</div>
-<div class="paragraph">
-<p>To extend the trill or the arpeggio repeat that same character. The
-arpeggio is written at the end of a chord.</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 12. Ornaments</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>  D[ D{ D[` D{` D[[ D[[[[ </code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">  D[ D{ D[` D{` D[[ D[[[[ </span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_repetition_markings">Repetition markings</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Apart from the repeat barlines <code>;</code>/<code>:</code>, you can use the following
-repetition markings:</p>
-</div>
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1<sup>st</sup> repetition</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>o</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2<sup>nd</sup> repetition</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oo</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">end marking</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>o`</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The end marking is necessary for the MusicXML/MIDI converter to detect
-the range of the repetition sections.</p>
-</div>
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">coda</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>i</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">segno</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>I</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">D.C.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>k</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">D.S.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>K</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Writing <em>coda</em> or <em>segno</em> right after <em>D.C.</em> or <em>D.S.</em> will append the
-words &#8220;al Coda&#8221; and &#8220;al Fine&#8221; accordingly.</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 13. Repetition Markings</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>, D F G Do, D F D Go`:oo  D S A }.</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="cavatina">, D F G Do, D F D Go`:oo  D S A }.</span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_other_notation">Other Notation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Octave markings are used in a similar manner as repetition markings and
-always after the highest note in a chord.</p>
-</div>
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8<sup>va</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>O</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8<sup>va</sup> (2)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OO</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">end 8<sup>va</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>O`</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The triplet is written before the chord sequence. Use tight spacing to
-fit the notes under the mark: enter three quarter-spaces <code>///</code> between
-the notes.</p>
-</div>
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">triplet</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>?</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Pedal markings are lower markings and as such they have to be applied to
-the first note of a chord.</p>
-</div>
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">pedal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>p</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">release pedal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pp</code></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_staff_systems">Staff Systems</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To create systems of multiple staves you can extend barlines to join
-with the upper staff. To draw a <em>grand staff</em>, first enter a newline
-followed by a single barline <code>,</code> to start a new staff. To draw the brace
-connecting with the upper staff, type in <code>\\</code>. Then continue with the
-clef and key signature as you would normally do. To connect the
-subsequent barlines, write a single <code>\</code> after them.</p>
-</div>
-<table class="tableblock frame-all grid-all fit-content">
-<colgroup>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Musical symbol</th>
-<th class="tableblock halign-left valign-top">Raw input</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">brace</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>,\\</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">long barlines</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>,\</code> or <code>.\</code> etc.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="exampleblock">
-<div class="title">Example 14. Staff systems</div>
-<div class="content">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Input</th>
-<th class="tableblock halign-left valign-top">Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><code>,+--- DFJ DGJ J s d>..,</code><br>
-<code>,\\ _--- A D } MJ ,\</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">
-<span class="cavatina cavatina-multipart">
-<span>,+--- DFJ DGJ J s d&gt;..</span>
-<span>,\\_--- A D } MJ ,\</span>
-</span>
-</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
 </div>
 </div>
 </body>

@@ -1,0 +1,111 @@
+= Cavatina 10-Minute Tutorial
+:docinfo:
+:keywords:      tutorial, cavatina, font, music, music notation, sheet music
+:revdate:       {docdate}
+:revnumber:     2.0
+:stylesheet:    resources/css/theme.css
+:docinfodir:    html/
+:nofooter:
+:experimental:
+
+ifndef::env-github[]
+:link-docs:     docs.html
+endif::[]
+
+ifdef::env-github[]
+:link-docs:     docs.adoc
+
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+
+[IMPORTANT]
+To do this tutorial, please visit the link:https://github.com/LexLuengas/cavatina-docs/blob/master/tutorial.html[HTML version] of it.
+endif::[]
+
+This is a learn-by-doing kind of quickstart into Cavatina to get the
+feel of writing with the font. If you haven’t at least quickly checked
+the link:{link-docs}[documentation], we recommend doing so, specially the <<{link-docs}#_the_basics,Basics>> and <<{link-docs}#_the_musical_note,Musical Note>> chapters.
+
+After having selected your keyboard layout, you will be able to follow the tutorial by writing on the textbox below.
+
+ifndef::env-github[]
+[subs=attributes]
+++++
+<div class="container-select-keyboard-layout">
+include::html/keyboard-layout-select.html[]
+</div>
+
+<div class='cavatina-input'>
+    <textarea class='textarea-cavatina-input' rows='1' placeholder='' spellcheck='false'></textarea>
+</div>
+++++
+endif::[]
+
+[TIP]
+Try to concentrate in what you _see_ rather than in what you _type_.
+
+Let’s write some *notes*:
+
+1.  Start by hitting space twice to draw some staff lines.
+2.  Now write a C-chord: write `adg`. Wait, wait, don’t get confused –
+I’ll explain. Take a moment to look at where that keys are on your
+computer keyboard. Did you notice it? These are the first, third and
+fifth keys on one row, just like C, E and G are the first, third and
+fifth notes in the diatonic scale on C~4~: *C*-D-*E*-F-*G*-A-B.
+3.  Well, with that in mind, why don’t we write that same chord _one
+octave higher_? Write a space to open a new chord block and then write
+`qet`. Get it? If not, take a look at the computer keyboard once again.
+It happens to be that `q`, `e` and `t` are the first, third and fifth
+keys on the row above the row where `a`, `d` and `g` are. Coincidence?
+
+Next level: *note length*.
+
+1.  Hit the spacebar to end the last chord. Write a note, say, `h`.
+2.  Hit the spacebar again and write the uppercase of that letter, `H`.
+3.  Don’t hit spacebar.
+4.  Now write `~`, that character you have probably never used. Ta-da!
+The A-note you wrote has now twice its former length. `~` is called the
+_time_ character and is a *modifier*: it is used together with other
+characters rather than by itself.
+
+Let’s move on to *note accidentals*.
+
+1.  Make a new chord block, or start from scratch, and write any note,
+like `W`.
+2.  Without hitting space after the note, write `-`.
+3.  Hit space. Do the same for a new note, the same note if you wish,
+but write `=` instead of `-`.
+4.  If everything went well, you should now have a note with a flat
+symbol and another with a sharp symbol.
+5.  Wonder how you write a natural? Write both a flat and a sharp symbol
+next to each other. The order doesn’t matter.
+
+OK. It’s time to learn how to write *key signatures* and *time
+signatures*. Delete what you have written so far; you won’t need it.
+
+1.  Write a `+`; that’s a G-clef.
+2.  To specify the key signature, just add flats or sharps right after
+the clef. Write `-----`.
+3.  Write a space. Now we will write a time signature. Time signatures
+can be written directly after key signatures or after *barlines*... 
+Barlines! Barlines are written by typing `,`. Now it’s perfect time to
+write a barline.
+4.  To start a key signature, you first write the _time_ character `~`.
+5.  After the time character you simply write the time signature
+sequentially. Write `34`.
+
+That’s it – Now you have an impression of how Cavatina works. There are
+many more features like dynamics, articulations and staff systems that
+you can check out in the link:docs[documentation].
+
+''''
+
+Now try it yourself: write the first measures of Beethoven’s 5^th^ symphony: 
+
+[.cavatina]#+---~24 ] g|| g.. g.., D~"", ] f|| f.. f.., S~L, S~"",#
+
+[TIP]
+Pssst! You can also cheat and copy-paste the notes above.

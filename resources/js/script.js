@@ -14,10 +14,10 @@ const noteClassHghlList = 'cdefgab'
 const isAlphaRegex = /^[A-Zèàùòüäöç]$/i;
 
 function setQueryParameter(key, value) {
-    if (window.history.pushState) {
+    if (window.history.replacestate) {
         let { protocol, host, pathname, hash } = window.location;
         var url = `${protocol}//${host}${pathname}?${key}=${value}${hash}`;
-        window.history.pushState({ path: url }, document.title, url);
+        window.history.replacestate({ path: url }, document.title, url);
     }
 }
 
