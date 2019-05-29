@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "pipeline/watch.sh",
+            ],
+            "group": "build"
+        },
+        {
+            "label": "serve",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "-m",
+                "http.server",
+            ]
+        },
+        {
+            "label": "gulp:default",
+            "type": "shell",
+            "command": "gulp",
+            "args": [
+                "--gulpfile",
+                "pipeline/gulpfile.js",
+            ]
+        }
+    ]
+}
