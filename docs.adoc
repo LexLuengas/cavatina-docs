@@ -51,7 +51,7 @@ endif::[]
 
 == Learning Cavatina
 
-For learning how to write music with Cavatina you have a few options, although it is strongly recommended that you do read the sections <<_the_basics>> and <<_the_musical_note>> beforehand. You can
+For learning how to write music with Cavatina you have a few options, although it is strongly recommended that you do read the sections <<The Basics>> and <<The Musical Note>> beforehand. You can
 
 - do the link:{link-tutorial}[tutorial],
 - read on through this documentation, or
