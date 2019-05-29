@@ -17,7 +17,6 @@ ifndef::env-github[]
 endif::[]
 
 ifdef::env-github[]
-:toc-title:             _Contents_
 :toc-placement!:
 :imagesdir:             https://github.com/LexLuengas/cavatina-docs/blob/master/resources/images
 :link-tutorial:         tutorial.adoc
