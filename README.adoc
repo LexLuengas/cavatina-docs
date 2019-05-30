@@ -2,9 +2,9 @@
 
 link:https://github.com/LexLuengas/cavatina/[Cavatina] is a music font system designed for fast input.
 
-This repository contains resources for learning Cavatina:
+This repository contains reference and learning resources for Cavatina.
 
-- The link:documentation.html[documentation].
+- The link:docs.html[documentation].
 - A link:tutorial.html[tutorial].
 - The link:keyboard-mapping.html[keyboard mapping].
 
