@@ -87,6 +87,10 @@ const noteClassHghlList = 'cdefgab'
             let symbol = !isExtra
                 ? keyEl.dataset.usLayoutChars
                 : keyEl.dataset.extraKey;
+
+            // Control key
+            if (symbol.length === 0) return;
+
             let [bottomKey] = remapKey(countryCode, symbol, isExtra);
             keyEl.textContent = isAlphaRegex.test(bottomKey)
                 ? bottomKey.toUpperCase()

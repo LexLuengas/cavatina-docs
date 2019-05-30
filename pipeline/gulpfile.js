@@ -4,7 +4,7 @@ var less = require('gulp-less');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('less', function(cb) {
-    gulp.src('../resources/css/*.less')
+    gulp.src('../resources/styles/*.less')
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(sourcemaps.write())
@@ -15,6 +15,6 @@ gulp.task('less', function(cb) {
 });
 
 gulp.task('default', gulp.series('less', function(cb) {
-    gulp.watch('../resources/css/*.less', gulp.series('less'));
+    gulp.watch('../resources/styles/*.less', gulp.series('less'));
     cb();
 }));

@@ -23,7 +23,7 @@
 }
 
 .generate-note-selector(@note) {
-    :not(.keyboard-row-notes) > li > &.@{note}note {
+    :not(.keyboard-row-notes) > li > button.@{note}note {
         transform: translate(0, 0);
         &:hover,
         &.emphasized {
@@ -31,14 +31,19 @@
         }
     }
 
-    .keyboard-row-notes > li > &.@{note}note {
+    .keyboard-row-notes > li > button.@{note}note {
         &.emphasized {
             .keyColorStyle(@note);
         }
+        &.emphasized:hover {
+            .keyStyle(@note);
+        }
     }
 
-
-    .keyboard-container.note-emphasized-@{note}note :not(.keyboard-row-notes) > li > &.@{note}note {
+    .keyboard-container.note-emphasized-@{note}note
+        :not(.keyboard-row-notes)
+        > li
+        > button.@{note}note {
         .keyStyle(@note);
     }
 

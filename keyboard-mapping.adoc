@@ -2,7 +2,7 @@
 :docinfo:
 :keywords:      documentation, cavatina, font, music, music notation, sheet music
 :revnumber:     2.0
-:stylesheet:    resources/css/theme.css
+:stylesheet:    resources/styles/theme.css
 :docinfodir:    html/
 :relfileprefix: https://lexluengas.github.io/cavatina-docs/
 :nofooter:
