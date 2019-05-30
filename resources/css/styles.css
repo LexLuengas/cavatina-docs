@@ -1,3 +1,13 @@
 @import 'keys.css';
 @import 'fonts.css';
 @import 'common.css';
+
+.table-display-key-semantics > .content {
+    display: flex;
+    justify-content: center;
+}
+
+.table-display-key-semantics > .content > table {
+    width: 50%;
+    min-width: 400px;
+}

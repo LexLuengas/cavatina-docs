@@ -1,8 +1,9 @@
 import {
     getKeyboardType,
-    remapKeys,
+    remapKey,
     translateChars
 } from './keyboard-layouts.js';
+import { setQueryParameter, reallocateKeyboard, isAlphaRegex } from './util.js';
 
 const noteClassEmphList = 'cdefgab'
     .split('')
@@ -10,24 +11,6 @@ const noteClassEmphList = 'cdefgab'
 const noteClassHghlList = 'cdefgab'
     .split('')
     .map(n => 'note-emphasized-' + n + 'note');
-
-const isAlphaRegex = /^[A-Zèàùòüäöç]$/i;
-
-function setQueryParameter(key, value) {
-    if (window.history.replacestate) {
-        let { protocol, host, pathname, hash } = window.location;
-        var url = `${protocol}//${host}${pathname}?${key}=${value}${hash}`;
-        window.history.replacestate({ path: url }, document.title, url);
-    }
-}
-
-function reallocateKeyboard(keyboardType) {
-    if (!(keyboardType >= 1 && keyboardType <= 3))
-        throw new Error('keyboardType outside range [1, 3].');
-    let klTypeClassList = [1, 2, 3].map(i => 'key-layout-type-' + i).join(' ');
-    $('.keyboard-container').removeClass(klTypeClassList);
-    $('.keyboard-container').addClass('key-layout-type-' + keyboardType);
-}
 
 // Setup keyboard graphics
 {
@@ -85,36 +68,31 @@ function reallocateKeyboard(keyboardType) {
         codeEl.dataset.usLayoutChars = codeEl.textContent;
     });
 
-    $('select.select-keyboard-layout')
-        .on('change', e => {
-            var countryCode = $(e.target).val();
-            setQueryParameter('keyboard_layout', countryCode);
-            
-            let keyboardType = getKeyboardType(countryCode);
-            reallocateKeyboard(keyboardType);
+    $('select.select-keyboard-layout').on('change', e => {
+        var countryCode = $(e.target).val();
+        setQueryParameter('keyboard_layout', countryCode);
 
-            codeEls.each(codeEl => {
-                codeEl.textContent = translateChars(
-                    countryCode,
-                    codeEl.dataset.usLayoutChars
-                );
-            });
+        let keyboardType = getKeyboardType(countryCode);
+        reallocateKeyboard(keyboardType);
 
-            keyEls.each(keyEl => {
-                let isExtra = typeof keyEl.dataset.extraKey !== 'undefined';
-                let key = !isExtra
-                    ? keyEl.dataset.usLayoutChars
-                    : keyEl.dataset.extraKey;
-                let [bottomKey] = remapKeys(
-                    countryCode,
-                    key.toString(),
-                    isExtra
-                );
-                keyEl.textContent = isAlphaRegex.test(bottomKey)
-                    ? bottomKey.toUpperCase()
-                    : bottomKey;
-            });
+        codeEls.each(codeEl => {
+            codeEl.textContent = translateChars(
+                countryCode,
+                codeEl.dataset.usLayoutChars
+            );
         });
+
+        keyEls.each(keyEl => {
+            let isExtra = typeof keyEl.dataset.extraKey !== 'undefined';
+            let symbol = !isExtra
+                ? keyEl.dataset.usLayoutChars
+                : keyEl.dataset.extraKey;
+            let [bottomKey] = remapKey(countryCode, symbol, isExtra);
+            keyEl.textContent = isAlphaRegex.test(bottomKey)
+                ? bottomKey.toUpperCase()
+                : bottomKey;
+        });
+    });
 }
 
 // Setup URL search query logic

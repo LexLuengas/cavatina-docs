@@ -12,14 +12,14 @@
 ifndef::env-github[]
 :imagesdir:             resources/images/
 :link-tutorial:         tutorial.html
-:link-keyboard-mapping: keyboard_mapping.html
+:link-keyboard-mapping: keyboard-mapping.html
 endif::[]
 
 ifdef::env-github[]
 :toc-placement!:
 :imagesdir:             https://github.com/LexLuengas/cavatina-docs/blob/master/resources/images
 :link-tutorial:         tutorial.adoc
-:link-keyboard-mapping: keyboard_mapping.adoc
+:link-keyboard-mapping: keyboard-mapping.adoc
 
 :tip-caption:           :bulb:
 :note-caption:          :information_source:

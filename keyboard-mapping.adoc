@@ -14,3 +14,31 @@ ifdef::env-github[]
 To view this page, please visit the link:https://github.com/LexLuengas/cavatina-docs/blob/master/keyboard-mapping.html[HTML version] of it.
 endif::[]
 
+Click on a key to fix its information on the table. When a symbol is a note modifier, a _F_ is shown as a reference note. 
+
+ifndef::env-github[]
+[subs=attributes] 
+++++
+<div class="container-select-keyboard-layout is-horizontal">
+include::html/keyboard-layout-select.html[]
+</div>
+++++
+endif::[]
+
+ifndef::env-github[]
+[subs=attributes] 
+++++
+include::html/keyboard-basic.html[]
+++++
+endif::[]
+
+[.table-display-key-semantics]
+--
+[cols="^.^2,^.^2,<.^6", stripes=none]
+|===
+| Symbol | Source | Symbol Name
+
+| [.cavatina]#pass:[  ]# | `{sp}` | [.cavatina-symbol-name]#pass:[ ]#
+| [.cavatina]#pass:[  ]# | `{sp}` | [.cavatina-symbol-name]#pass:[ ]#
+|===
+--

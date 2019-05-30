@@ -788,7 +788,7 @@ p { margin-bottom: 1.25rem; }
 
 <script defer src="./resources/js/ender.min.js"></script>
 <script type="module" src="./resources/js/keyboard-layouts.js"></script>
-<script type="module" src="./resources/js/script.js"></script>
+<script type="module" src="./resources/js/keyboard-mapping.js"></script>
 </head>
 <body class="article">
 <div id="header">
@@ -798,7 +798,123 @@ p { margin-bottom: 1.25rem; }
 </div>
 </div>
 <div id="content">
-
+<div class="paragraph">
+<p>Click on a key to fix its information on the table. When a symbol is a note modifier, a <em>F</em> is shown as a reference note.</p>
+</div>
+<div class="container-select-keyboard-layout is-horizontal">
+<label for="select-keyboard-layout">Select your keyboard layout</label>
+<select class="select-keyboard-layout" id="select-keyboard-layout">
+    <option value="DE">German</option>
+    <option value="SPh">Spanish (Hisp.)</option>
+    <option value="SPi">Spanish (ISO)</option>
+    <option value="IT">Italian</option>
+    <option value="PTa">Portugese (Apple)</option>
+    <option value="PTb">Portugese (Brazil, Win.)</option>
+    <option value="PTp">Portugese (Portugal, Win.)</option>
+    <option value="BRa">U.K. (Apple)</option>
+    <option value="BRw">U.K. (Windows)</option>
+    <option value="US" selected="selected">U.S.</option>
+</select>
+</div>
+<div class="keyboard-container key-layout-type-1">
+    <div class="keyboard-row-container">
+        <ul class="keyboard-row">
+            <li><button>`</button></li>
+            <li><button>1</button></li>
+            <li><button>2</button></li>
+            <li><button>3</button></li>
+            <li><button>4</button></li>
+            <li><button>5</button></li>
+            <li><button>6</button></li>
+            <li><button>7</button></li>
+            <li><button>8</button></li>
+            <li><button>9</button></li>
+            <li><button>0</button></li>
+            <li><button>-</button></li>
+            <li><button>=</button></li>
+            <li class="is-key-backspace"><button disabled></button></li>
+        </ul>
+        <ul class="keyboard-row">
+            <li class="is-key-tab"><button disabled></button></li>
+            <li><button>Q</button></li>
+            <li><button>W</button></li>
+            <li><button>E</button></li>
+            <li><button>R</button></li>
+            <li><button>T</button></li>
+            <li><button>Y</button></li>
+            <li><button>U</button></li>
+            <li><button>I</button></li>
+            <li><button>O</button></li>
+            <li><button>P</button></li>
+            <li><button>[</button></li>
+            <li><button>]</button></li>
+            <li class="is-key-return-upper"><button>\</button>
+            </li>
+        </ul>
+        <ul class="keyboard-row">
+            <li class="is-key-capslock"><button disabled></button></li>
+            <li><button>A</button></li>
+            <li><button>S</button></li>
+            <li><button>D</button></li>
+            <li><button>F</button></li>
+            <li><button>G</button></li>
+            <li><button>H</button></li>
+            <li><button>J</button></li>
+            <li><button>K</button></li>
+            <li><button>L</button></li>
+            <li><button>;</button></li>
+            <li><button>'</button></li>
+            <li class="is-key-optional is-key-optional-1"><button data-extra-key="1"></button></li>
+            <li class="is-key-return"><button disabled></button></li>
+        </ul>
+        <ul class="keyboard-row">
+            <li class="is-key-shift-left"><button disabled></button></li>
+            <li class="is-key-optional is-key-optional-2"><button data-extra-key="2"></button></li>
+            <li><button>Z</button></li>
+            <li><button>X</button></li>
+            <li><button>C</button></li>
+            <li><button>V</button></li>
+            <li><button>B</button></li>
+            <li><button>N</button></li>
+            <li><button>M</button></li>
+            <li><button>,</button></li>
+            <li><button>.</button></li>
+            <li><button>/</button></li>
+            <li class="is-key-optional is-key-optional-3"><button data-extra-key="3"></button></li>
+            <li class="is-key-shift-right"><button disabled></button></li>
+        </ul>
+    </div>
+</div>
+<div class="openblock table-display-key-semantics">
+<div class="content">
+<table class="tableblock frame-all grid-all stripes-none stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-middle">Symbol</th>
+<th class="tableblock halign-center valign-middle">Source</th>
+<th class="tableblock halign-left valign-middle">Symbol Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="cavatina">  </span></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><code> </code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><span class="cavatina-symbol-name"> </span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><span class="cavatina">  </span></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><code> </code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><span class="cavatina-symbol-name"> </span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </body>
 </html>
