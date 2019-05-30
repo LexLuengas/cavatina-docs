@@ -39,7 +39,7 @@ advanced font features or included as a webfont in a browser.
 The idea behind Cavatina is that you don't necessarily need a heavy-weight music notation program to draft musical ideas.
 Instead, music is typed in as normal text based on a specific keyboard scheme.
 
-The Cavatina project is open source and free under the MIT license. You can grab a copy of the fonts and related tools on the link:[GitHub realease page].
+The Cavatina project is open source and free under the MIT license. You can grab a copy of the fonts and related tools from the link:https://github.com/LexLuengas/cavatina/releases[GitHub releases page].
 
 [NOTE]
 Cavatina works with the latest versions of Firefox, Chrome and Opera, so make sure to use one of those browsers to read this documentation.
