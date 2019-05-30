@@ -6,13 +6,14 @@
 :revnumber:     2.0
 :stylesheet:    resources/css/theme.css
 :docinfodir:    html/
+:base-url:      https://lexluengas.github.io/cavatina-docs
 :nofooter:
 :experimental:
 
 ifndef::env-github[]
 :imagesdir:             resources/images/
-:link-tutorial:         tutorial.html
-:link-keyboard-mapping: keyboard-mapping.html
+:link-tutorial:         {base-url}/tutorial.html
+:link-keyboard-mapping: {base-url}/keyboard-mapping.html
 endif::[]
 
 ifdef::env-github[]

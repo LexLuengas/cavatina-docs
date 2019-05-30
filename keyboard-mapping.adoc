@@ -4,6 +4,7 @@
 :revnumber:     2.0
 :stylesheet:    resources/css/theme.css
 :docinfodir:    html/
+:base-url:      https://lexluengas.github.io/cavatina-docs
 :nofooter:
 :experimental:
 
@@ -11,7 +12,7 @@ ifdef::env-github[]
 :important-caption: :heavy_exclamation_mark:
 
 [IMPORTANT]
-To view this page, please visit the link:https://github.com/LexLuengas/cavatina-docs/blob/master/keyboard-mapping.html[HTML version] of it.
+To view this page, please visit the link:{base-url}/keyboard-mapping.html[HTML version] of it.
 endif::[]
 
 Click on a key to fix its information on the table. When a symbol is a note modifier, a _F_ is shown as a reference note. 

@@ -4,11 +4,12 @@
 :revnumber:     2.0
 :stylesheet:    resources/css/theme.css
 :docinfodir:    html/
+:base-url:      https://lexluengas.github.io/cavatina-docs
 :nofooter:
 :experimental:
 
 ifndef::env-github[]
-:link-docs:     docs.html
+:link-docs:     {base-url}/docs.html
 endif::[]
 
 ifdef::env-github[]
@@ -21,7 +22,7 @@ ifdef::env-github[]
 :warning-caption:   :warning:
 
 [IMPORTANT]
-To do this tutorial, please visit the link:https://github.com/LexLuengas/cavatina-docs/blob/master/tutorial.html[HTML version] of it.
+To do this tutorial, please visit the link:{base-url}/tutorial.html[HTML version] of it.
 endif::[]
 
 This is a learn-by-doing kind of quickstart into Cavatina to get the
@@ -98,7 +99,7 @@ sequentially. Write `34`.
 
 That’s it – Now you have an impression of how Cavatina works. There are
 many more features like dynamics, articulations and staff systems that
-you can check out in the link:docs[documentation].
+you can check out in the link:{link-docs}[documentation].
 
 ''''
 
