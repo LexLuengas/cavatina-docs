@@ -6,21 +6,17 @@
 :revnumber:     2.0
 :stylesheet:    resources/css/theme.css
 :docinfodir:    html/
-:base-url:      https://lexluengas.github.io/cavatina-docs
+:relfileprefix: https://lexluengas.github.io/cavatina-docs/
 :nofooter:
 :experimental:
 
 ifndef::env-github[]
 :imagesdir:             resources/images/
-:link-tutorial:         {base-url}/tutorial.html
-:link-keyboard-mapping: {base-url}/keyboard-mapping.html
 endif::[]
 
 ifdef::env-github[]
 :toc-placement!:
 :imagesdir:             https://github.com/LexLuengas/cavatina-docs/blob/master/resources/images
-:link-tutorial:         tutorial.adoc
-:link-keyboard-mapping: keyboard-mapping.adoc
 
 :tip-caption:           :bulb:
 :note-caption:          :information_source:
@@ -58,9 +54,9 @@ endif::[]
 
 For learning how to write music with Cavatina you have a few options, although it is strongly recommended that you do read the sections <<The Basics>> and <<The Musical Note>> beforehand. You can
 
-- do the link:{link-tutorial}[tutorial],
+- do the <<tutorial#,tutorial>>,
 - read on through this documentation, or
-- look at the link:{link-keyboard-mapping}[keyboard mapping] itself.
+- look at the <<keyboard-mapping#,keyboard mapping>> itself.
 
 == The Basics
 

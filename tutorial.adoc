@@ -4,17 +4,14 @@
 :revnumber:     2.0
 :stylesheet:    resources/css/theme.css
 :docinfodir:    html/
-:base-url:      https://lexluengas.github.io/cavatina-docs
+:relfileprefix: https://lexluengas.github.io/cavatina-docs/
 :nofooter:
 :experimental:
 
 ifndef::env-github[]
-:link-docs:     {base-url}/docs.html
 endif::[]
 
 ifdef::env-github[]
-:link-docs:         docs.adoc
-
 :tip-caption:       :bulb:
 :note-caption:      :information_source:
 :important-caption: :heavy_exclamation_mark:
@@ -27,7 +24,7 @@ endif::[]
 
 This is a learn-by-doing kind of quickstart into Cavatina to get the
 feel of writing with the font. If you haven’t at least quickly checked
-the link:{link-docs}[documentation], we recommend doing so, specially the <<{link-docs}#_the_basics,Basics>> and <<{link-docs}#_the_musical_note,Musical Note>> chapters.
+the <<docs#,documentation>>, we recommend doing so, specially the <<docs{outfilesuffix}#_the_basics,Basics>> and <<docs{outfilesuffix}#_the_musical_note,Musical Note>> chapters.
 
 After having selected your keyboard layout, you will be able to follow the tutorial by writing on the textbox below.
 
@@ -99,7 +96,7 @@ sequentially. Write `34`.
 
 That’s it – Now you have an impression of how Cavatina works. There are
 many more features like dynamics, articulations and staff systems that
-you can check out in the link:{link-docs}[documentation].
+you can check out in the <<docs#,documentation>>.
 
 ''''
 
