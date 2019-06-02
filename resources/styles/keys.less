@@ -15,6 +15,7 @@
         position: fixed;
         top: 0;
         right: 0;
+        z-index: 5;
     }
     &.is-horizontal {
         display: inline-flex;
@@ -42,8 +43,11 @@
         width: 100%;
     }
 
-    .cavatina-display-block span.notes {
-        margin: unset;
+    .cavatina-display-block {
+        overflow-x: scroll;
+        span.notes {
+            margin: unset;
+        }
     }
 }
 
@@ -115,6 +119,7 @@
 .keyboard-row-container {
     display: inline-flex;
     flex-direction: column;
+    z-index: 1;
     .iter-z-indices(~'.keyboard-row' ; 5);
 }
 
