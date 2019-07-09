@@ -90,8 +90,10 @@ const noteClassHghlList = 'cdefgab'
 
             // Control key
             if (symbol.length === 0) return;
+            // Shift or Return keys
+            if (symbol.length > 1) return symbol;
 
-            let [bottomKey] = remapKey(countryCode, symbol, isExtra);
+            let [bottomKey,] = remapKey(countryCode, symbol, isExtra);
             keyEl.textContent = isAlphaRegex.test(bottomKey)
                 ? bottomKey.toUpperCase()
                 : bottomKey;
