@@ -18,7 +18,7 @@ export function reallocateKeyboard(keyboardType) {
         .removeClass(klTypeClassList)
         .addClass('key-layout-type-' + keyboardType);
 
-    let keyReturnUpper = keyboardContainerEl.find('.is-key-return-upper button')[0];
+    let keyReturnUpper = keyboardContainerEl.find('.key-return-upper button')[0];
     if (keyboardType !== 1) {
         keyReturnUpper.setAttribute('disabled', '');
     } else {

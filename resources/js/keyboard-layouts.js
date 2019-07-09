@@ -158,7 +158,7 @@ C3 quarter note,D3 quarter note,E3 quarter note,F3 quarter note,G3 quarter note,
     .replace(/\n/g, '')
     .split(',');
 
-const usLayoutSemantics = cavatinaSemantic.reduce((acc, val, i, a) => {
+const usLayoutSemantics = cavatinaSemantic.reduce((acc, val, i) => {
     return acc.set(cavatinaRosetta['US'].charAt(i), val);
 }, new Map());
 
